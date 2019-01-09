@@ -1,6 +1,6 @@
 ﻿Imports System.Data.OleDb
 
-Public Class Form1
+Public Class frmLogin
     Dim dbConnection As New OleDbConnection
     Dim dbAdapter As New OleDbDataAdapter
     Dim dbDataSet As New DataSet
@@ -11,7 +11,8 @@ Public Class Form1
     Private Sub Form1_Load(sender As Object, e As EventArgs) Handles MyBase.Load
         ConnectDB()
         InitializeSetup()
-        'ShowData("SELECT * FROM Users")
+
+
 
     End Sub
 
@@ -19,8 +20,7 @@ Public Class Form1
         dbAdapter = New OleDbDataAdapter(dbcommand, dbConnection)
         dbDataTable = New DataTable
         dbAdapter.Fill(dbDataTable)
-        dgvInfo.DataSource = dbDataTable
-        dgvInfo.Columns("Id").Visible = False
+
     End Sub
 
     Private Sub ConnectDB()
@@ -31,7 +31,7 @@ Public Class Form1
     Private Sub InitializeSetup()
         CreateDefaultRoles()
         CreateDefaultUsers()
-
+        FormSetup()
     End Sub
 
     Private Sub CreateDefaultRoles()
@@ -88,5 +88,16 @@ Public Class Form1
         End Try
     End Sub
 
+    Private Sub Button1_Click(sender As Object, e As EventArgs) Handles btnCancel.Click
+        Me.Dispose()
+    End Sub
 
+    Private Sub FormSetup()
+        txtPassword.PasswordChar = Chr(151)
+        Me.AcceptButton = btnLogin
+    End Sub
+
+    Private Sub btnLogin_Click(sender As Object, e As EventArgs) Handles btnLogin.Click
+        MsgBox("A")
+    End Sub
 End Class
