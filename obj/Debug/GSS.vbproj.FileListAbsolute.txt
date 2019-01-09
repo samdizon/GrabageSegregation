@@ -1,0 +1,11 @@
+C:\Users\samdizon\Desktop\C# - .Net\GarbageSegregation\bin\Debug\GSS.exe.config
+C:\Users\samdizon\Desktop\C# - .Net\GarbageSegregation\bin\Debug\GSS.exe
+C:\Users\samdizon\Desktop\C# - .Net\GarbageSegregation\bin\Debug\GSS.pdb
+C:\Users\samdizon\Desktop\C# - .Net\GarbageSegregation\bin\Debug\GSS.xml
+C:\Users\samdizon\Desktop\C# - .Net\GarbageSegregation\obj\Debug\GSS.vbprojResolveAssemblyReference.cache
+C:\Users\samdizon\Desktop\C# - .Net\GarbageSegregation\obj\Debug\GSS.Form1.resources
+C:\Users\samdizon\Desktop\C# - .Net\GarbageSegregation\obj\Debug\GSS.Resources.resources
+C:\Users\samdizon\Desktop\C# - .Net\GarbageSegregation\obj\Debug\GSS.vbproj.GenerateResource.Cache
+C:\Users\samdizon\Desktop\C# - .Net\GarbageSegregation\obj\Debug\GSS.exe
+C:\Users\samdizon\Desktop\C# - .Net\GarbageSegregation\obj\Debug\GSS.xml
+C:\Users\samdizon\Desktop\C# - .Net\GarbageSegregation\obj\Debug\GSS.pdb
