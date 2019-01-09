@@ -1,6 +1,7 @@
 ﻿Imports System.Data.OleDb
 
 
+
 Public Class frmLogin
     Dim dbConnection As New OleDbConnection
     Dim dbAdapter As New OleDbDataAdapter
@@ -8,7 +9,7 @@ Public Class frmLogin
 
     Dim dbDataTable As New DataTable
     Dim queryCommand As New OleDbCommand
-
+    Dim adminRoleID As Integer
     Private Sub Form1_Load(sender As Object, e As EventArgs) Handles MyBase.Load
         ConnectDB()
         InitializeSetup()
@@ -57,7 +58,7 @@ Public Class frmLogin
     End Sub
 
     Private Sub CreateDefaultUsers()
-        Dim adminRoleID As Integer
+
 
         'look for Administrator ID
         Try
@@ -93,7 +94,6 @@ Public Class frmLogin
 
     Private Sub FormSetup()
         txtPassword.PasswordChar = Chr(151)
-        Me.AcceptButton = btnLogin
     End Sub
 
     Private Sub btnLogin_Click(sender As Object, e As EventArgs) Handles btnLogin.Click
@@ -113,47 +113,29 @@ Public Class frmLogin
 
 
         Try
-            ConnectDB()
-            queryCommand = New OleDbCommand("SELECT ID, Username, Password, RoleID FROM Users WHERE Username = @username and Password = @password", dbConnection)
-            Dim username As New OleDbParameter("@username", SqlDbType.VarChar)
-            Dim password As New OleDbParameter("@password", SqlDbType.VarChar)
+            Dim username, password As String
+            username = Trim(txtUsername.Text)
+            password = Trim(txtPassword.Text)
 
-            username.Value = txtUsername.Text
-            password.Value = txtPassword.Text
+            dbAdapter = New OleDbDataAdapter("Select * From Users WHERE CONVERT(VARCHAR, username) = '" & username & "' and CONVERT(VARCHAR, Password) = '" & password & "' COLLATE SQL_Latin1_General_CP1_CS_AS", dbConnection)
+            dbDataTable = New DataTable
+            dbAdapter.Fill(dbDataTable)
 
-            queryCommand.Parameters.Add(username)
-            queryCommand.Parameters.Add(password)
-            queryCommand.Connection.Open()
-
-            Dim myReader As OleDbDataReader = queryCommand.ExecuteReader(CommandBehavior.CloseConnection)
-
-            Dim Login As Object = 0
-
-            If myReader.HasRows Then
-                myReader.Read()
-                Login = myReader(Login)
-
-            End If
-
-            If Login = Nothing Then
-
+            'if user is not found
+            If (dbDataTable.Rows.Count = 0) Then
                 MsgBox("Login is Failed...Try again !", MsgBoxStyle.Critical, "Login Denied")
                 txtUsername.Clear()
                 txtPassword.Clear()
                 txtUsername.Focus()
-
             Else
                 MsgBox("Successfully Login", MsgBoxStyle.Information)
                 txtUsername.Text = ""
                 txtPassword.Text = ""
                 Me.Hide()
 
-
-
+                Dim mainForm As New fmMain()
+                mainForm.Show()
             End If
-
-            queryCommand.Dispose()
-            dbConnection.Close()
 
         Catch ex As Exception
             MessageBox.Show(ex.Message, "Error", MessageBoxButtons.OK, MessageBoxIcon.Error)
