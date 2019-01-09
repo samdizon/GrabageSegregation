@@ -128,7 +128,7 @@ Public Class frmLogin
                 txtPassword.Clear()
                 txtUsername.Focus()
             Else
-                MsgBox("Successfully Login", MsgBoxStyle.Information)
+                'MsgBox("Successfully Login", MsgBoxStyle.Information)
                 txtUsername.Text = ""
                 txtPassword.Text = ""
                 Me.Hide()

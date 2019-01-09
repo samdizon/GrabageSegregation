@@ -8,3 +8,5 @@ C:\Users\samdizon\Desktop\C# - .Net\GarbageSegregation\obj\Debug\GSS.vbproj.Gene
 C:\Users\samdizon\Desktop\C# - .Net\GarbageSegregation\obj\Debug\GSS.exe
 C:\Users\samdizon\Desktop\C# - .Net\GarbageSegregation\obj\Debug\GSS.xml
 C:\Users\samdizon\Desktop\C# - .Net\GarbageSegregation\obj\Debug\GSS.pdb
+C:\Users\samdizon\Desktop\C# - .Net\GarbageSegregation\bin\Debug\GSS.pdb
+C:\Users\samdizon\Desktop\C# - .Net\GarbageSegregation\bin\Debug\GSS.xml
