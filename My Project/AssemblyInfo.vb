@@ -8,17 +8,17 @@ Imports System.Runtime.InteropServices
 
 ' Review the values of the assembly attributes
 
-<Assembly: AssemblyTitle("GarbageSegregation")>
+<Assembly: AssemblyTitle("GSS")>
 <Assembly: AssemblyDescription("")>
 <Assembly: AssemblyCompany("")>
-<Assembly: AssemblyProduct("GarbageSegregation")>
+<Assembly: AssemblyProduct("GSS")>
 <Assembly: AssemblyCopyright("Copyright ©  2019")>
 <Assembly: AssemblyTrademark("")>
 
 <Assembly: ComVisible(False)>
 
 'The following GUID is for the ID of the typelib if this project is exposed to COM
-<Assembly: Guid("680926a0-9b5c-42f6-bb58-22697b053eec")>
+<Assembly: Guid("b8431128-c717-4ce7-9e71-407a97084593")>
 
 ' Version information for an assembly consists of the following four values:
 '

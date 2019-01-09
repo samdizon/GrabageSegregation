@@ -64,9 +64,9 @@ Namespace My
     Friend Module MySettingsProperty
 
         <Global.System.ComponentModel.Design.HelpKeywordAttribute("My.Settings")> _
-        Friend ReadOnly Property Settings() As Global.GarbageSegregation.My.MySettings
+        Friend ReadOnly Property Settings() As Global.GSS.My.MySettings
             Get
-                Return Global.GarbageSegregation.My.MySettings.Default
+                Return Global.GSS.My.MySettings.Default
             End Get
         End Property
     End Module
