@@ -132,7 +132,7 @@ Public Class frmLogin
                 txtUsername.Text = ""
                 txtPassword.Text = ""
                 Me.Hide()
-
+                dbConnection.Close()
                 Dim mainForm As New fmMain()
                 mainForm.Show()
             End If

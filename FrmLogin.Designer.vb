@@ -36,6 +36,7 @@ Partial Class frmLogin
         Me.PictureBox1 = New System.Windows.Forms.PictureBox()
         Me.Label3 = New System.Windows.Forms.Label()
         Me.Label4 = New System.Windows.Forms.Label()
+        Me.ServiceController1 = New System.ServiceProcess.ServiceController()
         CType(Me.pbxUsername, System.ComponentModel.ISupportInitialize).BeginInit()
         CType(Me.pbxPassword, System.ComponentModel.ISupportInitialize).BeginInit()
         CType(Me.PictureBox1, System.ComponentModel.ISupportInitialize).BeginInit()
@@ -45,6 +46,8 @@ Partial Class frmLogin
         '
         Me.btnCancel.BackColor = System.Drawing.Color.DimGray
         Me.btnCancel.DialogResult = System.Windows.Forms.DialogResult.Cancel
+        Me.btnCancel.FlatAppearance.MouseDownBackColor = System.Drawing.Color.Chocolate
+        Me.btnCancel.FlatAppearance.MouseOverBackColor = System.Drawing.Color.Chocolate
         Me.btnCancel.FlatStyle = System.Windows.Forms.FlatStyle.Flat
         Me.btnCancel.Font = New System.Drawing.Font("Franklin Gothic Medium", 12.0!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
         Me.btnCancel.ForeColor = System.Drawing.Color.White
@@ -131,7 +134,9 @@ Partial Class frmLogin
         '
         'btnLogin
         '
-        Me.btnLogin.BackColor = System.Drawing.Color.Chocolate
+        Me.btnLogin.BackColor = System.Drawing.Color.DimGray
+        Me.btnLogin.FlatAppearance.MouseDownBackColor = System.Drawing.Color.Chocolate
+        Me.btnLogin.FlatAppearance.MouseOverBackColor = System.Drawing.Color.Chocolate
         Me.btnLogin.FlatStyle = System.Windows.Forms.FlatStyle.Flat
         Me.btnLogin.Font = New System.Drawing.Font("Franklin Gothic Medium", 12.0!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
         Me.btnLogin.ForeColor = System.Drawing.Color.White
@@ -221,4 +226,5 @@ Partial Class frmLogin
     Friend WithEvents PictureBox1 As PictureBox
     Friend WithEvents Label3 As Label
     Friend WithEvents Label4 As Label
+    Friend WithEvents ServiceController1 As ServiceProcess.ServiceController
 End Class

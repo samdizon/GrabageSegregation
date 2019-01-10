@@ -10,3 +10,15 @@ C:\Users\samdizon\Desktop\C# - .Net\GarbageSegregation\obj\Debug\GSS.xml
 C:\Users\samdizon\Desktop\C# - .Net\GarbageSegregation\obj\Debug\GSS.pdb
 C:\Users\samdizon\Desktop\C# - .Net\GarbageSegregation\bin\Debug\GSS.pdb
 C:\Users\samdizon\Desktop\C# - .Net\GarbageSegregation\bin\Debug\GSS.xml
+C:\Users\samdizon\Desktop\C# - .Net\GSS\bin\Debug\GSS.exe.config
+C:\Users\samdizon\Desktop\C# - .Net\GSS\bin\Debug\GSS.exe
+C:\Users\samdizon\Desktop\C# - .Net\GSS\bin\Debug\GSS.pdb
+C:\Users\samdizon\Desktop\C# - .Net\GSS\bin\Debug\GSS.xml
+C:\Users\samdizon\Desktop\C# - .Net\GSS\obj\Debug\GSS.vbprojResolveAssemblyReference.cache
+C:\Users\samdizon\Desktop\C# - .Net\GSS\obj\Debug\GSS.fmMain.resources
+C:\Users\samdizon\Desktop\C# - .Net\GSS\obj\Debug\GSS.frmLogin.resources
+C:\Users\samdizon\Desktop\C# - .Net\GSS\obj\Debug\GSS.Resources.resources
+C:\Users\samdizon\Desktop\C# - .Net\GSS\obj\Debug\GSS.vbproj.GenerateResource.Cache
+C:\Users\samdizon\Desktop\C# - .Net\GSS\obj\Debug\GSS.exe
+C:\Users\samdizon\Desktop\C# - .Net\GSS\obj\Debug\GSS.xml
+C:\Users\samdizon\Desktop\C# - .Net\GSS\obj\Debug\GSS.pdb
