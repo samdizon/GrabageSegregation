@@ -35,11 +35,18 @@ Partial Class fmMain
         Me.PictureBox3 = New System.Windows.Forms.PictureBox()
         Me.PictureBox4 = New System.Windows.Forms.PictureBox()
         Me.PictureBox5 = New System.Windows.Forms.PictureBox()
+        Me.PictureBox6 = New System.Windows.Forms.PictureBox()
+        Me.LinkLabel2 = New System.Windows.Forms.LinkLabel()
+        Me.PictureBox7 = New System.Windows.Forms.PictureBox()
+        Me.LinkLabel3 = New System.Windows.Forms.LinkLabel()
+        Me.GroupBox1 = New System.Windows.Forms.GroupBox()
         CType(Me.PictureBox2, System.ComponentModel.ISupportInitialize).BeginInit()
         CType(Me.PictureBox1, System.ComponentModel.ISupportInitialize).BeginInit()
         CType(Me.PictureBox3, System.ComponentModel.ISupportInitialize).BeginInit()
         CType(Me.PictureBox4, System.ComponentModel.ISupportInitialize).BeginInit()
         CType(Me.PictureBox5, System.ComponentModel.ISupportInitialize).BeginInit()
+        CType(Me.PictureBox6, System.ComponentModel.ISupportInitialize).BeginInit()
+        CType(Me.PictureBox7, System.ComponentModel.ISupportInitialize).BeginInit()
         Me.SuspendLayout()
         '
         'btnMinimize
@@ -80,7 +87,7 @@ Partial Class fmMain
         Me.lblLogout.ForeColor = System.Drawing.Color.Chocolate
         Me.lblLogout.LinkBehavior = System.Windows.Forms.LinkBehavior.HoverUnderline
         Me.lblLogout.LinkColor = System.Drawing.Color.DarkOrange
-        Me.lblLogout.Location = New System.Drawing.Point(105, 612)
+        Me.lblLogout.Location = New System.Drawing.Point(87, 522)
         Me.lblLogout.Name = "lblLogout"
         Me.lblLogout.Size = New System.Drawing.Size(73, 45)
         Me.lblLogout.TabIndex = 4
@@ -96,7 +103,7 @@ Partial Class fmMain
         Me.lblSettings.ForeColor = System.Drawing.Color.Chocolate
         Me.lblSettings.LinkBehavior = System.Windows.Forms.LinkBehavior.HoverUnderline
         Me.lblSettings.LinkColor = System.Drawing.Color.DarkOrange
-        Me.lblSettings.Location = New System.Drawing.Point(100, 503)
+        Me.lblSettings.Location = New System.Drawing.Point(82, 459)
         Me.lblSettings.Name = "lblSettings"
         Me.lblSettings.Size = New System.Drawing.Size(73, 45)
         Me.lblSettings.TabIndex = 5
@@ -125,7 +132,7 @@ Partial Class fmMain
         Me.LinkLabel1.ForeColor = System.Drawing.Color.Chocolate
         Me.LinkLabel1.LinkBehavior = System.Windows.Forms.LinkBehavior.HoverUnderline
         Me.LinkLabel1.LinkColor = System.Drawing.Color.DarkOrange
-        Me.LinkLabel1.Location = New System.Drawing.Point(104, 455)
+        Me.LinkLabel1.Location = New System.Drawing.Point(86, 393)
         Me.LinkLabel1.Name = "LinkLabel1"
         Me.LinkLabel1.Size = New System.Drawing.Size(73, 45)
         Me.LinkLabel1.TabIndex = 7
@@ -160,14 +167,14 @@ Partial Class fmMain
         Me.PictureBox1.BackColor = System.Drawing.Color.Black
         Me.PictureBox1.Location = New System.Drawing.Point(-2, 0)
         Me.PictureBox1.Name = "PictureBox1"
-        Me.PictureBox1.Size = New System.Drawing.Size(215, 700)
+        Me.PictureBox1.Size = New System.Drawing.Size(215, 632)
         Me.PictureBox1.TabIndex = 12
         Me.PictureBox1.TabStop = False
         '
         'PictureBox3
         '
         Me.PictureBox3.Image = CType(resources.GetObject("PictureBox3.Image"), System.Drawing.Image)
-        Me.PictureBox3.Location = New System.Drawing.Point(45, 612)
+        Me.PictureBox3.Location = New System.Drawing.Point(27, 522)
         Me.PictureBox3.Name = "PictureBox3"
         Me.PictureBox3.Size = New System.Drawing.Size(55, 45)
         Me.PictureBox3.TabIndex = 13
@@ -176,7 +183,7 @@ Partial Class fmMain
         'PictureBox4
         '
         Me.PictureBox4.Image = CType(resources.GetObject("PictureBox4.Image"), System.Drawing.Image)
-        Me.PictureBox4.Location = New System.Drawing.Point(45, 455)
+        Me.PictureBox4.Location = New System.Drawing.Point(27, 393)
         Me.PictureBox4.Name = "PictureBox4"
         Me.PictureBox4.Size = New System.Drawing.Size(55, 45)
         Me.PictureBox4.TabIndex = 14
@@ -185,19 +192,82 @@ Partial Class fmMain
         'PictureBox5
         '
         Me.PictureBox5.Image = CType(resources.GetObject("PictureBox5.Image"), System.Drawing.Image)
-        Me.PictureBox5.Location = New System.Drawing.Point(45, 503)
+        Me.PictureBox5.Location = New System.Drawing.Point(27, 459)
         Me.PictureBox5.Name = "PictureBox5"
         Me.PictureBox5.Size = New System.Drawing.Size(55, 45)
         Me.PictureBox5.TabIndex = 15
         Me.PictureBox5.TabStop = False
         '
+        'PictureBox6
+        '
+        Me.PictureBox6.Image = CType(resources.GetObject("PictureBox6.Image"), System.Drawing.Image)
+        Me.PictureBox6.Location = New System.Drawing.Point(27, 265)
+        Me.PictureBox6.Name = "PictureBox6"
+        Me.PictureBox6.Size = New System.Drawing.Size(55, 45)
+        Me.PictureBox6.TabIndex = 17
+        Me.PictureBox6.TabStop = False
+        '
+        'LinkLabel2
+        '
+        Me.LinkLabel2.ActiveLinkColor = System.Drawing.Color.DarkOrange
+        Me.LinkLabel2.BackColor = System.Drawing.Color.Black
+        Me.LinkLabel2.Font = New System.Drawing.Font("Franklin Gothic Medium", 12.0!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.LinkLabel2.ForeColor = System.Drawing.Color.Chocolate
+        Me.LinkLabel2.LinkBehavior = System.Windows.Forms.LinkBehavior.HoverUnderline
+        Me.LinkLabel2.LinkColor = System.Drawing.Color.DarkOrange
+        Me.LinkLabel2.Location = New System.Drawing.Point(86, 265)
+        Me.LinkLabel2.Name = "LinkLabel2"
+        Me.LinkLabel2.Size = New System.Drawing.Size(73, 45)
+        Me.LinkLabel2.TabIndex = 16
+        Me.LinkLabel2.TabStop = True
+        Me.LinkLabel2.Text = "Browse"
+        Me.LinkLabel2.TextAlign = System.Drawing.ContentAlignment.MiddleLeft
+        '
+        'PictureBox7
+        '
+        Me.PictureBox7.Image = CType(resources.GetObject("PictureBox7.Image"), System.Drawing.Image)
+        Me.PictureBox7.Location = New System.Drawing.Point(27, 330)
+        Me.PictureBox7.Name = "PictureBox7"
+        Me.PictureBox7.Size = New System.Drawing.Size(55, 45)
+        Me.PictureBox7.TabIndex = 19
+        Me.PictureBox7.TabStop = False
+        '
+        'LinkLabel3
+        '
+        Me.LinkLabel3.ActiveLinkColor = System.Drawing.Color.DarkOrange
+        Me.LinkLabel3.BackColor = System.Drawing.Color.Black
+        Me.LinkLabel3.Font = New System.Drawing.Font("Franklin Gothic Medium", 12.0!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.LinkLabel3.ForeColor = System.Drawing.Color.Chocolate
+        Me.LinkLabel3.LinkBehavior = System.Windows.Forms.LinkBehavior.HoverUnderline
+        Me.LinkLabel3.LinkColor = System.Drawing.Color.DarkOrange
+        Me.LinkLabel3.Location = New System.Drawing.Point(86, 330)
+        Me.LinkLabel3.Name = "LinkLabel3"
+        Me.LinkLabel3.Size = New System.Drawing.Size(73, 45)
+        Me.LinkLabel3.TabIndex = 18
+        Me.LinkLabel3.TabStop = True
+        Me.LinkLabel3.Text = "Register"
+        Me.LinkLabel3.TextAlign = System.Drawing.ContentAlignment.MiddleLeft
+        '
+        'GroupBox1
+        '
+        Me.GroupBox1.BackColor = System.Drawing.Color.Transparent
+        Me.GroupBox1.Location = New System.Drawing.Point(242, 151)
+        Me.GroupBox1.Name = "GroupBox1"
+        Me.GroupBox1.Size = New System.Drawing.Size(832, 441)
+        Me.GroupBox1.TabIndex = 20
+        Me.GroupBox1.TabStop = False
+        '
         'fmMain
         '
         Me.AutoScaleDimensions = New System.Drawing.SizeF(9.0!, 21.0!)
         Me.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font
-        Me.AutoScroll = True
         Me.BackgroundImage = CType(resources.GetObject("$this.BackgroundImage"), System.Drawing.Image)
-        Me.ClientSize = New System.Drawing.Size(1103, 701)
+        Me.ClientSize = New System.Drawing.Size(1103, 626)
+        Me.Controls.Add(Me.GroupBox1)
+        Me.Controls.Add(Me.PictureBox7)
+        Me.Controls.Add(Me.LinkLabel3)
+        Me.Controls.Add(Me.PictureBox6)
+        Me.Controls.Add(Me.LinkLabel2)
         Me.Controls.Add(Me.PictureBox5)
         Me.Controls.Add(Me.PictureBox4)
         Me.Controls.Add(Me.PictureBox3)
@@ -222,6 +292,8 @@ Partial Class fmMain
         CType(Me.PictureBox3, System.ComponentModel.ISupportInitialize).EndInit()
         CType(Me.PictureBox4, System.ComponentModel.ISupportInitialize).EndInit()
         CType(Me.PictureBox5, System.ComponentModel.ISupportInitialize).EndInit()
+        CType(Me.PictureBox6, System.ComponentModel.ISupportInitialize).EndInit()
+        CType(Me.PictureBox7, System.ComponentModel.ISupportInitialize).EndInit()
         Me.ResumeLayout(False)
 
     End Sub
@@ -238,4 +310,9 @@ Partial Class fmMain
     Friend WithEvents PictureBox3 As PictureBox
     Friend WithEvents PictureBox4 As PictureBox
     Friend WithEvents PictureBox5 As PictureBox
+    Friend WithEvents PictureBox6 As PictureBox
+    Friend WithEvents LinkLabel2 As LinkLabel
+    Friend WithEvents PictureBox7 As PictureBox
+    Friend WithEvents LinkLabel3 As LinkLabel
+    Friend WithEvents GroupBox1 As GroupBox
 End Class
