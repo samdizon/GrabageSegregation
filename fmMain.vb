@@ -7,7 +7,7 @@
         Me.WindowState = System.Windows.Forms.FormWindowState.Minimized
     End Sub
 
-    Private Sub Button1_Click_1(sender As Object, e As EventArgs) Handles Button1.Click
+    Private Sub Button1_Click_1(sender As Object, e As EventArgs) Handles btnClose.Click
         Me.Dispose()
     End Sub
 
