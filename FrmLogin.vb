@@ -1,14 +1,9 @@
-﻿Imports System.Data.OleDb
-
-
+﻿
+Imports System.Data.OleDb
 
 Public Class frmLogin
-    Dim dbConnection As New OleDbConnection
-    Dim dbAdapter As New OleDbDataAdapter
-    Dim dbDataSet As New DataSet
 
-    Dim dbDataTable As New DataTable
-    Dim queryCommand As New OleDbCommand
+
     Dim adminRoleID As Integer
     Private Sub Form1_Load(sender As Object, e As EventArgs) Handles MyBase.Load
         ConnectDB()
@@ -23,9 +18,7 @@ Public Class frmLogin
 
     End Sub
 
-    Private Sub ConnectDB()
-        dbConnection.ConnectionString = "Provider=SQLNCLI11;Server=(LocalDB)\MSSQLLocalDB;Database=GSS;Trusted_Connection=yes;"
-    End Sub
+
 
 
     Private Sub InitializeSetup()
@@ -123,12 +116,11 @@ Public Class frmLogin
 
             'if user is not found
             If (dbDataTable.Rows.Count = 0) Then
-                MsgBox("Login is Failed...Try again !", MsgBoxStyle.Critical, "Login Denied")
+                MsgBox("Invalid username and/or password. Please try again.", MsgBoxStyle.Critical, "Login Denied")
                 txtUsername.Clear()
                 txtPassword.Clear()
                 txtUsername.Focus()
             Else
-                'MsgBox("Successfully Login", MsgBoxStyle.Information)
                 txtUsername.Text = ""
                 txtPassword.Text = ""
                 Me.Hide()

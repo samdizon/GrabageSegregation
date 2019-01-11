@@ -73,6 +73,7 @@
     <Import Include="System.Threading.Tasks" />
   </ItemGroup>
   <ItemGroup>
+    <Compile Include="Declarations.vb" />
     <Compile Include="fmMain.Designer.vb">
       <DependentUpon>fmMain.vb</DependentUpon>
     </Compile>
