@@ -22,3 +22,19 @@ C:\Users\samdizon\Desktop\C# - .Net\GSS\obj\Debug\GSS.vbproj.GenerateResource.Ca
 C:\Users\samdizon\Desktop\C# - .Net\GSS\obj\Debug\GSS.exe
 C:\Users\samdizon\Desktop\C# - .Net\GSS\obj\Debug\GSS.xml
 C:\Users\samdizon\Desktop\C# - .Net\GSS\obj\Debug\GSS.pdb
+C:\Users\SAM\Desktop\GSS\bin\Debug\GSS.exe.config
+C:\Users\SAM\Desktop\GSS\bin\Debug\GSS.exe
+C:\Users\SAM\Desktop\GSS\bin\Debug\GSS.pdb
+C:\Users\SAM\Desktop\GSS\bin\Debug\GSS.xml
+C:\Users\SAM\Desktop\GSS\obj\Debug\GSS.vbprojAssemblyReference.cache
+C:\Users\SAM\Desktop\GSS\obj\Debug\GSS.fmMain.resources
+C:\Users\SAM\Desktop\GSS\obj\Debug\GSS.frmLogin.resources
+C:\Users\SAM\Desktop\GSS\obj\Debug\GSS.Resources.resources
+C:\Users\SAM\Desktop\GSS\obj\Debug\GSS.vbproj.GenerateResource.cache
+C:\Users\SAM\Desktop\GSS\obj\Debug\GSS.vbproj.CoreCompileInputs.cache
+C:\Users\SAM\Desktop\GSS\obj\Debug\GSS.exe
+C:\Users\SAM\Desktop\GSS\obj\Debug\GSS.xml
+C:\Users\SAM\Desktop\GSS\obj\Debug\GSS.pdb
+C:\Users\SAM\Desktop\GSS\obj\Debug\GSS.frmFingerprintRegistration.resources
+C:\Users\SAM\Desktop\GSS\obj\Debug\GSS.vbproj.ResolveComReference.cache
+C:\Users\SAM\Desktop\GSS\obj\Debug\GSS.frmAbout.resources

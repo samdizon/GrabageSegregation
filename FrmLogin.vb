@@ -24,6 +24,7 @@ Public Class frmLogin
     Private Sub InitializeSetup()
         CreateDefaultRoles()
         CreateDefaultUsers()
+        CreateDefaultSortingCategories()
         FormSetup()
     End Sub
 
@@ -49,6 +50,29 @@ Public Class frmLogin
 
         End Try
     End Sub
+
+    Private Sub CreateDefaultSortingCategories()
+        Try
+            'Check categories
+            dbAdapter = New OleDbDataAdapter("Select * From SortingCategories", dbConnection)
+            dbDataTable = New DataTable
+            dbAdapter.Fill(dbDataTable)
+
+            'If no categories found
+            If (dbDataTable.Rows.Count = 0) Then
+                'insert categories
+                dbAdapter = New OleDbDataAdapter("INSERT INTO SortingCategories (Name) VALUES ('PAPER'), ('METAL'), ('PLASTIC')", dbConnection)
+                dbAdapter.Fill(dbDataSet)
+
+            End If
+
+        Catch ex As Exception
+            MsgBox("A problem is encountered on the System. Please call your system administrator.", MsgBoxStyle.Critical)
+            Me.Dispose()
+
+        End Try
+    End Sub
+
 
     Private Sub CreateDefaultUsers()
 
@@ -90,7 +114,6 @@ Public Class frmLogin
     End Sub
 
     Private Sub btnLogin_Click(sender As Object, e As EventArgs) Handles btnLogin.Click
-
         'check if username and password is provided
         If (Len(Trim(txtUsername.Text)) = 0) Then
             MessageBox.Show("Please enter user name", "Input Error", MessageBoxButtons.OK, MessageBoxIcon.Error)
@@ -125,7 +148,19 @@ Public Class frmLogin
                 txtPassword.Text = ""
                 Me.Hide()
                 dbConnection.Close()
+
+
+
                 Dim mainForm As New fmMain()
+
+
+                Dim userRecordIndex As Integer
+
+                userRecordIndex = dbDataTable.Columns("ID").Ordinal
+                mainForm.LoginUserID = dbDataTable.Rows(0).ItemArray(userRecordIndex).ToString
+
+                userRecordIndex = dbDataTable.Columns("Username").Ordinal
+                mainForm.lblUsername.Text = Trim("Hi, " + dbDataTable.Rows(0).ItemArray(userRecordIndex).ToString)
                 mainForm.Show()
             End If
 
