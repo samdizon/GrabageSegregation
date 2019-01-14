@@ -38,3 +38,4 @@ C:\Users\SAM\Desktop\GSS\obj\Debug\GSS.pdb
 C:\Users\SAM\Desktop\GSS\obj\Debug\GSS.frmFingerprintRegistration.resources
 C:\Users\SAM\Desktop\GSS\obj\Debug\GSS.vbproj.ResolveComReference.cache
 C:\Users\SAM\Desktop\GSS\obj\Debug\GSS.frmAbout.resources
+C:\Users\SAM\Desktop\GSS\obj\Debug\GSS.frmSettings.resources

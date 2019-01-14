@@ -85,19 +85,22 @@ Partial Class frmFingerprintRegistration
         '
         'Button1
         '
-        Me.Button1.BackColor = System.Drawing.Color.OrangeRed
-        Me.Button1.Location = New System.Drawing.Point(353, 337)
+        Me.Button1.BackColor = System.Drawing.Color.DarkOrange
+        Me.Button1.Location = New System.Drawing.Point(357, 376)
         Me.Button1.Name = "Button1"
-        Me.Button1.Size = New System.Drawing.Size(85, 41)
+        Me.Button1.Size = New System.Drawing.Size(100, 41)
         Me.Button1.TabIndex = 47
         Me.Button1.Text = "Test"
         Me.Button1.UseVisualStyleBackColor = False
         '
         'TextBox1
         '
-        Me.TextBox1.Location = New System.Drawing.Point(247, 344)
+        Me.TextBox1.BackColor = System.Drawing.Color.Linen
+        Me.TextBox1.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle
+        Me.TextBox1.Font = New System.Drawing.Font("Franklin Gothic Medium", 21.0!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.TextBox1.Location = New System.Drawing.Point(251, 378)
         Me.TextBox1.Name = "TextBox1"
-        Me.TextBox1.Size = New System.Drawing.Size(100, 26)
+        Me.TextBox1.Size = New System.Drawing.Size(100, 39)
         Me.TextBox1.TabIndex = 48
         '
         'frmFingerprintRegistration
@@ -105,7 +108,7 @@ Partial Class frmFingerprintRegistration
         Me.AutoScaleDimensions = New System.Drawing.SizeF(9.0!, 21.0!)
         Me.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font
         Me.BackColor = System.Drawing.Color.DarkOrange
-        Me.ClientSize = New System.Drawing.Size(741, 467)
+        Me.ClientSize = New System.Drawing.Size(710, 467)
         Me.Controls.Add(Me.TextBox1)
         Me.Controls.Add(Me.Button1)
         Me.Controls.Add(Me.Label2)

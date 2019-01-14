@@ -76,6 +76,30 @@ Public Class frmLogin
 
     Private Sub CreateDefaultUsers()
 
+        Try
+            'Check preferences
+            dbAdapter = New OleDbDataAdapter("Select * From Settings", dbConnection)
+            dbDataTable = New DataTable
+            dbAdapter.Fill(dbDataTable)
+
+            'If no settings found
+            If (dbDataTable.Rows.Count = 0) Then
+                'insert settings
+                dbAdapter = New OleDbDataAdapter("INSERT INTO Settings (ApplicationName, PortName, DataBits, PortBaudRate, ReadTimeout) 
+                                                         VALUES ('Garbage Segregation System'), (''), ('8'), (9600), (10000)", dbConnection)
+                dbAdapter.Fill(dbDataSet)
+
+            End If
+
+        Catch ex As Exception
+            MsgBox("A problem is encountered on the System. Please call your system administrator.", MsgBoxStyle.Critical)
+            Me.Dispose()
+
+        End Try
+    End Sub
+
+    Private Sub CreateDefaultSettings()
+
 
         'look for Administrator ID
         Try
