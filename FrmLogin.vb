@@ -177,15 +177,39 @@ Public Class frmLogin
 
 
                 Dim mainForm As New fmMain()
+                Dim userRecordIndex, userRoleID As Integer
 
-
-                Dim userRecordIndex As Integer
+                Dim userRoleRecordIndex As Integer
+                Dim userRole As String
 
                 userRecordIndex = dbDataTable.Columns("ID").Ordinal
                 mainForm.LoginUserID = dbDataTable.Rows(0).ItemArray(userRecordIndex).ToString
 
                 userRecordIndex = dbDataTable.Columns("Username").Ordinal
                 mainForm.lblUsername.Text = Trim("Hi, " + dbDataTable.Rows(0).ItemArray(userRecordIndex).ToString)
+
+                userRecordIndex = dbDataTable.Columns("RoleID").Ordinal
+                userRoleID = dbDataTable.Rows(0).ItemArray(userRecordIndex).ToString
+
+                'check role
+                dbAdapter = New OleDbDataAdapter("Select * 
+                                                    From Roles 
+                                                    WHERE ID = " & userRoleID & " ", dbConnection)
+                dbDataTable = New DataTable
+                dbAdapter.Fill(dbDataTable)
+
+                userRoleRecordIndex = dbDataTable.Columns("Name").Ordinal
+                userRole = Trim(dbDataTable.Rows(0).ItemArray(userRoleRecordIndex).ToString)
+
+                If userRole = "MEMBER" Then
+                    mainForm.lblRegisterUsers.Visible = False
+                    mainForm.btnEditUser.Visible = False
+                    mainForm.btnDeleteUser.Visible = False
+                Else
+                    mainForm.lblRegisterUsers.Visible = True
+                    mainForm.btnDeleteUser.Visible = True
+                End If
+
                 mainForm.Show()
             End If
 
