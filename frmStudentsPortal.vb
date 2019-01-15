@@ -63,11 +63,13 @@ Public Class frmStudentsPortal
         Dim fingerprintID As Integer = 0
 
         receivedData = ReceiveSerialData().ToString.ToUpper
+        'test data
+        receivedData = 1234
         Label1.Text = receivedData.ToString
 
         'get identified fingerprint ID from arduino
-        If receivedData = "NOTHING" Then
-            ValidateStudentByID(1234)
+        If receivedData <> "NOTHING" Then
+            ValidateStudentByID(CInt(Trim(receivedData.ToString)))
         End If
 
 
@@ -104,9 +106,9 @@ Public Class frmStudentsPortal
                 ArduinoSerialPort.Close()
                 DetectFingerprintTimer.Stop()
                 DetectFingerprintTimer.Enabled = False
+                frmMainStudents.StudentID = dbDataTable.Rows(0)("ID")
                 frmMainStudents.Show()
                 Me.Hide()
-
             End If
 
 

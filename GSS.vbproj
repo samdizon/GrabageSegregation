@@ -138,6 +138,9 @@
     <EmbeddedResource Include="fmMain.resx">
       <DependentUpon>fmMain.vb</DependentUpon>
     </EmbeddedResource>
+    <EmbeddedResource Include="frmMainStudents.resx">
+      <DependentUpon>frmMainStudents.vb</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="frmStudentsPortal.resx">
       <DependentUpon>frmStudentsPortal.vb</DependentUpon>
     </EmbeddedResource>

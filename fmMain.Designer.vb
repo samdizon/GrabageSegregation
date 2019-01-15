@@ -24,12 +24,12 @@ Partial Class fmMain
     Private Sub InitializeComponent()
         Me.components = New System.ComponentModel.Container()
         Dim resources As System.ComponentModel.ComponentResourceManager = New System.ComponentModel.ComponentResourceManager(GetType(fmMain))
-        Dim DataGridViewCellStyle7 As System.Windows.Forms.DataGridViewCellStyle = New System.Windows.Forms.DataGridViewCellStyle()
-        Dim DataGridViewCellStyle8 As System.Windows.Forms.DataGridViewCellStyle = New System.Windows.Forms.DataGridViewCellStyle()
-        Dim DataGridViewCellStyle9 As System.Windows.Forms.DataGridViewCellStyle = New System.Windows.Forms.DataGridViewCellStyle()
-        Dim DataGridViewCellStyle10 As System.Windows.Forms.DataGridViewCellStyle = New System.Windows.Forms.DataGridViewCellStyle()
-        Dim DataGridViewCellStyle11 As System.Windows.Forms.DataGridViewCellStyle = New System.Windows.Forms.DataGridViewCellStyle()
-        Dim DataGridViewCellStyle12 As System.Windows.Forms.DataGridViewCellStyle = New System.Windows.Forms.DataGridViewCellStyle()
+        Dim DataGridViewCellStyle31 As System.Windows.Forms.DataGridViewCellStyle = New System.Windows.Forms.DataGridViewCellStyle()
+        Dim DataGridViewCellStyle32 As System.Windows.Forms.DataGridViewCellStyle = New System.Windows.Forms.DataGridViewCellStyle()
+        Dim DataGridViewCellStyle33 As System.Windows.Forms.DataGridViewCellStyle = New System.Windows.Forms.DataGridViewCellStyle()
+        Dim DataGridViewCellStyle34 As System.Windows.Forms.DataGridViewCellStyle = New System.Windows.Forms.DataGridViewCellStyle()
+        Dim DataGridViewCellStyle35 As System.Windows.Forms.DataGridViewCellStyle = New System.Windows.Forms.DataGridViewCellStyle()
+        Dim DataGridViewCellStyle36 As System.Windows.Forms.DataGridViewCellStyle = New System.Windows.Forms.DataGridViewCellStyle()
         Me.btnMinimize = New System.Windows.Forms.Button()
         Me.btnClose = New System.Windows.Forms.Button()
         Me.lblLogout = New System.Windows.Forms.LinkLabel()
@@ -168,11 +168,11 @@ Partial Class fmMain
         Me.PictureBox35 = New System.Windows.Forms.PictureBox()
         Me.lblBrowseUsers = New System.Windows.Forms.LinkLabel()
         Me.gbBrowseUsers = New System.Windows.Forms.GroupBox()
-        Me.btnDeleteUser = New System.Windows.Forms.Button()
-        Me.btnEditUser = New System.Windows.Forms.Button()
         Me.dgvUsers = New System.Windows.Forms.DataGridView()
         Me.btnSearchUser = New System.Windows.Forms.Button()
         Me.PictureBox36 = New System.Windows.Forms.PictureBox()
+        Me.btnEditUser = New System.Windows.Forms.Button()
+        Me.btnDeleteUser = New System.Windows.Forms.Button()
         Me.btnDummyEditUser = New System.Windows.Forms.Button()
         Me.btnDummyDeleteUser = New System.Windows.Forms.Button()
         Me.gbRegisterUser = New System.Windows.Forms.GroupBox()
@@ -216,6 +216,9 @@ Partial Class fmMain
         Me.PictureBox47 = New System.Windows.Forms.PictureBox()
         Me.PictureBox48 = New System.Windows.Forms.PictureBox()
         Me.lblDummyRegisterUser = New System.Windows.Forms.LinkLabel()
+        Me.Label1 = New System.Windows.Forms.Label()
+        Me.Label49 = New System.Windows.Forms.Label()
+        Me.PictureBox49 = New System.Windows.Forms.PictureBox()
         CType(Me.PictureBox2, System.ComponentModel.ISupportInitialize).BeginInit()
         CType(Me.PictureBox1, System.ComponentModel.ISupportInitialize).BeginInit()
         CType(Me.PictureBox3, System.ComponentModel.ISupportInitialize).BeginInit()
@@ -275,6 +278,7 @@ Partial Class fmMain
         CType(Me.PictureBox46, System.ComponentModel.ISupportInitialize).BeginInit()
         CType(Me.PictureBox47, System.ComponentModel.ISupportInitialize).BeginInit()
         CType(Me.PictureBox48, System.ComponentModel.ISupportInitialize).BeginInit()
+        CType(Me.PictureBox49, System.ComponentModel.ISupportInitialize).BeginInit()
         Me.SuspendLayout()
         '
         'btnMinimize
@@ -480,7 +484,6 @@ Partial Class fmMain
         '
         Me.gbBrowseStudents.BackColor = System.Drawing.Color.Transparent
         Me.gbBrowseStudents.Controls.Add(Me.btnDeleteStudent)
-        Me.gbBrowseStudents.Controls.Add(Me.btnEditStudent)
         Me.gbBrowseStudents.Controls.Add(Me.lblTotalPlastic)
         Me.gbBrowseStudents.Controls.Add(Me.Label15)
         Me.gbBrowseStudents.Controls.Add(Me.lblTotalMetal)
@@ -515,6 +518,7 @@ Partial Class fmMain
         Me.gbBrowseStudents.Controls.Add(Me.PictureBox12)
         Me.gbBrowseStudents.Controls.Add(Me.PictureBox13)
         Me.gbBrowseStudents.Controls.Add(Me.PictureBox11)
+        Me.gbBrowseStudents.Controls.Add(Me.btnEditStudent)
         Me.gbBrowseStudents.Location = New System.Drawing.Point(257, 137)
         Me.gbBrowseStudents.Name = "gbBrowseStudents"
         Me.gbBrowseStudents.Size = New System.Drawing.Size(832, 574)
@@ -794,25 +798,25 @@ Partial Class fmMain
         '
         Me.dgvStudents.AllowUserToAddRows = False
         Me.dgvStudents.AllowUserToDeleteRows = False
-        DataGridViewCellStyle7.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft
-        DataGridViewCellStyle7.BackColor = System.Drawing.SystemColors.Control
-        DataGridViewCellStyle7.Font = New System.Drawing.Font("Franklin Gothic Medium", 12.0!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        DataGridViewCellStyle7.ForeColor = System.Drawing.SystemColors.WindowText
-        DataGridViewCellStyle7.SelectionBackColor = System.Drawing.Color.DarkOrange
-        DataGridViewCellStyle7.SelectionForeColor = System.Drawing.SystemColors.HighlightText
-        DataGridViewCellStyle7.WrapMode = System.Windows.Forms.DataGridViewTriState.[True]
-        Me.dgvStudents.ColumnHeadersDefaultCellStyle = DataGridViewCellStyle7
+        DataGridViewCellStyle31.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft
+        DataGridViewCellStyle31.BackColor = System.Drawing.SystemColors.Control
+        DataGridViewCellStyle31.Font = New System.Drawing.Font("Franklin Gothic Medium", 12.0!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        DataGridViewCellStyle31.ForeColor = System.Drawing.SystemColors.WindowText
+        DataGridViewCellStyle31.SelectionBackColor = System.Drawing.Color.DarkOrange
+        DataGridViewCellStyle31.SelectionForeColor = System.Drawing.SystemColors.HighlightText
+        DataGridViewCellStyle31.WrapMode = System.Windows.Forms.DataGridViewTriState.[True]
+        Me.dgvStudents.ColumnHeadersDefaultCellStyle = DataGridViewCellStyle31
         Me.dgvStudents.ColumnHeadersHeight = 30
         Me.dgvStudents.Location = New System.Drawing.Point(24, 111)
         Me.dgvStudents.Name = "dgvStudents"
-        DataGridViewCellStyle8.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft
-        DataGridViewCellStyle8.BackColor = System.Drawing.SystemColors.Control
-        DataGridViewCellStyle8.Font = New System.Drawing.Font("Franklin Gothic Medium", 12.0!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        DataGridViewCellStyle8.ForeColor = System.Drawing.SystemColors.WindowText
-        DataGridViewCellStyle8.SelectionBackColor = System.Drawing.Color.DarkOrange
-        DataGridViewCellStyle8.SelectionForeColor = System.Drawing.SystemColors.HighlightText
-        DataGridViewCellStyle8.WrapMode = System.Windows.Forms.DataGridViewTriState.[True]
-        Me.dgvStudents.RowHeadersDefaultCellStyle = DataGridViewCellStyle8
+        DataGridViewCellStyle32.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft
+        DataGridViewCellStyle32.BackColor = System.Drawing.SystemColors.Control
+        DataGridViewCellStyle32.Font = New System.Drawing.Font("Franklin Gothic Medium", 12.0!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        DataGridViewCellStyle32.ForeColor = System.Drawing.SystemColors.WindowText
+        DataGridViewCellStyle32.SelectionBackColor = System.Drawing.Color.DarkOrange
+        DataGridViewCellStyle32.SelectionForeColor = System.Drawing.SystemColors.HighlightText
+        DataGridViewCellStyle32.WrapMode = System.Windows.Forms.DataGridViewTriState.[True]
+        Me.dgvStudents.RowHeadersDefaultCellStyle = DataGridViewCellStyle32
         Me.dgvStudents.RowTemplate.DefaultCellStyle.ForeColor = System.Drawing.Color.Black
         Me.dgvStudents.RowTemplate.DefaultCellStyle.SelectionBackColor = System.Drawing.Color.DarkOrange
         Me.dgvStudents.Size = New System.Drawing.Size(781, 237)
@@ -1901,25 +1905,25 @@ Partial Class fmMain
         '
         Me.dgvBrowseSortedWaste.AllowUserToAddRows = False
         Me.dgvBrowseSortedWaste.AllowUserToDeleteRows = False
-        DataGridViewCellStyle9.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft
-        DataGridViewCellStyle9.BackColor = System.Drawing.SystemColors.Control
-        DataGridViewCellStyle9.Font = New System.Drawing.Font("Franklin Gothic Medium", 12.0!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        DataGridViewCellStyle9.ForeColor = System.Drawing.SystemColors.WindowText
-        DataGridViewCellStyle9.SelectionBackColor = System.Drawing.Color.DarkOrange
-        DataGridViewCellStyle9.SelectionForeColor = System.Drawing.SystemColors.HighlightText
-        DataGridViewCellStyle9.WrapMode = System.Windows.Forms.DataGridViewTriState.[True]
-        Me.dgvBrowseSortedWaste.ColumnHeadersDefaultCellStyle = DataGridViewCellStyle9
+        DataGridViewCellStyle33.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft
+        DataGridViewCellStyle33.BackColor = System.Drawing.SystemColors.Control
+        DataGridViewCellStyle33.Font = New System.Drawing.Font("Franklin Gothic Medium", 12.0!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        DataGridViewCellStyle33.ForeColor = System.Drawing.SystemColors.WindowText
+        DataGridViewCellStyle33.SelectionBackColor = System.Drawing.Color.DarkOrange
+        DataGridViewCellStyle33.SelectionForeColor = System.Drawing.SystemColors.HighlightText
+        DataGridViewCellStyle33.WrapMode = System.Windows.Forms.DataGridViewTriState.[True]
+        Me.dgvBrowseSortedWaste.ColumnHeadersDefaultCellStyle = DataGridViewCellStyle33
         Me.dgvBrowseSortedWaste.ColumnHeadersHeight = 30
         Me.dgvBrowseSortedWaste.Location = New System.Drawing.Point(24, 96)
         Me.dgvBrowseSortedWaste.Name = "dgvBrowseSortedWaste"
-        DataGridViewCellStyle10.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft
-        DataGridViewCellStyle10.BackColor = System.Drawing.SystemColors.Control
-        DataGridViewCellStyle10.Font = New System.Drawing.Font("Franklin Gothic Medium", 12.0!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        DataGridViewCellStyle10.ForeColor = System.Drawing.SystemColors.WindowText
-        DataGridViewCellStyle10.SelectionBackColor = System.Drawing.Color.DarkOrange
-        DataGridViewCellStyle10.SelectionForeColor = System.Drawing.SystemColors.HighlightText
-        DataGridViewCellStyle10.WrapMode = System.Windows.Forms.DataGridViewTriState.[True]
-        Me.dgvBrowseSortedWaste.RowHeadersDefaultCellStyle = DataGridViewCellStyle10
+        DataGridViewCellStyle34.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft
+        DataGridViewCellStyle34.BackColor = System.Drawing.SystemColors.Control
+        DataGridViewCellStyle34.Font = New System.Drawing.Font("Franklin Gothic Medium", 12.0!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        DataGridViewCellStyle34.ForeColor = System.Drawing.SystemColors.WindowText
+        DataGridViewCellStyle34.SelectionBackColor = System.Drawing.Color.DarkOrange
+        DataGridViewCellStyle34.SelectionForeColor = System.Drawing.SystemColors.HighlightText
+        DataGridViewCellStyle34.WrapMode = System.Windows.Forms.DataGridViewTriState.[True]
+        Me.dgvBrowseSortedWaste.RowHeadersDefaultCellStyle = DataGridViewCellStyle34
         Me.dgvBrowseSortedWaste.RowTemplate.DefaultCellStyle.ForeColor = System.Drawing.Color.Black
         Me.dgvBrowseSortedWaste.RowTemplate.DefaultCellStyle.SelectionBackColor = System.Drawing.Color.DarkOrange
         Me.dgvBrowseSortedWaste.Size = New System.Drawing.Size(781, 180)
@@ -2017,61 +2021,29 @@ Partial Class fmMain
         Me.gbBrowseUsers.TabIndex = 45
         Me.gbBrowseUsers.TabStop = False
         '
-        'btnDeleteUser
-        '
-        Me.btnDeleteUser.BackColor = System.Drawing.Color.Transparent
-        Me.btnDeleteUser.Enabled = False
-        Me.btnDeleteUser.FlatAppearance.BorderColor = System.Drawing.Color.DimGray
-        Me.btnDeleteUser.FlatAppearance.CheckedBackColor = System.Drawing.Color.Chocolate
-        Me.btnDeleteUser.FlatAppearance.MouseDownBackColor = System.Drawing.Color.Chocolate
-        Me.btnDeleteUser.FlatAppearance.MouseOverBackColor = System.Drawing.Color.Chocolate
-        Me.btnDeleteUser.FlatStyle = System.Windows.Forms.FlatStyle.Flat
-        Me.btnDeleteUser.Location = New System.Drawing.Point(691, 486)
-        Me.btnDeleteUser.Name = "btnDeleteUser"
-        Me.btnDeleteUser.Size = New System.Drawing.Size(114, 56)
-        Me.btnDeleteUser.TabIndex = 38
-        Me.btnDeleteUser.Text = "Delete"
-        Me.btnDeleteUser.UseVisualStyleBackColor = False
-        '
-        'btnEditUser
-        '
-        Me.btnEditUser.BackColor = System.Drawing.Color.Transparent
-        Me.btnEditUser.Enabled = False
-        Me.btnEditUser.FlatAppearance.BorderColor = System.Drawing.Color.DimGray
-        Me.btnEditUser.FlatAppearance.CheckedBackColor = System.Drawing.Color.Chocolate
-        Me.btnEditUser.FlatAppearance.MouseDownBackColor = System.Drawing.Color.Chocolate
-        Me.btnEditUser.FlatAppearance.MouseOverBackColor = System.Drawing.Color.Chocolate
-        Me.btnEditUser.FlatStyle = System.Windows.Forms.FlatStyle.Flat
-        Me.btnEditUser.Location = New System.Drawing.Point(557, 486)
-        Me.btnEditUser.Name = "btnEditUser"
-        Me.btnEditUser.Size = New System.Drawing.Size(114, 56)
-        Me.btnEditUser.TabIndex = 37
-        Me.btnEditUser.Text = "Edit"
-        Me.btnEditUser.UseVisualStyleBackColor = False
-        '
         'dgvUsers
         '
         Me.dgvUsers.AllowUserToAddRows = False
         Me.dgvUsers.AllowUserToDeleteRows = False
-        DataGridViewCellStyle11.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft
-        DataGridViewCellStyle11.BackColor = System.Drawing.SystemColors.Control
-        DataGridViewCellStyle11.Font = New System.Drawing.Font("Franklin Gothic Medium", 12.0!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        DataGridViewCellStyle11.ForeColor = System.Drawing.SystemColors.WindowText
-        DataGridViewCellStyle11.SelectionBackColor = System.Drawing.Color.DarkOrange
-        DataGridViewCellStyle11.SelectionForeColor = System.Drawing.SystemColors.HighlightText
-        DataGridViewCellStyle11.WrapMode = System.Windows.Forms.DataGridViewTriState.[True]
-        Me.dgvUsers.ColumnHeadersDefaultCellStyle = DataGridViewCellStyle11
+        DataGridViewCellStyle35.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft
+        DataGridViewCellStyle35.BackColor = System.Drawing.SystemColors.Control
+        DataGridViewCellStyle35.Font = New System.Drawing.Font("Franklin Gothic Medium", 12.0!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        DataGridViewCellStyle35.ForeColor = System.Drawing.SystemColors.WindowText
+        DataGridViewCellStyle35.SelectionBackColor = System.Drawing.Color.DarkOrange
+        DataGridViewCellStyle35.SelectionForeColor = System.Drawing.SystemColors.HighlightText
+        DataGridViewCellStyle35.WrapMode = System.Windows.Forms.DataGridViewTriState.[True]
+        Me.dgvUsers.ColumnHeadersDefaultCellStyle = DataGridViewCellStyle35
         Me.dgvUsers.ColumnHeadersHeight = 30
         Me.dgvUsers.Location = New System.Drawing.Point(24, 111)
         Me.dgvUsers.Name = "dgvUsers"
-        DataGridViewCellStyle12.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft
-        DataGridViewCellStyle12.BackColor = System.Drawing.SystemColors.Control
-        DataGridViewCellStyle12.Font = New System.Drawing.Font("Franklin Gothic Medium", 12.0!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        DataGridViewCellStyle12.ForeColor = System.Drawing.SystemColors.WindowText
-        DataGridViewCellStyle12.SelectionBackColor = System.Drawing.Color.DarkOrange
-        DataGridViewCellStyle12.SelectionForeColor = System.Drawing.SystemColors.HighlightText
-        DataGridViewCellStyle12.WrapMode = System.Windows.Forms.DataGridViewTriState.[True]
-        Me.dgvUsers.RowHeadersDefaultCellStyle = DataGridViewCellStyle12
+        DataGridViewCellStyle36.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft
+        DataGridViewCellStyle36.BackColor = System.Drawing.SystemColors.Control
+        DataGridViewCellStyle36.Font = New System.Drawing.Font("Franklin Gothic Medium", 12.0!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        DataGridViewCellStyle36.ForeColor = System.Drawing.SystemColors.WindowText
+        DataGridViewCellStyle36.SelectionBackColor = System.Drawing.Color.DarkOrange
+        DataGridViewCellStyle36.SelectionForeColor = System.Drawing.SystemColors.HighlightText
+        DataGridViewCellStyle36.WrapMode = System.Windows.Forms.DataGridViewTriState.[True]
+        Me.dgvUsers.RowHeadersDefaultCellStyle = DataGridViewCellStyle36
         Me.dgvUsers.RowTemplate.DefaultCellStyle.ForeColor = System.Drawing.Color.Black
         Me.dgvUsers.RowTemplate.DefaultCellStyle.SelectionBackColor = System.Drawing.Color.DarkOrange
         Me.dgvUsers.Size = New System.Drawing.Size(781, 350)
@@ -2100,6 +2072,38 @@ Partial Class fmMain
         Me.PictureBox36.Size = New System.Drawing.Size(643, 56)
         Me.PictureBox36.TabIndex = 5
         Me.PictureBox36.TabStop = False
+        '
+        'btnEditUser
+        '
+        Me.btnEditUser.BackColor = System.Drawing.Color.Transparent
+        Me.btnEditUser.Enabled = False
+        Me.btnEditUser.FlatAppearance.BorderColor = System.Drawing.Color.DimGray
+        Me.btnEditUser.FlatAppearance.CheckedBackColor = System.Drawing.Color.Chocolate
+        Me.btnEditUser.FlatAppearance.MouseDownBackColor = System.Drawing.Color.Chocolate
+        Me.btnEditUser.FlatAppearance.MouseOverBackColor = System.Drawing.Color.Chocolate
+        Me.btnEditUser.FlatStyle = System.Windows.Forms.FlatStyle.Flat
+        Me.btnEditUser.Location = New System.Drawing.Point(557, 486)
+        Me.btnEditUser.Name = "btnEditUser"
+        Me.btnEditUser.Size = New System.Drawing.Size(114, 56)
+        Me.btnEditUser.TabIndex = 37
+        Me.btnEditUser.Text = "Edit"
+        Me.btnEditUser.UseVisualStyleBackColor = False
+        '
+        'btnDeleteUser
+        '
+        Me.btnDeleteUser.BackColor = System.Drawing.Color.Transparent
+        Me.btnDeleteUser.Enabled = False
+        Me.btnDeleteUser.FlatAppearance.BorderColor = System.Drawing.Color.DimGray
+        Me.btnDeleteUser.FlatAppearance.CheckedBackColor = System.Drawing.Color.Chocolate
+        Me.btnDeleteUser.FlatAppearance.MouseDownBackColor = System.Drawing.Color.Chocolate
+        Me.btnDeleteUser.FlatAppearance.MouseOverBackColor = System.Drawing.Color.Chocolate
+        Me.btnDeleteUser.FlatStyle = System.Windows.Forms.FlatStyle.Flat
+        Me.btnDeleteUser.Location = New System.Drawing.Point(691, 486)
+        Me.btnDeleteUser.Name = "btnDeleteUser"
+        Me.btnDeleteUser.Size = New System.Drawing.Size(114, 56)
+        Me.btnDeleteUser.TabIndex = 38
+        Me.btnDeleteUser.Text = "Delete"
+        Me.btnDeleteUser.UseVisualStyleBackColor = False
         '
         'btnDummyEditUser
         '
@@ -2648,6 +2652,42 @@ Partial Class fmMain
         Me.lblDummyRegisterUser.TabStop = True
         Me.lblDummyRegisterUser.Text = "Register User"
         Me.lblDummyRegisterUser.TextAlign = System.Drawing.ContentAlignment.MiddleLeft
+        Me.Users.SetToolTip(Me.lblDummyRegisterUser, "Register users can only be accessed by administrators")
+        '
+        'Label1
+        '
+        Me.Label1.BackColor = System.Drawing.Color.Transparent
+        Me.Label1.Font = New System.Drawing.Font("Franklin Gothic Book", 9.75!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.Label1.ForeColor = System.Drawing.Color.PeachPuff
+        Me.Label1.Location = New System.Drawing.Point(262, 63)
+        Me.Label1.Margin = New System.Windows.Forms.Padding(0)
+        Me.Label1.Name = "Label1"
+        Me.Label1.Size = New System.Drawing.Size(606, 28)
+        Me.Label1.TabIndex = 53
+        Me.Label1.Text = "Arduino-based waste material detector bin with fingerprint identification"
+        Me.Label1.TextAlign = System.Drawing.ContentAlignment.MiddleLeft
+        '
+        'Label49
+        '
+        Me.Label49.BackColor = System.Drawing.Color.Transparent
+        Me.Label49.Font = New System.Drawing.Font("Franklin Gothic Book", 16.0!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.Label49.ForeColor = System.Drawing.Color.White
+        Me.Label49.Location = New System.Drawing.Point(261, 30)
+        Me.Label49.Margin = New System.Windows.Forms.Padding(0)
+        Me.Label49.Name = "Label49"
+        Me.Label49.Size = New System.Drawing.Size(607, 36)
+        Me.Label49.TabIndex = 52
+        Me.Label49.Text = "Garbage Segregation System"
+        Me.Label49.TextAlign = System.Drawing.ContentAlignment.MiddleLeft
+        '
+        'PictureBox49
+        '
+        Me.PictureBox49.BackgroundImage = CType(resources.GetObject("PictureBox49.BackgroundImage"), System.Drawing.Image)
+        Me.PictureBox49.Location = New System.Drawing.Point(32, 28)
+        Me.PictureBox49.Name = "PictureBox49"
+        Me.PictureBox49.Size = New System.Drawing.Size(60, 58)
+        Me.PictureBox49.TabIndex = 54
+        Me.PictureBox49.TabStop = False
         '
         'fmMain
         '
@@ -2655,10 +2695,12 @@ Partial Class fmMain
         Me.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font
         Me.BackgroundImage = CType(resources.GetObject("$this.BackgroundImage"), System.Drawing.Image)
         Me.ClientSize = New System.Drawing.Size(1123, 740)
+        Me.Controls.Add(Me.PictureBox49)
+        Me.Controls.Add(Me.Label1)
+        Me.Controls.Add(Me.Label49)
         Me.Controls.Add(Me.PictureBox35)
         Me.Controls.Add(Me.lblBrowseUsers)
         Me.Controls.Add(Me.PictureBox34)
-        Me.Controls.Add(Me.lblRegisterUsers)
         Me.Controls.Add(Me.PictureBox7)
         Me.Controls.Add(Me.lblRegisterStudents)
         Me.Controls.Add(Me.PictureBox6)
@@ -2674,15 +2716,16 @@ Partial Class fmMain
         Me.Controls.Add(Me.btnMinimize)
         Me.Controls.Add(Me.lblFormTitle)
         Me.Controls.Add(Me.PictureBox2)
+        Me.Controls.Add(Me.lblRegisterUsers)
+        Me.Controls.Add(Me.lblDummyRegisterUser)
+        Me.Controls.Add(Me.PictureBox1)
+        Me.Controls.Add(Me.gbBrowseSortedWaste)
+        Me.Controls.Add(Me.gbEditStudents)
+        Me.Controls.Add(Me.gbBrowseUsers)
         Me.Controls.Add(Me.gbBrowseStudents)
         Me.Controls.Add(Me.gbEditUser)
         Me.Controls.Add(Me.gbRegisterUser)
         Me.Controls.Add(Me.gbRegisterStudents)
-        Me.Controls.Add(Me.gbBrowseSortedWaste)
-        Me.Controls.Add(Me.gbEditStudents)
-        Me.Controls.Add(Me.lblDummyRegisterUser)
-        Me.Controls.Add(Me.PictureBox1)
-        Me.Controls.Add(Me.gbBrowseUsers)
         Me.Font = New System.Drawing.Font("Franklin Gothic Medium", 12.0!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
         Me.ForeColor = System.Drawing.Color.White
         Me.FormBorderStyle = System.Windows.Forms.FormBorderStyle.None
@@ -2755,6 +2798,7 @@ Partial Class fmMain
         CType(Me.PictureBox46, System.ComponentModel.ISupportInitialize).EndInit()
         CType(Me.PictureBox47, System.ComponentModel.ISupportInitialize).EndInit()
         CType(Me.PictureBox48, System.ComponentModel.ISupportInitialize).EndInit()
+        CType(Me.PictureBox49, System.ComponentModel.ISupportInitialize).EndInit()
         Me.ResumeLayout(False)
 
     End Sub
@@ -2945,4 +2989,7 @@ Partial Class fmMain
     Friend WithEvents btnDummyDeleteUser As Button
     Friend WithEvents btnDummyEditUser As Button
     Friend WithEvents lblDummyRegisterUser As LinkLabel
+    Friend WithEvents Label1 As Label
+    Friend WithEvents Label49 As Label
+    Friend WithEvents PictureBox49 As PictureBox
 End Class
