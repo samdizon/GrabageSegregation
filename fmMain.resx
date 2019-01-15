@@ -281,7 +281,7 @@
     <value>17, 17</value>
   </metadata>
   <metadata name="RegisterStudentsTooltip.TrayLocation" type="System.Drawing.Point, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a">
-    <value>299, 17</value>
+    <value>418, 17</value>
   </metadata>
   <metadata name="GarbageInfoTolltip.TrayLocation" type="System.Drawing.Point, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a">
     <value>146, 17</value>
@@ -309,10 +309,10 @@
 </value>
   </data>
   <metadata name="RegisterStudentsTooltip.TrayLocation" type="System.Drawing.Point, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a">
-    <value>299, 17</value>
+    <value>418, 17</value>
   </metadata>
   <metadata name="Users.TrayLocation" type="System.Drawing.Point, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a">
-    <value>398, 17</value>
+    <value>309, 18</value>
   </metadata>
   <data name="PictureBox34.Image" type="System.Drawing.Bitmap, System.Drawing" mimetype="application/x-microsoft.net.object.bytearray.base64">
     <value>
@@ -346,10 +346,24 @@
 </value>
   </data>
   <metadata name="Users.TrayLocation" type="System.Drawing.Point, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a">
-    <value>398, 17</value>
+    <value>309, 18</value>
   </metadata>
+  <data name="PictureBox49.BackgroundImage" type="System.Drawing.Bitmap, System.Drawing" mimetype="application/x-microsoft.net.object.bytearray.base64">
+    <value>
+        iVBORw0KGgoAAAANSUhEUgAAAFMAAABBCAIAAAAizg/HAAAABGdBTUEAALGPC/xhBQAAAAlwSFlzAAAO
+        wwAADsMBx2+oZAAAAcRJREFUeF7lmTFOA0EQBP0RJJ7Cz+ABzojgB2Q8AgiJCZAcACEB8IBjTlgW1Awj
+        wfZGvaqkyud1X+zNsjWF7gPdB7oPdB/oPtB9oPtA94HuA90Hug90H+g+0H2g+0D3gT6Xq5Pl+WbJJ2J8
+        hIcnQ5/IxdH+PX878QC+MhP6RD5e1td7vF4uj3/00Ihx4oHvfTL0Wdyfr+/2+sB+ID6KE4+hT4Mu4O5s
+        fQfhiQvxEwroAmYc/IQCuozxxeM3tNBljO8ev6GFLmN89/gNLXQZeTdKr2WRQpeRd6P0WhYpdBl5N0qv
+        ZZFCl5F3o/RaFil0GXk3Sq9lkUKXkXej9FoWKXQZeTdKr2WRQpeRd6P0WhYpdBl5N0qvZZFCl5F3o/Ra
+        Fil0GXk3Sq9lkUKXkXej9FoWKXQZeTdKr2WRQpeRd6P0WhYpdBl5N0qvZZFCl5F3o/RaFil0GXk3Sq9l
+        kUKXkXej9FoWKXQZ47vHb2ihyxjfPX5DC13G227d/e//CeOLceISdB10Gben6/TBM+fflS/oSuLl35/2
+        7/DXE1+c+doB3Qe6D3Qf6D7QfaD7QPeB7gPdB7oPdB/oPtB9oPtA94HuwnbzCUuSZYoyL9hUAAAAAElF
+        TkSuQmCC
+</value>
+  </data>
   <metadata name="$this.TrayHeight" type="System.Int32, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089">
-    <value>127</value>
+    <value>71</value>
   </metadata>
   <data name="$this.BackgroundImage" type="System.Drawing.Bitmap, System.Drawing" mimetype="application/x-microsoft.net.object.bytearray.base64">
     <value>
