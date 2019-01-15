@@ -8,9 +8,29 @@ Module Declarations
     Public dbDataTable As New DataTable
     Public queryCommand As New OleDbCommand
 
+    'connection declaration
+    Public PortName As String
+    Public BaudRate, DataBits, ReadTimeout As String
+
+
+
     Sub ConnectDB()
         dbConnection.ConnectionString = "Provider=SQLNCLI11;Server=(LocalDB)\MSSQLLocalDB;Database=GSS;Trusted_Connection=yes;"
-        Return
+    End Sub
+
+    Sub GetSettings()
+        Dim sql As String
+        sql = "Select * From Settings"
+
+        dbAdapter = New OleDbDataAdapter(sql, dbConnection)
+        dbDataTable = New DataTable
+        dbAdapter.Fill(dbDataTable)
+
+        DataBits = Trim(CInt(dbDataTable.Rows(0)("DataBits")))
+        BaudRate = Trim(CInt(dbDataTable.Rows(0)("PortBaudRate")))
+        ReadTimeout = Trim(CInt(dbDataTable.Rows(0)("ReadTimeout")))
+        PortName = Trim(dbDataTable.Rows(0)("PortName"))
+
     End Sub
 
 End Module

@@ -1,9 +1,23 @@
 ﻿Imports System.Data.OleDb
+Imports System.IO.Ports
+
 Public Class frmSettings
     Dim SettingsID As Integer
+
     Private Sub frmSettings_Load(sender As Object, e As EventArgs) Handles MyBase.Load
         ConnectDB()
         GetSettings()
+
+        For Each sp As String In My.Computer.Ports.SerialPortNames
+            comboComPort.Items.Add(sp)
+        Next
+
+        If comboComPort.Items.Count <> 0 Then
+            comboComPort.SelectedIndex = 0
+        Else
+            MsgBox("No port available, please call your system administrator", MsgBoxStyle.Critical, "Device connection error")
+            Me.Hide()
+        End If
     End Sub
 
     Private Sub GetSettings()
@@ -14,15 +28,6 @@ Public Class frmSettings
             dbDataTable = New DataTable
             dbAdapter.Fill(dbDataTable)
 
-
-            'Dim i, SettingsRecordIndex As Integer
-
-            'i = dbDataTable.Rows()
-
-            'StudentRecordIndex = dgvStudents.Columns("ID").Index
-            'lblEditStudentID.Text = Trim(dgvStudents.Item(StudentRecordIndex, i).Value.ToString)
-
-            'TotalCorrect = dbDataTable.Rows(0)(0).ToString
             txtDataBits.Text = dbDataTable.Rows(0)("DataBits")
             txtPortBaudRate.Text = dbDataTable.Rows(0)("PortBaudRate")
             txtReadTimeout.Text = dbDataTable.Rows(0)("ReadTimeout")
@@ -53,7 +58,7 @@ Public Class frmSettings
             MsgBox("Please call your system administrator, the device is not recognized", MsgBoxStyle.Critical)
             End
         Else
-            PortName = "Dummy"
+            PortName = Trim(comboComPort.Text)
             DataBits = CInt(Trim(txtDataBits.Text))
             PortBaudRate = CInt(Trim(txtPortBaudRate.Text))
             ReadTimeout = CInt(Trim(txtReadTimeout.Text))
