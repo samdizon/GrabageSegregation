@@ -28,19 +28,19 @@ Partial Class frmSettings
         Me.Label2 = New System.Windows.Forms.Label()
         Me.lblComport = New System.Windows.Forms.Label()
         Me.Label1 = New System.Windows.Forms.Label()
-        Me.ComboBox1 = New System.Windows.Forms.ComboBox()
+        Me.comboComPort = New System.Windows.Forms.ComboBox()
         Me.PictureBox2 = New System.Windows.Forms.PictureBox()
         Me.Label3 = New System.Windows.Forms.Label()
-        Me.txtSearchStudents = New System.Windows.Forms.TextBox()
+        Me.txtDataBits = New System.Windows.Forms.TextBox()
         Me.pbxUsername = New System.Windows.Forms.PictureBox()
-        Me.TextBox1 = New System.Windows.Forms.TextBox()
+        Me.txtPortBaudRate = New System.Windows.Forms.TextBox()
         Me.PictureBox3 = New System.Windows.Forms.PictureBox()
         Me.Label4 = New System.Windows.Forms.Label()
-        Me.TextBox2 = New System.Windows.Forms.TextBox()
+        Me.txtReadTimeout = New System.Windows.Forms.TextBox()
         Me.PictureBox4 = New System.Windows.Forms.PictureBox()
         Me.Label5 = New System.Windows.Forms.Label()
         Me.btnSaveSettings = New System.Windows.Forms.Button()
-        Me.Button1 = New System.Windows.Forms.Button()
+        Me.btnCancel = New System.Windows.Forms.Button()
         CType(Me.PictureBox1, System.ComponentModel.ISupportInitialize).BeginInit()
         CType(Me.PictureBox2, System.ComponentModel.ISupportInitialize).BeginInit()
         CType(Me.pbxUsername, System.ComponentModel.ISupportInitialize).BeginInit()
@@ -51,7 +51,7 @@ Partial Class frmSettings
         'PictureBox1
         '
         Me.PictureBox1.BackgroundImage = CType(resources.GetObject("PictureBox1.BackgroundImage"), System.Drawing.Image)
-        Me.PictureBox1.Location = New System.Drawing.Point(106, 23)
+        Me.PictureBox1.Location = New System.Drawing.Point(351, 84)
         Me.PictureBox1.Name = "PictureBox1"
         Me.PictureBox1.Size = New System.Drawing.Size(84, 81)
         Me.PictureBox1.TabIndex = 0
@@ -62,7 +62,7 @@ Partial Class frmSettings
         Me.Label6.BackColor = System.Drawing.Color.Transparent
         Me.Label6.Font = New System.Drawing.Font("Franklin Gothic Book", 16.0!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
         Me.Label6.ForeColor = System.Drawing.Color.White
-        Me.Label6.Location = New System.Drawing.Point(202, 32)
+        Me.Label6.Location = New System.Drawing.Point(447, 93)
         Me.Label6.Margin = New System.Windows.Forms.Padding(0)
         Me.Label6.Name = "Label6"
         Me.Label6.Size = New System.Drawing.Size(221, 36)
@@ -74,7 +74,7 @@ Partial Class frmSettings
         '
         Me.Label2.BorderStyle = System.Windows.Forms.BorderStyle.Fixed3D
         Me.Label2.FlatStyle = System.Windows.Forms.FlatStyle.Flat
-        Me.Label2.Location = New System.Drawing.Point(62, 118)
+        Me.Label2.Location = New System.Drawing.Point(307, 179)
         Me.Label2.Name = "Label2"
         Me.Label2.Size = New System.Drawing.Size(500, 2)
         Me.Label2.TabIndex = 49
@@ -84,7 +84,7 @@ Partial Class frmSettings
         Me.lblComport.BackColor = System.Drawing.Color.Transparent
         Me.lblComport.Font = New System.Drawing.Font("Franklin Gothic Medium", 12.0!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
         Me.lblComport.ForeColor = System.Drawing.Color.White
-        Me.lblComport.Location = New System.Drawing.Point(100, 125)
+        Me.lblComport.Location = New System.Drawing.Point(345, 197)
         Me.lblComport.Margin = New System.Windows.Forms.Padding(0)
         Me.lblComport.Name = "lblComport"
         Me.lblComport.Size = New System.Drawing.Size(418, 42)
@@ -97,7 +97,7 @@ Partial Class frmSettings
         Me.Label1.BackColor = System.Drawing.Color.Transparent
         Me.Label1.Font = New System.Drawing.Font("Franklin Gothic Book", 9.75!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
         Me.Label1.ForeColor = System.Drawing.Color.PeachPuff
-        Me.Label1.Location = New System.Drawing.Point(203, 66)
+        Me.Label1.Location = New System.Drawing.Point(448, 127)
         Me.Label1.Margin = New System.Windows.Forms.Padding(0)
         Me.Label1.Name = "Label1"
         Me.Label1.Size = New System.Drawing.Size(314, 47)
@@ -105,19 +105,19 @@ Partial Class frmSettings
         Me.Label1.Text = "Arduino-based waste material detector bin with fingerprint identification"
         Me.Label1.TextAlign = System.Drawing.ContentAlignment.MiddleLeft
         '
-        'ComboBox1
+        'comboComPort
         '
-        Me.ComboBox1.ForeColor = System.Drawing.Color.DarkOrange
-        Me.ComboBox1.FormattingEnabled = True
-        Me.ComboBox1.Location = New System.Drawing.Point(113, 180)
-        Me.ComboBox1.Name = "ComboBox1"
-        Me.ComboBox1.Size = New System.Drawing.Size(390, 29)
-        Me.ComboBox1.TabIndex = 2
+        Me.comboComPort.ForeColor = System.Drawing.Color.DarkOrange
+        Me.comboComPort.FormattingEnabled = True
+        Me.comboComPort.Location = New System.Drawing.Point(358, 252)
+        Me.comboComPort.Name = "comboComPort"
+        Me.comboComPort.Size = New System.Drawing.Size(390, 29)
+        Me.comboComPort.TabIndex = 1
         '
         'PictureBox2
         '
         Me.PictureBox2.BackColor = System.Drawing.Color.White
-        Me.PictureBox2.Location = New System.Drawing.Point(100, 166)
+        Me.PictureBox2.Location = New System.Drawing.Point(345, 238)
         Me.PictureBox2.Name = "PictureBox2"
         Me.PictureBox2.Size = New System.Drawing.Size(418, 57)
         Me.PictureBox2.TabIndex = 52
@@ -128,49 +128,49 @@ Partial Class frmSettings
         Me.Label3.BackColor = System.Drawing.Color.Transparent
         Me.Label3.Font = New System.Drawing.Font("Franklin Gothic Medium", 12.0!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
         Me.Label3.ForeColor = System.Drawing.Color.White
-        Me.Label3.Location = New System.Drawing.Point(100, 225)
+        Me.Label3.Location = New System.Drawing.Point(345, 297)
         Me.Label3.Margin = New System.Windows.Forms.Padding(0)
         Me.Label3.Name = "Label3"
         Me.Label3.Size = New System.Drawing.Size(418, 31)
         Me.Label3.TabIndex = 53
-        Me.Label3.Text = "Port name"
+        Me.Label3.Text = "Data bits"
         Me.Label3.TextAlign = System.Drawing.ContentAlignment.MiddleLeft
         '
-        'txtSearchStudents
+        'txtDataBits
         '
-        Me.txtSearchStudents.BackColor = System.Drawing.Color.White
-        Me.txtSearchStudents.BorderStyle = System.Windows.Forms.BorderStyle.None
-        Me.txtSearchStudents.Font = New System.Drawing.Font("Franklin Gothic Medium", 12.0!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.txtSearchStudents.ForeColor = System.Drawing.Color.DarkOrange
-        Me.txtSearchStudents.Location = New System.Drawing.Point(113, 278)
-        Me.txtSearchStudents.Name = "txtSearchStudents"
-        Me.txtSearchStudents.Size = New System.Drawing.Size(390, 19)
-        Me.txtSearchStudents.TabIndex = 3
+        Me.txtDataBits.BackColor = System.Drawing.Color.White
+        Me.txtDataBits.BorderStyle = System.Windows.Forms.BorderStyle.None
+        Me.txtDataBits.Font = New System.Drawing.Font("Franklin Gothic Medium", 12.0!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.txtDataBits.ForeColor = System.Drawing.Color.DarkOrange
+        Me.txtDataBits.Location = New System.Drawing.Point(358, 350)
+        Me.txtDataBits.Name = "txtDataBits"
+        Me.txtDataBits.Size = New System.Drawing.Size(390, 19)
+        Me.txtDataBits.TabIndex = 2
         '
         'pbxUsername
         '
         Me.pbxUsername.BackColor = System.Drawing.Color.White
-        Me.pbxUsername.Location = New System.Drawing.Point(100, 259)
+        Me.pbxUsername.Location = New System.Drawing.Point(345, 331)
         Me.pbxUsername.Name = "pbxUsername"
         Me.pbxUsername.Size = New System.Drawing.Size(418, 56)
         Me.pbxUsername.TabIndex = 55
         Me.pbxUsername.TabStop = False
         '
-        'TextBox1
+        'txtPortBaudRate
         '
-        Me.TextBox1.BackColor = System.Drawing.Color.White
-        Me.TextBox1.BorderStyle = System.Windows.Forms.BorderStyle.None
-        Me.TextBox1.Font = New System.Drawing.Font("Franklin Gothic Medium", 12.0!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.TextBox1.ForeColor = System.Drawing.Color.DarkOrange
-        Me.TextBox1.Location = New System.Drawing.Point(113, 371)
-        Me.TextBox1.Name = "TextBox1"
-        Me.TextBox1.Size = New System.Drawing.Size(390, 19)
-        Me.TextBox1.TabIndex = 4
+        Me.txtPortBaudRate.BackColor = System.Drawing.Color.White
+        Me.txtPortBaudRate.BorderStyle = System.Windows.Forms.BorderStyle.None
+        Me.txtPortBaudRate.Font = New System.Drawing.Font("Franklin Gothic Medium", 12.0!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.txtPortBaudRate.ForeColor = System.Drawing.Color.DarkOrange
+        Me.txtPortBaudRate.Location = New System.Drawing.Point(358, 443)
+        Me.txtPortBaudRate.Name = "txtPortBaudRate"
+        Me.txtPortBaudRate.Size = New System.Drawing.Size(390, 19)
+        Me.txtPortBaudRate.TabIndex = 3
         '
         'PictureBox3
         '
         Me.PictureBox3.BackColor = System.Drawing.Color.White
-        Me.PictureBox3.Location = New System.Drawing.Point(100, 352)
+        Me.PictureBox3.Location = New System.Drawing.Point(345, 424)
         Me.PictureBox3.Name = "PictureBox3"
         Me.PictureBox3.Size = New System.Drawing.Size(418, 56)
         Me.PictureBox3.TabIndex = 58
@@ -181,7 +181,7 @@ Partial Class frmSettings
         Me.Label4.BackColor = System.Drawing.Color.Transparent
         Me.Label4.Font = New System.Drawing.Font("Franklin Gothic Medium", 12.0!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
         Me.Label4.ForeColor = System.Drawing.Color.White
-        Me.Label4.Location = New System.Drawing.Point(100, 318)
+        Me.Label4.Location = New System.Drawing.Point(345, 390)
         Me.Label4.Margin = New System.Windows.Forms.Padding(0)
         Me.Label4.Name = "Label4"
         Me.Label4.Size = New System.Drawing.Size(414, 31)
@@ -189,21 +189,21 @@ Partial Class frmSettings
         Me.Label4.Text = "Port Baud rate"
         Me.Label4.TextAlign = System.Drawing.ContentAlignment.MiddleLeft
         '
-        'TextBox2
+        'txtReadTimeout
         '
-        Me.TextBox2.BackColor = System.Drawing.Color.White
-        Me.TextBox2.BorderStyle = System.Windows.Forms.BorderStyle.None
-        Me.TextBox2.Font = New System.Drawing.Font("Franklin Gothic Medium", 12.0!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.TextBox2.ForeColor = System.Drawing.Color.DarkOrange
-        Me.TextBox2.Location = New System.Drawing.Point(113, 462)
-        Me.TextBox2.Name = "TextBox2"
-        Me.TextBox2.Size = New System.Drawing.Size(390, 19)
-        Me.TextBox2.TabIndex = 5
+        Me.txtReadTimeout.BackColor = System.Drawing.Color.White
+        Me.txtReadTimeout.BorderStyle = System.Windows.Forms.BorderStyle.None
+        Me.txtReadTimeout.Font = New System.Drawing.Font("Franklin Gothic Medium", 12.0!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.txtReadTimeout.ForeColor = System.Drawing.Color.DarkOrange
+        Me.txtReadTimeout.Location = New System.Drawing.Point(358, 534)
+        Me.txtReadTimeout.Name = "txtReadTimeout"
+        Me.txtReadTimeout.Size = New System.Drawing.Size(390, 19)
+        Me.txtReadTimeout.TabIndex = 4
         '
         'PictureBox4
         '
         Me.PictureBox4.BackColor = System.Drawing.Color.White
-        Me.PictureBox4.Location = New System.Drawing.Point(100, 443)
+        Me.PictureBox4.Location = New System.Drawing.Point(345, 515)
         Me.PictureBox4.Name = "PictureBox4"
         Me.PictureBox4.Size = New System.Drawing.Size(418, 56)
         Me.PictureBox4.TabIndex = 61
@@ -214,7 +214,7 @@ Partial Class frmSettings
         Me.Label5.BackColor = System.Drawing.Color.Transparent
         Me.Label5.Font = New System.Drawing.Font("Franklin Gothic Medium", 12.0!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
         Me.Label5.ForeColor = System.Drawing.Color.White
-        Me.Label5.Location = New System.Drawing.Point(100, 415)
+        Me.Label5.Location = New System.Drawing.Point(345, 487)
         Me.Label5.Margin = New System.Windows.Forms.Padding(0)
         Me.Label5.Name = "Label5"
         Me.Label5.Size = New System.Drawing.Size(418, 25)
@@ -231,28 +231,28 @@ Partial Class frmSettings
         Me.btnSaveSettings.FlatAppearance.MouseDownBackColor = System.Drawing.Color.Chocolate
         Me.btnSaveSettings.FlatAppearance.MouseOverBackColor = System.Drawing.Color.Chocolate
         Me.btnSaveSettings.FlatStyle = System.Windows.Forms.FlatStyle.Flat
-        Me.btnSaveSettings.Location = New System.Drawing.Point(322, 521)
+        Me.btnSaveSettings.Location = New System.Drawing.Point(567, 593)
         Me.btnSaveSettings.Name = "btnSaveSettings"
         Me.btnSaveSettings.Size = New System.Drawing.Size(196, 59)
-        Me.btnSaveSettings.TabIndex = 6
+        Me.btnSaveSettings.TabIndex = 5
         Me.btnSaveSettings.Text = "Save"
         Me.btnSaveSettings.UseVisualStyleBackColor = False
         '
-        'Button1
+        'btnCancel
         '
-        Me.Button1.BackColor = System.Drawing.Color.Transparent
-        Me.Button1.FlatAppearance.BorderColor = System.Drawing.Color.White
-        Me.Button1.FlatAppearance.BorderSize = 2
-        Me.Button1.FlatAppearance.CheckedBackColor = System.Drawing.Color.Chocolate
-        Me.Button1.FlatAppearance.MouseDownBackColor = System.Drawing.Color.Chocolate
-        Me.Button1.FlatAppearance.MouseOverBackColor = System.Drawing.Color.Chocolate
-        Me.Button1.FlatStyle = System.Windows.Forms.FlatStyle.Flat
-        Me.Button1.Location = New System.Drawing.Point(100, 521)
-        Me.Button1.Name = "Button1"
-        Me.Button1.Size = New System.Drawing.Size(204, 59)
-        Me.Button1.TabIndex = 7
-        Me.Button1.Text = "Cancel"
-        Me.Button1.UseVisualStyleBackColor = False
+        Me.btnCancel.BackColor = System.Drawing.Color.Transparent
+        Me.btnCancel.FlatAppearance.BorderColor = System.Drawing.Color.White
+        Me.btnCancel.FlatAppearance.BorderSize = 2
+        Me.btnCancel.FlatAppearance.CheckedBackColor = System.Drawing.Color.Chocolate
+        Me.btnCancel.FlatAppearance.MouseDownBackColor = System.Drawing.Color.Chocolate
+        Me.btnCancel.FlatAppearance.MouseOverBackColor = System.Drawing.Color.Chocolate
+        Me.btnCancel.FlatStyle = System.Windows.Forms.FlatStyle.Flat
+        Me.btnCancel.Location = New System.Drawing.Point(345, 593)
+        Me.btnCancel.Name = "btnCancel"
+        Me.btnCancel.Size = New System.Drawing.Size(204, 59)
+        Me.btnCancel.TabIndex = 6
+        Me.btnCancel.Text = "Cancel"
+        Me.btnCancel.UseVisualStyleBackColor = False
         '
         'frmSettings
         '
@@ -260,19 +260,19 @@ Partial Class frmSettings
         Me.AutoScaleDimensions = New System.Drawing.SizeF(9.0!, 21.0!)
         Me.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font
         Me.BackColor = System.Drawing.Color.DarkOrange
-        Me.ClientSize = New System.Drawing.Size(638, 704)
-        Me.Controls.Add(Me.Button1)
+        Me.ClientSize = New System.Drawing.Size(1126, 740)
+        Me.Controls.Add(Me.btnCancel)
         Me.Controls.Add(Me.btnSaveSettings)
-        Me.Controls.Add(Me.TextBox2)
+        Me.Controls.Add(Me.txtReadTimeout)
         Me.Controls.Add(Me.PictureBox4)
         Me.Controls.Add(Me.Label5)
-        Me.Controls.Add(Me.TextBox1)
+        Me.Controls.Add(Me.txtPortBaudRate)
         Me.Controls.Add(Me.PictureBox3)
         Me.Controls.Add(Me.Label4)
-        Me.Controls.Add(Me.txtSearchStudents)
+        Me.Controls.Add(Me.txtDataBits)
         Me.Controls.Add(Me.pbxUsername)
         Me.Controls.Add(Me.Label3)
-        Me.Controls.Add(Me.ComboBox1)
+        Me.Controls.Add(Me.comboComPort)
         Me.Controls.Add(Me.Label1)
         Me.Controls.Add(Me.Label2)
         Me.Controls.Add(Me.lblComport)
@@ -301,17 +301,17 @@ Partial Class frmSettings
     Friend WithEvents Label2 As Label
     Friend WithEvents lblComport As Label
     Friend WithEvents Label1 As Label
-    Friend WithEvents ComboBox1 As ComboBox
+    Friend WithEvents comboComPort As ComboBox
     Friend WithEvents PictureBox2 As PictureBox
     Friend WithEvents Label3 As Label
-    Friend WithEvents txtSearchStudents As TextBox
+    Friend WithEvents txtDataBits As TextBox
     Friend WithEvents pbxUsername As PictureBox
-    Friend WithEvents TextBox1 As TextBox
+    Friend WithEvents txtPortBaudRate As TextBox
     Friend WithEvents PictureBox3 As PictureBox
     Friend WithEvents Label4 As Label
-    Friend WithEvents TextBox2 As TextBox
+    Friend WithEvents txtReadTimeout As TextBox
     Friend WithEvents PictureBox4 As PictureBox
     Friend WithEvents Label5 As Label
     Friend WithEvents btnSaveSettings As Button
-    Friend WithEvents Button1 As Button
+    Friend WithEvents btnCancel As Button
 End Class

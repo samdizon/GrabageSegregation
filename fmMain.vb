@@ -833,7 +833,7 @@ Public Class fmMain
     End Sub
 
     Private Sub lblSettings_LinkClicked(sender As Object, e As LinkLabelLinkClickedEventArgs) Handles lblSettings.LinkClicked
-
+        frmSettings.ShowDialog()
     End Sub
 
     Private Sub LinkLabel2_LinkClicked_1(sender As Object, e As LinkLabelLinkClickedEventArgs) Handles LinkLabel2.LinkClicked
