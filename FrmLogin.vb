@@ -25,6 +25,7 @@ Public Class frmLogin
         CreateDefaultRoles()
         CreateDefaultUsers()
         CreateDefaultSortingCategories()
+        CreateDefaultSettings()
         FormSetup()
     End Sub
 
@@ -85,8 +86,8 @@ Public Class frmLogin
             'If no settings found
             If (dbDataTable.Rows.Count = 0) Then
                 'insert settings
-                dbAdapter = New OleDbDataAdapter("INSERT INTO Settings (ApplicationName, PortName, DataBits, PortBaudRate, ReadTimeout) 
-                                                         VALUES ('Garbage Segregation System'), (''), ('8'), (9600), (10000)", dbConnection)
+                dbAdapter = New OleDbDataAdapter("INSERT INTO Settings (PortName, DataBits, PortBaudRate, ReadTimeout) 
+                                                         VALUES ((''), ('8'), (9600), (10000))", dbConnection)
                 dbAdapter.Fill(dbDataSet)
 
             End If
