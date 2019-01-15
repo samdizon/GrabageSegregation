@@ -74,7 +74,7 @@ Public Class frmLogin
     End Sub
 
 
-    Private Sub CreateDefaultUsers()
+    Private Sub CreateDefaultSettings()
 
         Try
             'Check preferences
@@ -98,7 +98,7 @@ Public Class frmLogin
         End Try
     End Sub
 
-    Private Sub CreateDefaultSettings()
+    Private Sub CreateDefaultUsers()
 
 
         'look for Administrator ID
