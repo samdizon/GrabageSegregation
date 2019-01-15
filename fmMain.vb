@@ -132,7 +132,9 @@ Public Class fmMain
         Dim sql = "SELECT 
                     Roles.Name,
 	                Users.*
-                    From Users INNER JOIN Roles ON Users.RoleID = Roles.ID"
+                    From Users INNER JOIN Roles ON Users.RoleID = Roles.ID
+                    WHERE Users.ID <> " & LoginUserID & " "
+
         dbAdapter = New OleDbDataAdapter(sql, dbConnection)
         dbDataTable = New DataTable
         dbAdapter.Fill(dbDataTable)
@@ -836,7 +838,7 @@ Public Class fmMain
         frmSettings.ShowDialog()
     End Sub
 
-    Private Sub LinkLabel2_LinkClicked_1(sender As Object, e As LinkLabelLinkClickedEventArgs) Handles LinkLabel2.LinkClicked
+    Private Sub LinkLabel2_LinkClicked_1(sender As Object, e As LinkLabelLinkClickedEventArgs) Handles lblBrowseUsers.LinkClicked
         gbRegisterStudents.Hide()
         gbEditStudents.Hide()
         gbBrowseStudents.Hide()
@@ -1005,7 +1007,7 @@ Public Class fmMain
 
     End Sub
 
-    Private Sub LinkLabel1_LinkClicked(sender As Object, e As LinkLabelLinkClickedEventArgs) Handles LinkLabel1.LinkClicked
+    Private Sub LinkLabel1_LinkClicked(sender As Object, e As LinkLabelLinkClickedEventArgs) Handles lblRegisterUsers.LinkClicked
         gbBrowseStudents.Hide()
         gbBrowseUsers.Hide()
         gbEditStudents.Hide()

@@ -164,15 +164,17 @@ Partial Class fmMain
         Me.btnUpdateSorting = New System.Windows.Forms.Button()
         Me.PictureBox26 = New System.Windows.Forms.PictureBox()
         Me.PictureBox34 = New System.Windows.Forms.PictureBox()
-        Me.LinkLabel1 = New System.Windows.Forms.LinkLabel()
+        Me.lblRegisterUsers = New System.Windows.Forms.LinkLabel()
         Me.PictureBox35 = New System.Windows.Forms.PictureBox()
-        Me.LinkLabel2 = New System.Windows.Forms.LinkLabel()
+        Me.lblBrowseUsers = New System.Windows.Forms.LinkLabel()
         Me.gbBrowseUsers = New System.Windows.Forms.GroupBox()
         Me.btnDeleteUser = New System.Windows.Forms.Button()
         Me.btnEditUser = New System.Windows.Forms.Button()
         Me.dgvUsers = New System.Windows.Forms.DataGridView()
         Me.btnSearchUser = New System.Windows.Forms.Button()
         Me.PictureBox36 = New System.Windows.Forms.PictureBox()
+        Me.btnDummyEditUser = New System.Windows.Forms.Button()
+        Me.btnDummyDeleteUser = New System.Windows.Forms.Button()
         Me.gbRegisterUser = New System.Windows.Forms.GroupBox()
         Me.btnGeneratePassword = New System.Windows.Forms.Button()
         Me.Label35 = New System.Windows.Forms.Label()
@@ -213,6 +215,7 @@ Partial Class fmMain
         Me.PictureBox46 = New System.Windows.Forms.PictureBox()
         Me.PictureBox47 = New System.Windows.Forms.PictureBox()
         Me.PictureBox48 = New System.Windows.Forms.PictureBox()
+        Me.lblDummyRegisterUser = New System.Windows.Forms.LinkLabel()
         CType(Me.PictureBox2, System.ComponentModel.ISupportInitialize).BeginInit()
         CType(Me.PictureBox1, System.ComponentModel.ISupportInitialize).BeginInit()
         CType(Me.PictureBox3, System.ComponentModel.ISupportInitialize).BeginInit()
@@ -1956,21 +1959,21 @@ Partial Class fmMain
         Me.PictureBox34.TabIndex = 42
         Me.PictureBox34.TabStop = False
         '
-        'LinkLabel1
+        'lblRegisterUsers
         '
-        Me.LinkLabel1.ActiveLinkColor = System.Drawing.Color.DarkOrange
-        Me.LinkLabel1.BackColor = System.Drawing.Color.Black
-        Me.LinkLabel1.Font = New System.Drawing.Font("Franklin Gothic Medium", 12.0!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.LinkLabel1.ForeColor = System.Drawing.Color.Chocolate
-        Me.LinkLabel1.LinkBehavior = System.Windows.Forms.LinkBehavior.HoverUnderline
-        Me.LinkLabel1.LinkColor = System.Drawing.Color.DarkOrange
-        Me.LinkLabel1.Location = New System.Drawing.Point(85, 436)
-        Me.LinkLabel1.Name = "LinkLabel1"
-        Me.LinkLabel1.Size = New System.Drawing.Size(127, 45)
-        Me.LinkLabel1.TabIndex = 41
-        Me.LinkLabel1.TabStop = True
-        Me.LinkLabel1.Text = "Register User"
-        Me.LinkLabel1.TextAlign = System.Drawing.ContentAlignment.MiddleLeft
+        Me.lblRegisterUsers.ActiveLinkColor = System.Drawing.Color.DarkOrange
+        Me.lblRegisterUsers.BackColor = System.Drawing.Color.Black
+        Me.lblRegisterUsers.Font = New System.Drawing.Font("Franklin Gothic Medium", 12.0!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.lblRegisterUsers.ForeColor = System.Drawing.Color.Chocolate
+        Me.lblRegisterUsers.LinkBehavior = System.Windows.Forms.LinkBehavior.HoverUnderline
+        Me.lblRegisterUsers.LinkColor = System.Drawing.Color.DarkOrange
+        Me.lblRegisterUsers.Location = New System.Drawing.Point(85, 436)
+        Me.lblRegisterUsers.Name = "lblRegisterUsers"
+        Me.lblRegisterUsers.Size = New System.Drawing.Size(127, 45)
+        Me.lblRegisterUsers.TabIndex = 41
+        Me.lblRegisterUsers.TabStop = True
+        Me.lblRegisterUsers.Text = "Register User"
+        Me.lblRegisterUsers.TextAlign = System.Drawing.ContentAlignment.MiddleLeft
         '
         'PictureBox35
         '
@@ -1981,31 +1984,33 @@ Partial Class fmMain
         Me.PictureBox35.TabIndex = 44
         Me.PictureBox35.TabStop = False
         '
-        'LinkLabel2
+        'lblBrowseUsers
         '
-        Me.LinkLabel2.ActiveLinkColor = System.Drawing.Color.DarkOrange
-        Me.LinkLabel2.BackColor = System.Drawing.Color.Black
-        Me.LinkLabel2.Font = New System.Drawing.Font("Franklin Gothic Medium", 12.0!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.LinkLabel2.ForeColor = System.Drawing.Color.Chocolate
-        Me.LinkLabel2.LinkBehavior = System.Windows.Forms.LinkBehavior.HoverUnderline
-        Me.LinkLabel2.LinkColor = System.Drawing.Color.DarkOrange
-        Me.LinkLabel2.Location = New System.Drawing.Point(85, 375)
-        Me.LinkLabel2.Name = "LinkLabel2"
-        Me.LinkLabel2.Size = New System.Drawing.Size(127, 45)
-        Me.LinkLabel2.TabIndex = 43
-        Me.LinkLabel2.TabStop = True
-        Me.LinkLabel2.Text = "Browse Users"
-        Me.LinkLabel2.TextAlign = System.Drawing.ContentAlignment.MiddleLeft
+        Me.lblBrowseUsers.ActiveLinkColor = System.Drawing.Color.DarkOrange
+        Me.lblBrowseUsers.BackColor = System.Drawing.Color.Black
+        Me.lblBrowseUsers.Font = New System.Drawing.Font("Franklin Gothic Medium", 12.0!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.lblBrowseUsers.ForeColor = System.Drawing.Color.Chocolate
+        Me.lblBrowseUsers.LinkBehavior = System.Windows.Forms.LinkBehavior.HoverUnderline
+        Me.lblBrowseUsers.LinkColor = System.Drawing.Color.DarkOrange
+        Me.lblBrowseUsers.Location = New System.Drawing.Point(85, 375)
+        Me.lblBrowseUsers.Name = "lblBrowseUsers"
+        Me.lblBrowseUsers.Size = New System.Drawing.Size(127, 45)
+        Me.lblBrowseUsers.TabIndex = 43
+        Me.lblBrowseUsers.TabStop = True
+        Me.lblBrowseUsers.Text = "Browse Users"
+        Me.lblBrowseUsers.TextAlign = System.Drawing.ContentAlignment.MiddleLeft
         '
         'gbBrowseUsers
         '
         Me.gbBrowseUsers.BackColor = System.Drawing.Color.Transparent
-        Me.gbBrowseUsers.Controls.Add(Me.btnDeleteUser)
-        Me.gbBrowseUsers.Controls.Add(Me.btnEditUser)
         Me.gbBrowseUsers.Controls.Add(Me.dgvUsers)
         Me.gbBrowseUsers.Controls.Add(Me.btnSearchUser)
         Me.gbBrowseUsers.Controls.Add(Me.txtSearchUsers)
         Me.gbBrowseUsers.Controls.Add(Me.PictureBox36)
+        Me.gbBrowseUsers.Controls.Add(Me.btnEditUser)
+        Me.gbBrowseUsers.Controls.Add(Me.btnDeleteUser)
+        Me.gbBrowseUsers.Controls.Add(Me.btnDummyEditUser)
+        Me.gbBrowseUsers.Controls.Add(Me.btnDummyDeleteUser)
         Me.gbBrowseUsers.Location = New System.Drawing.Point(257, 136)
         Me.gbBrowseUsers.Name = "gbBrowseUsers"
         Me.gbBrowseUsers.Size = New System.Drawing.Size(832, 574)
@@ -2095,6 +2100,40 @@ Partial Class fmMain
         Me.PictureBox36.Size = New System.Drawing.Size(643, 56)
         Me.PictureBox36.TabIndex = 5
         Me.PictureBox36.TabStop = False
+        '
+        'btnDummyEditUser
+        '
+        Me.btnDummyEditUser.BackColor = System.Drawing.Color.Transparent
+        Me.btnDummyEditUser.Enabled = False
+        Me.btnDummyEditUser.FlatAppearance.BorderColor = System.Drawing.Color.DimGray
+        Me.btnDummyEditUser.FlatAppearance.CheckedBackColor = System.Drawing.Color.Chocolate
+        Me.btnDummyEditUser.FlatAppearance.MouseDownBackColor = System.Drawing.Color.Chocolate
+        Me.btnDummyEditUser.FlatAppearance.MouseOverBackColor = System.Drawing.Color.Chocolate
+        Me.btnDummyEditUser.FlatStyle = System.Windows.Forms.FlatStyle.Flat
+        Me.btnDummyEditUser.Location = New System.Drawing.Point(557, 486)
+        Me.btnDummyEditUser.Name = "btnDummyEditUser"
+        Me.btnDummyEditUser.Size = New System.Drawing.Size(114, 56)
+        Me.btnDummyEditUser.TabIndex = 39
+        Me.btnDummyEditUser.Text = "Edit"
+        Me.Users.SetToolTip(Me.btnDummyEditUser, "Only administrators can edit user accounts")
+        Me.btnDummyEditUser.UseVisualStyleBackColor = False
+        '
+        'btnDummyDeleteUser
+        '
+        Me.btnDummyDeleteUser.BackColor = System.Drawing.Color.Transparent
+        Me.btnDummyDeleteUser.Enabled = False
+        Me.btnDummyDeleteUser.FlatAppearance.BorderColor = System.Drawing.Color.DimGray
+        Me.btnDummyDeleteUser.FlatAppearance.CheckedBackColor = System.Drawing.Color.Chocolate
+        Me.btnDummyDeleteUser.FlatAppearance.MouseDownBackColor = System.Drawing.Color.Chocolate
+        Me.btnDummyDeleteUser.FlatAppearance.MouseOverBackColor = System.Drawing.Color.Chocolate
+        Me.btnDummyDeleteUser.FlatStyle = System.Windows.Forms.FlatStyle.Flat
+        Me.btnDummyDeleteUser.Location = New System.Drawing.Point(691, 486)
+        Me.btnDummyDeleteUser.Name = "btnDummyDeleteUser"
+        Me.btnDummyDeleteUser.Size = New System.Drawing.Size(114, 56)
+        Me.btnDummyDeleteUser.TabIndex = 40
+        Me.btnDummyDeleteUser.Text = "Delete"
+        Me.Users.SetToolTip(Me.btnDummyDeleteUser, "Only administrators can delete user accounts")
+        Me.btnDummyDeleteUser.UseVisualStyleBackColor = False
         '
         'gbRegisterUser
         '
@@ -2594,6 +2633,22 @@ Partial Class fmMain
         Me.PictureBox48.TabIndex = 5
         Me.PictureBox48.TabStop = False
         '
+        'lblDummyRegisterUser
+        '
+        Me.lblDummyRegisterUser.ActiveLinkColor = System.Drawing.Color.DarkOrange
+        Me.lblDummyRegisterUser.BackColor = System.Drawing.Color.Black
+        Me.lblDummyRegisterUser.Font = New System.Drawing.Font("Franklin Gothic Medium", 12.0!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.lblDummyRegisterUser.ForeColor = System.Drawing.Color.Chocolate
+        Me.lblDummyRegisterUser.LinkBehavior = System.Windows.Forms.LinkBehavior.HoverUnderline
+        Me.lblDummyRegisterUser.LinkColor = System.Drawing.Color.DarkGray
+        Me.lblDummyRegisterUser.Location = New System.Drawing.Point(85, 437)
+        Me.lblDummyRegisterUser.Name = "lblDummyRegisterUser"
+        Me.lblDummyRegisterUser.Size = New System.Drawing.Size(127, 45)
+        Me.lblDummyRegisterUser.TabIndex = 48
+        Me.lblDummyRegisterUser.TabStop = True
+        Me.lblDummyRegisterUser.Text = "Register User"
+        Me.lblDummyRegisterUser.TextAlign = System.Drawing.ContentAlignment.MiddleLeft
+        '
         'fmMain
         '
         Me.AutoScaleDimensions = New System.Drawing.SizeF(9.0!, 21.0!)
@@ -2601,9 +2656,9 @@ Partial Class fmMain
         Me.BackgroundImage = CType(resources.GetObject("$this.BackgroundImage"), System.Drawing.Image)
         Me.ClientSize = New System.Drawing.Size(1123, 740)
         Me.Controls.Add(Me.PictureBox35)
-        Me.Controls.Add(Me.LinkLabel2)
+        Me.Controls.Add(Me.lblBrowseUsers)
         Me.Controls.Add(Me.PictureBox34)
-        Me.Controls.Add(Me.LinkLabel1)
+        Me.Controls.Add(Me.lblRegisterUsers)
         Me.Controls.Add(Me.PictureBox7)
         Me.Controls.Add(Me.lblRegisterStudents)
         Me.Controls.Add(Me.PictureBox6)
@@ -2619,13 +2674,14 @@ Partial Class fmMain
         Me.Controls.Add(Me.btnMinimize)
         Me.Controls.Add(Me.lblFormTitle)
         Me.Controls.Add(Me.PictureBox2)
-        Me.Controls.Add(Me.PictureBox1)
         Me.Controls.Add(Me.gbBrowseStudents)
         Me.Controls.Add(Me.gbEditUser)
         Me.Controls.Add(Me.gbRegisterUser)
         Me.Controls.Add(Me.gbRegisterStudents)
         Me.Controls.Add(Me.gbBrowseSortedWaste)
         Me.Controls.Add(Me.gbEditStudents)
+        Me.Controls.Add(Me.lblDummyRegisterUser)
+        Me.Controls.Add(Me.PictureBox1)
         Me.Controls.Add(Me.gbBrowseUsers)
         Me.Font = New System.Drawing.Font("Franklin Gothic Medium", 12.0!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
         Me.ForeColor = System.Drawing.Color.White
@@ -2830,9 +2886,9 @@ Partial Class fmMain
     Friend WithEvents PictureBox33 As PictureBox
     Friend WithEvents comboCategory As ComboBox
     Friend WithEvents PictureBox34 As PictureBox
-    Friend WithEvents LinkLabel1 As LinkLabel
+    Friend WithEvents lblRegisterUsers As LinkLabel
     Friend WithEvents PictureBox35 As PictureBox
-    Friend WithEvents LinkLabel2 As LinkLabel
+    Friend WithEvents lblBrowseUsers As LinkLabel
     Friend WithEvents gbBrowseUsers As GroupBox
     Friend WithEvents btnDeleteUser As Button
     Friend WithEvents btnEditUser As Button
@@ -2886,4 +2942,7 @@ Partial Class fmMain
     Friend WithEvents btnUpdateUser As Button
     Friend WithEvents txtEditUserFirstName As TextBox
     Friend WithEvents PictureBox48 As PictureBox
+    Friend WithEvents btnDummyDeleteUser As Button
+    Friend WithEvents btnDummyEditUser As Button
+    Friend WithEvents lblDummyRegisterUser As LinkLabel
 End Class
