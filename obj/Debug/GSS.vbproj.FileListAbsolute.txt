@@ -55,3 +55,4 @@ C:\Users\samdizon\Desktop\GSS\obj\Debug\GSS.vbproj.GenerateResource.Cache
 C:\Users\samdizon\Desktop\GSS\obj\Debug\GSS.exe
 C:\Users\samdizon\Desktop\GSS\obj\Debug\GSS.xml
 C:\Users\samdizon\Desktop\GSS\obj\Debug\GSS.pdb
+C:\Users\SAM\Desktop\GSS\obj\Debug\GSS.frmStudentsMain.resources
