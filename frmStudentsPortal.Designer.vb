@@ -1,5 +1,5 @@
 ﻿<Global.Microsoft.VisualBasic.CompilerServices.DesignerGenerated()> _
-Partial Class frmStudentsMain
+Partial Class frmStudentsPortal
     Inherits System.Windows.Forms.Form
 
     'Form overrides dispose to clean up the component list.
@@ -22,7 +22,8 @@ Partial Class frmStudentsMain
     'Do not modify it using the code editor.
     <System.Diagnostics.DebuggerStepThrough()> _
     Private Sub InitializeComponent()
-        Dim resources As System.ComponentModel.ComponentResourceManager = New System.ComponentModel.ComponentResourceManager(GetType(frmStudentsMain))
+        Me.components = New System.ComponentModel.Container()
+        Dim resources As System.ComponentModel.ComponentResourceManager = New System.ComponentModel.ComponentResourceManager(GetType(frmStudentsPortal))
         Me.panelAppTitle = New System.Windows.Forms.Panel()
         Me.Label3 = New System.Windows.Forms.Label()
         Me.PictureBox3 = New System.Windows.Forms.PictureBox()
@@ -30,6 +31,9 @@ Partial Class frmStudentsMain
         Me.Label5 = New System.Windows.Forms.Label()
         Me.Label7 = New System.Windows.Forms.Label()
         Me.PictureBox4 = New System.Windows.Forms.PictureBox()
+        Me.DetectFingerprintTimer = New System.Windows.Forms.Timer(Me.components)
+        Me.ArduinoSerialPort = New System.IO.Ports.SerialPort(Me.components)
+        Me.Label1 = New System.Windows.Forms.Label()
         Me.panelAppTitle.SuspendLayout()
         CType(Me.PictureBox3, System.ComponentModel.ISupportInitialize).BeginInit()
         CType(Me.PictureBox4, System.ComponentModel.ISupportInitialize).BeginInit()
@@ -37,6 +41,7 @@ Partial Class frmStudentsMain
         '
         'panelAppTitle
         '
+        Me.panelAppTitle.Controls.Add(Me.Label1)
         Me.panelAppTitle.Controls.Add(Me.Label3)
         Me.panelAppTitle.Controls.Add(Me.PictureBox3)
         Me.panelAppTitle.Controls.Add(Me.Label4)
@@ -116,6 +121,21 @@ Partial Class frmStudentsMain
         Me.PictureBox4.TabIndex = 53
         Me.PictureBox4.TabStop = False
         '
+        'DetectFingerprintTimer
+        '
+        Me.DetectFingerprintTimer.Interval = 500
+        '
+        'Label1
+        '
+        Me.Label1.Font = New System.Drawing.Font("Franklin Gothic Medium", 8.25!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.Label1.ForeColor = System.Drawing.Color.Pink
+        Me.Label1.Location = New System.Drawing.Point(20, 383)
+        Me.Label1.Name = "Label1"
+        Me.Label1.Size = New System.Drawing.Size(544, 27)
+        Me.Label1.TabIndex = 59
+        Me.Label1.Text = "Reading..."
+        Me.Label1.TextAlign = System.Drawing.ContentAlignment.MiddleCenter
+        '
         'frmStudentsMain
         '
         Me.AutoScaleDimensions = New System.Drawing.SizeF(9.0!, 21.0!)
@@ -144,4 +164,7 @@ Partial Class frmStudentsMain
     Friend WithEvents Label5 As Label
     Friend WithEvents Label7 As Label
     Friend WithEvents PictureBox4 As PictureBox
+    Friend WithEvents DetectFingerprintTimer As Timer
+    Friend WithEvents ArduinoSerialPort As IO.Ports.SerialPort
+    Friend WithEvents Label1 As Label
 End Class

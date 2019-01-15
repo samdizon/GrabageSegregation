@@ -81,10 +81,16 @@
     <Compile Include="fmMain.vb">
       <SubType>Form</SubType>
     </Compile>
-    <Compile Include="frmStudentsMain.Designer.vb">
-      <DependentUpon>frmStudentsMain.vb</DependentUpon>
+    <Compile Include="frmMainStudents.Designer.vb">
+      <DependentUpon>frmMainStudents.vb</DependentUpon>
     </Compile>
-    <Compile Include="frmStudentsMain.vb">
+    <Compile Include="frmMainStudents.vb">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="frmStudentsPortal.Designer.vb">
+      <DependentUpon>frmStudentsPortal.vb</DependentUpon>
+    </Compile>
+    <Compile Include="frmStudentsPortal.vb">
       <SubType>Form</SubType>
     </Compile>
     <Compile Include="frmAbout.Designer.vb">
@@ -132,8 +138,8 @@
     <EmbeddedResource Include="fmMain.resx">
       <DependentUpon>fmMain.vb</DependentUpon>
     </EmbeddedResource>
-    <EmbeddedResource Include="frmStudentsMain.resx">
-      <DependentUpon>frmStudentsMain.vb</DependentUpon>
+    <EmbeddedResource Include="frmStudentsPortal.resx">
+      <DependentUpon>frmStudentsPortal.vb</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="frmAbout.resx">
       <DependentUpon>frmAbout.vb</DependentUpon>

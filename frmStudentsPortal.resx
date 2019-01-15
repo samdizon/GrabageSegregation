@@ -173,4 +173,10 @@
         fcBgHzDYBwz2AYN9wGAfMNgHDPYBg33AYB8w2AcM9gGl5xn/ANl/OdLVykiDAAAAAElFTkSuQmCC
 </value>
   </data>
+  <metadata name="DetectFingerprintTimer.TrayLocation" type="System.Drawing.Point, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a">
+    <value>263, 22</value>
+  </metadata>
+  <metadata name="ArduinoSerialPort.TrayLocation" type="System.Drawing.Point, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a">
+    <value>116, 21</value>
+  </metadata>
 </root>
