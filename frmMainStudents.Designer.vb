@@ -22,6 +22,7 @@ Partial Class frmMainStudents
     'Do not modify it using the code editor.
     <System.Diagnostics.DebuggerStepThrough()>
     Private Sub InitializeComponent()
+        Me.components = New System.ComponentModel.Container()
         Dim resources As System.ComponentModel.ComponentResourceManager = New System.ComponentModel.ComponentResourceManager(GetType(frmMainStudents))
         Dim DataGridViewCellStyle1 As System.Windows.Forms.DataGridViewCellStyle = New System.Windows.Forms.DataGridViewCellStyle()
         Dim DataGridViewCellStyle2 As System.Windows.Forms.DataGridViewCellStyle = New System.Windows.Forms.DataGridViewCellStyle()
@@ -66,12 +67,14 @@ Partial Class frmMainStudents
         Me.PictureBox3 = New System.Windows.Forms.PictureBox()
         Me.PictureBox4 = New System.Windows.Forms.PictureBox()
         Me.PictureBox5 = New System.Windows.Forms.PictureBox()
-        Me.Button1 = New System.Windows.Forms.Button()
+        Me.btnThrow = New System.Windows.Forms.Button()
         Me.Label6 = New System.Windows.Forms.Label()
         Me.Button2 = New System.Windows.Forms.Button()
         Me.PictureBox6 = New System.Windows.Forms.PictureBox()
-        Me.Label12 = New System.Windows.Forms.Label()
-        Me.Label14 = New System.Windows.Forms.Label()
+        Me.lblStudentName = New System.Windows.Forms.Label()
+        Me.lblStudentYearSection = New System.Windows.Forms.Label()
+        Me.ArduinoSerialPort = New System.IO.Ports.SerialPort(Me.components)
+        Me.TimerThrowGB = New System.Windows.Forms.Timer(Me.components)
         CType(Me.PictureBox8, System.ComponentModel.ISupportInitialize).BeginInit()
         CType(Me.PictureBox9, System.ComponentModel.ISupportInitialize).BeginInit()
         CType(Me.PictureBox10, System.ComponentModel.ISupportInitialize).BeginInit()
@@ -339,7 +342,7 @@ Partial Class frmMainStudents
         '
         Me.lblTotalCorrect.BackColor = System.Drawing.Color.DarkOrange
         Me.lblTotalCorrect.Font = New System.Drawing.Font("Franklin Gothic Medium", 36.0!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.lblTotalCorrect.Location = New System.Drawing.Point(520, 461)
+        Me.lblTotalCorrect.Location = New System.Drawing.Point(535, 460)
         Me.lblTotalCorrect.Name = "lblTotalCorrect"
         Me.lblTotalCorrect.Size = New System.Drawing.Size(78, 60)
         Me.lblTotalCorrect.TabIndex = 47
@@ -553,20 +556,20 @@ Partial Class frmMainStudents
         Me.PictureBox5.TabIndex = 79
         Me.PictureBox5.TabStop = False
         '
-        'Button1
+        'btnThrow
         '
-        Me.Button1.BackColor = System.Drawing.Color.Transparent
-        Me.Button1.FlatAppearance.BorderColor = System.Drawing.Color.White
-        Me.Button1.FlatAppearance.CheckedBackColor = System.Drawing.Color.Chocolate
-        Me.Button1.FlatAppearance.MouseDownBackColor = System.Drawing.Color.Chocolate
-        Me.Button1.FlatAppearance.MouseOverBackColor = System.Drawing.Color.Chocolate
-        Me.Button1.FlatStyle = System.Windows.Forms.FlatStyle.Flat
-        Me.Button1.Location = New System.Drawing.Point(369, 600)
-        Me.Button1.Name = "Button1"
-        Me.Button1.Size = New System.Drawing.Size(284, 59)
-        Me.Button1.TabIndex = 80
-        Me.Button1.Text = "Throw garbage"
-        Me.Button1.UseVisualStyleBackColor = False
+        Me.btnThrow.BackColor = System.Drawing.Color.Transparent
+        Me.btnThrow.FlatAppearance.BorderColor = System.Drawing.Color.White
+        Me.btnThrow.FlatAppearance.CheckedBackColor = System.Drawing.Color.Chocolate
+        Me.btnThrow.FlatAppearance.MouseDownBackColor = System.Drawing.Color.Chocolate
+        Me.btnThrow.FlatAppearance.MouseOverBackColor = System.Drawing.Color.Chocolate
+        Me.btnThrow.FlatStyle = System.Windows.Forms.FlatStyle.Flat
+        Me.btnThrow.Location = New System.Drawing.Point(369, 600)
+        Me.btnThrow.Name = "btnThrow"
+        Me.btnThrow.Size = New System.Drawing.Size(284, 59)
+        Me.btnThrow.TabIndex = 80
+        Me.btnThrow.Text = "Throw garbage"
+        Me.btnThrow.UseVisualStyleBackColor = False
         '
         'Label6
         '
@@ -601,30 +604,34 @@ Partial Class frmMainStudents
         Me.PictureBox6.TabIndex = 83
         Me.PictureBox6.TabStop = False
         '
-        'Label12
+        'lblStudentName
         '
-        Me.Label12.BackColor = System.Drawing.Color.Transparent
-        Me.Label12.Font = New System.Drawing.Font("Franklin Gothic Book", 16.0!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.Label12.ForeColor = System.Drawing.Color.Bisque
-        Me.Label12.Location = New System.Drawing.Point(94, 21)
-        Me.Label12.Margin = New System.Windows.Forms.Padding(0)
-        Me.Label12.Name = "Label12"
-        Me.Label12.Size = New System.Drawing.Size(650, 37)
-        Me.Label12.TabIndex = 84
-        Me.Label12.Text = "Albert Pangiidian Dizon Jr."
-        Me.Label12.TextAlign = System.Drawing.ContentAlignment.MiddleLeft
+        Me.lblStudentName.BackColor = System.Drawing.Color.Transparent
+        Me.lblStudentName.Font = New System.Drawing.Font("Franklin Gothic Book", 16.0!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.lblStudentName.ForeColor = System.Drawing.Color.Bisque
+        Me.lblStudentName.Location = New System.Drawing.Point(94, 21)
+        Me.lblStudentName.Margin = New System.Windows.Forms.Padding(0)
+        Me.lblStudentName.Name = "lblStudentName"
+        Me.lblStudentName.Size = New System.Drawing.Size(650, 37)
+        Me.lblStudentName.TabIndex = 84
+        Me.lblStudentName.Text = "Albert Pangiidian Dizon Jr."
+        Me.lblStudentName.TextAlign = System.Drawing.ContentAlignment.MiddleLeft
         '
-        'Label14
+        'lblStudentYearSection
         '
-        Me.Label14.BackColor = System.Drawing.Color.Transparent
-        Me.Label14.Font = New System.Drawing.Font("Franklin Gothic Book", 12.0!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.Label14.ForeColor = System.Drawing.Color.PeachPuff
-        Me.Label14.Location = New System.Drawing.Point(93, 54)
-        Me.Label14.Margin = New System.Windows.Forms.Padding(0)
-        Me.Label14.Name = "Label14"
-        Me.Label14.Size = New System.Drawing.Size(650, 24)
-        Me.Label14.TabIndex = 85
-        Me.Label14.Text = "BSIT, 2-A"
+        Me.lblStudentYearSection.BackColor = System.Drawing.Color.Transparent
+        Me.lblStudentYearSection.Font = New System.Drawing.Font("Franklin Gothic Book", 12.0!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.lblStudentYearSection.ForeColor = System.Drawing.Color.PeachPuff
+        Me.lblStudentYearSection.Location = New System.Drawing.Point(93, 54)
+        Me.lblStudentYearSection.Margin = New System.Windows.Forms.Padding(0)
+        Me.lblStudentYearSection.Name = "lblStudentYearSection"
+        Me.lblStudentYearSection.Size = New System.Drawing.Size(650, 24)
+        Me.lblStudentYearSection.TabIndex = 85
+        Me.lblStudentYearSection.Text = "BSIT, 2-A"
+        '
+        'TimerThrowGB
+        '
+        Me.TimerThrowGB.Interval = 500
         '
         'frmMainStudents
         '
@@ -632,12 +639,12 @@ Partial Class frmMainStudents
         Me.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font
         Me.BackColor = System.Drawing.Color.DarkOrange
         Me.ClientSize = New System.Drawing.Size(1030, 727)
-        Me.Controls.Add(Me.Label14)
-        Me.Controls.Add(Me.Label12)
+        Me.Controls.Add(Me.lblStudentYearSection)
+        Me.Controls.Add(Me.lblStudentName)
         Me.Controls.Add(Me.PictureBox6)
         Me.Controls.Add(Me.Button2)
         Me.Controls.Add(Me.Label6)
-        Me.Controls.Add(Me.Button1)
+        Me.Controls.Add(Me.btnThrow)
         Me.Controls.Add(Me.PictureBox2)
         Me.Controls.Add(Me.btnClose)
         Me.Controls.Add(Me.btnMinimize)
@@ -744,10 +751,12 @@ Partial Class frmMainStudents
     Friend WithEvents PictureBox3 As PictureBox
     Friend WithEvents PictureBox4 As PictureBox
     Friend WithEvents PictureBox5 As PictureBox
-    Friend WithEvents Button1 As Button
+    Friend WithEvents btnThrow As Button
     Friend WithEvents Label6 As Label
     Friend WithEvents Button2 As Button
     Friend WithEvents PictureBox6 As PictureBox
-    Friend WithEvents Label12 As Label
-    Friend WithEvents Label14 As Label
+    Friend WithEvents lblStudentName As Label
+    Friend WithEvents lblStudentYearSection As Label
+    Friend WithEvents ArduinoSerialPort As IO.Ports.SerialPort
+    Friend WithEvents TimerThrowGB As Timer
 End Class

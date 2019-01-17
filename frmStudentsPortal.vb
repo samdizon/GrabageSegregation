@@ -100,7 +100,12 @@ Public Class frmStudentsPortal
             dbAdapter.Fill(dbDataTable)
 
             If dbDataTable.Rows.Count = 0 Then
+                ArduinoSerialPort.Close()
+                DetectFingerprintTimer.Stop()
+                DetectFingerprintTimer.Enabled = False
+                
                 MsgBox("Unrecognized fingerprint. Please check with your administrator if your biometric ID is registered.")
+
             Else
 
                 ArduinoSerialPort.Close()
