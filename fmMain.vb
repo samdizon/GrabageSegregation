@@ -4,6 +4,7 @@
 Public Class fmMain
     Public IncorrectPaper, IncorrectMetal, IncorrectPlastic, CorrectPaper, CorrectMetal, CorrectPlastic, TotalPaper, TotalPlastic, TotalMetal As Integer
     Public LoginUserID As Integer
+    Public LoginUsername, LoginFirstName, LoginMidleName, LoginLastName, LoginRoleName, LoginPassword As String
 
     Private Sub fmMain_Load(sender As Object, e As EventArgs) Handles MyBase.Load
         'txtSearchStudents.Select()
@@ -1014,6 +1015,7 @@ Public Class fmMain
         gbEditUser.Hide()
         gbRegisterStudents.Hide()
         gbRegisterUser.Show()
+
         dbAdapter = New OleDbDataAdapter("Select * from Roles", dbConnection)
 
         dbDataTable = New DataTable
@@ -1025,7 +1027,6 @@ Public Class fmMain
         comboRoles.DataSource = bindingSource
         comboRoles.DisplayMember = "Name"
         comboRoles.ValueMember = "ID"
-
         comboRoles.Select()
     End Sub
 
@@ -1088,6 +1089,37 @@ Public Class fmMain
 
     Private Sub lblAbout_LinkClicked(sender As Object, e As LinkLabelLinkClickedEventArgs) Handles lblAbout.LinkClicked
         frmAbout.ShowDialog()
+    End Sub
+
+    Private Sub lblUsername_LinkClicked(sender As Object, e As LinkLabelLinkClickedEventArgs) Handles lblUsername.LinkClicked
+        lblEditUserDisplay.Text = "Update your profile"
+        lblEditUserID.Text = LoginUserID
+        txtEditUserFirstName.Text = LoginFirstName
+        txtEditUserMiddleName.Text = LoginMidleName
+        txtEditUserLastName.Text = LoginLastName
+        txtEditUserPassword.Text = LoginPassword
+        txtEditUserUsername.Text = LoginUsername
+        dbAdapter = New OleDbDataAdapter("Select * from Roles", dbConnection)
+
+        dbDataTable = New DataTable
+        dbAdapter.Fill(dbDataTable)
+
+        Dim bindingSource As New BindingSource
+
+        bindingSource.DataSource = dbDataTable
+        comboEditUser.DataSource = bindingSource
+        comboEditUser.DisplayMember = "Name"
+        comboEditUser.ValueMember = "ID"
+
+        comboEditUser.Text = LoginRoleName
+        comboEditUser.Select()
+        gbBrowseSortedWaste.Hide()
+        gbBrowseStudents.Hide()
+        gbBrowseUsers.Hide()
+        gbEditStudents.Hide()
+        gbRegisterStudents.Hide()
+        gbRegisterUser.Hide()
+        gbEditUser.Show()
     End Sub
 
     Private Sub txtEditStudentYear_KeyDown(sender As Object, e As KeyEventArgs) Handles txtEditStudentYear.KeyDown
