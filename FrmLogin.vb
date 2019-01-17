@@ -191,6 +191,21 @@ Public Class frmLogin
                 userRecordIndex = dbDataTable.Columns("RoleID").Ordinal
                 userRoleID = dbDataTable.Rows(0).ItemArray(userRecordIndex).ToString
 
+                userRecordIndex = dbDataTable.Columns("FirstName").Ordinal
+                mainForm.LoginFirstName = Trim(dbDataTable.Rows(0).ItemArray(userRecordIndex).ToString)
+
+                userRecordIndex = dbDataTable.Columns("MiddleName").Ordinal
+                mainForm.LoginMidleName = Trim(dbDataTable.Rows(0).ItemArray(userRecordIndex).ToString)
+
+                userRecordIndex = dbDataTable.Columns("LastName").Ordinal
+                mainForm.LoginLastName = Trim(dbDataTable.Rows(0).ItemArray(userRecordIndex).ToString)
+
+                userRecordIndex = dbDataTable.Columns("Username").Ordinal
+                mainForm.LoginUsername = Trim(dbDataTable.Rows(0).ItemArray(userRecordIndex).ToString)
+
+                userRecordIndex = dbDataTable.Columns("Password").Ordinal
+                mainForm.LoginPassword = Trim(dbDataTable.Rows(0).ItemArray(userRecordIndex).ToString)
+
                 'check role
                 dbAdapter = New OleDbDataAdapter("Select * 
                                                     From Roles 
@@ -200,7 +215,7 @@ Public Class frmLogin
 
                 userRoleRecordIndex = dbDataTable.Columns("Name").Ordinal
                 userRole = Trim(dbDataTable.Rows(0).ItemArray(userRoleRecordIndex).ToString)
-
+                mainForm.LoginRoleName = userRole
                 If userRole = "MEMBER" Then
                     mainForm.lblRegisterUsers.Visible = False
                     mainForm.btnEditUser.Visible = False
