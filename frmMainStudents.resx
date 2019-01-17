@@ -200,4 +200,10 @@
         msUQd4PCxjUx2A6NIU72n1Fkc6XI5kqRzZUWyVbwC6MPBzZ0jvG3AAAAAElFTkSuQmCC
 </value>
   </data>
+  <metadata name="ArduinoSerialPort.TrayLocation" type="System.Drawing.Point, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a">
+    <value>226, 22</value>
+  </metadata>
+  <metadata name="TimerThrowGB.TrayLocation" type="System.Drawing.Point, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a">
+    <value>374, 22</value>
+  </metadata>
 </root>

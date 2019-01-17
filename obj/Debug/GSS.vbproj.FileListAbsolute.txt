@@ -57,3 +57,5 @@ C:\Users\samdizon\Desktop\GSS\obj\Debug\GSS.xml
 C:\Users\samdizon\Desktop\GSS\obj\Debug\GSS.pdb
 C:\Users\SAM\Desktop\GSS\obj\Debug\GSS.frmStudentsPortal.resources
 C:\Users\SAM\Desktop\GSS\obj\Debug\GSS.frmMainStudents.resources
+C:\Users\samdizon\Desktop\GSS\obj\Debug\GSS.frmMainStudents.resources
+C:\Users\samdizon\Desktop\GSS\obj\Debug\GSS.frmStudentsPortal.resources
