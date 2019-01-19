@@ -219,6 +219,7 @@ Partial Class fmMain
         Me.Label49 = New System.Windows.Forms.Label()
         Me.PictureBox49 = New System.Windows.Forms.PictureBox()
         Me.lblUsername = New System.Windows.Forms.LinkLabel()
+        Me.ArduinoSerialPort = New System.IO.Ports.SerialPort(Me.components)
         CType(Me.PictureBox2, System.ComponentModel.ISupportInitialize).BeginInit()
         CType(Me.PictureBox1, System.ComponentModel.ISupportInitialize).BeginInit()
         CType(Me.PictureBox3, System.ComponentModel.ISupportInitialize).BeginInit()
@@ -2995,4 +2996,5 @@ Partial Class fmMain
     Friend WithEvents Label49 As Label
     Friend WithEvents PictureBox49 As PictureBox
     Friend WithEvents lblUsername As LinkLabel
+    Friend WithEvents ArduinoSerialPort As IO.Ports.SerialPort
 End Class

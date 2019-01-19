@@ -17,6 +17,29 @@ Public Class frmMainStudents
 
         AssignSortingResultsToLabels()
 
+
+        GetSettings()
+
+        TimerThrowGB.Enabled = False
+
+        Try
+            ArduinoSerialPort.Close()
+            ArduinoSerialPort.PortName = PortName
+            ArduinoSerialPort.BaudRate = BaudRate
+            ArduinoSerialPort.DataBits = DataBits
+            ArduinoSerialPort.Parity = Parity.None
+            ArduinoSerialPort.Handshake = Handshake.None
+            ArduinoSerialPort.Encoding = System.Text.Encoding.Default
+            ArduinoSerialPort.ReadTimeout = ReadTimeout
+
+            ArduinoSerialPort.Open()
+            TimerThrowGB.Enabled = True
+        Catch ex As Exception
+            MsgBox("Unable to connect with computer port " & PortName & ". Please call your system administrator and change port settings. " & ex.ToString, MsgBoxStyle.Critical)
+            frmLogin.Show()
+            Me.Hide()
+        End Try
+
     End Sub
     Private Sub GetAllSortedWaste()
         Dim sql = "Select * From Students
@@ -74,28 +97,8 @@ Public Class frmMainStudents
         TotalPlastic = IncorrectPlastic + CorrectPlastic
     End Sub
 
-    Private Sub btnThrow_Click(sender As Object, e As EventArgs) Handles btnThrow.Click
-        GetSettings()
+    Private Sub btnThrow_Click(sender As Object, e As EventArgs)
 
-        TimerThrowGB.Enabled = False
-
-        Try
-            ArduinoSerialPort.Close()
-            ArduinoSerialPort.PortName = PortName
-            ArduinoSerialPort.BaudRate = BaudRate
-            ArduinoSerialPort.DataBits = DataBits
-            ArduinoSerialPort.Parity = Parity.None
-            ArduinoSerialPort.Handshake = Handshake.None
-            ArduinoSerialPort.Encoding = System.Text.Encoding.Default
-            ArduinoSerialPort.ReadTimeout = ReadTimeout
-
-            ArduinoSerialPort.Open()
-            TimerThrowGB.Enabled = True
-        Catch ex As Exception
-            MsgBox("Unable to connect with computer port " & PortName & ". Please call your system administrator and change port settings. " & ex.ToString, MsgBoxStyle.Critical)
-            frmLogin.Show()
-            Me.Hide()
-        End Try
     End Sub
 
     Private Sub AssignSortingResultsToLabels()
@@ -263,15 +266,27 @@ Public Class frmMainStudents
     End Sub
 
     Private Sub TimerThrowGB_Tick(sender As Object, e As EventArgs) Handles TimerThrowGB.Tick
+        lblResultPrompt.Text = ""
         Dim receivedData As String
-        Dim SortingID, result As Integer
+        Dim SortingID, result, resultIndex As Integer
+
+
         receivedData = ReceiveSerialData().ToString.ToUpper
         'test data
-        receivedData = "METAL"
-        result = 1
+        'receivedData = "PLASTIC-1"
+
+        'get result index
+
+
 
         'get garbage thrown and result
         If receivedData <> "NOTHING" Then
+            resultIndex = receivedData.IndexOf("-")
+            resultIndex += 1
+            result = receivedData.Substring(resultIndex, 1)
+
+            receivedData = receivedData.Substring(0, resultIndex - 1)
+
             ArduinoSerialPort.Close()
             TimerThrowGB.Stop()
             TimerThrowGB.Enabled = False
@@ -292,8 +307,20 @@ Public Class frmMainStudents
                 dbDataSet = New DataSet
                 dbAdapter.Fill(dbDataSet)
 
-                MsgBox("Garbage thrown successfully.", MsgBoxStyle.Information, "Waste sorting")
+                lblResultPrompt.Text = "Garbage thrown successfully."
                 GetAllSortedWaste()
+
+                GetCorrectSortingCategoriesByID(StudentID)
+                GetInCorrectSortingCategoriesByID(StudentID)
+                GetTotalSorting()
+
+                AssignSortingResultsToLabels()
+
+
+                ArduinoSerialPort.Open()
+                TimerThrowGB.Enabled = True
+                'TimerThrowGB.Start()
+
 
             Catch ex As Exception
                 MsgBox(ex.ToString, MsgBoxStyle.Critical)

@@ -53,7 +53,11 @@ Public Class frmStudentsPortal
         End If
         'press ctrl + alt + shift + o
         If (e.Alt AndAlso e.Control AndAlso e.Shift AndAlso (e.KeyCode = Keys.O)) Then
+            DetectFingerprintTimer.Enabled = False
+            DetectFingerprintTimer.Stop()
+            ArduinoSerialPort.Close()
             frmLogin.Show()
+
             Me.Hide()
         End If
 
@@ -64,7 +68,8 @@ Public Class frmStudentsPortal
 
         receivedData = ReceiveSerialData().ToString.ToUpper
         'test data
-        receivedData = 1234
+        'receivedData = 1234
+
         Label1.Text = receivedData.ToString
 
         'get identified fingerprint ID from arduino
@@ -93,6 +98,11 @@ Public Class frmStudentsPortal
 
     Private Sub ValidateStudentByID(FingerPrintID As Integer)
         Try
+
+            ArduinoSerialPort.Close()
+            DetectFingerprintTimer.Stop()
+            DetectFingerprintTimer.Enabled = False
+
             Dim Sql = "Select * From Students where FingerPrintID = " & FingerPrintID & " "
 
             dbAdapter = New OleDbDataAdapter(Sql, dbConnection)
@@ -100,17 +110,12 @@ Public Class frmStudentsPortal
             dbAdapter.Fill(dbDataTable)
 
             If dbDataTable.Rows.Count = 0 Then
-                ArduinoSerialPort.Close()
-                DetectFingerprintTimer.Stop()
-                DetectFingerprintTimer.Enabled = False
-                
+
+
                 MsgBox("Unrecognized fingerprint. Please check with your administrator if your biometric ID is registered.")
 
             Else
 
-                ArduinoSerialPort.Close()
-                DetectFingerprintTimer.Stop()
-                DetectFingerprintTimer.Enabled = False
                 frmMainStudents.StudentID = dbDataTable.Rows(0)("ID")
                 frmMainStudents.Show()
                 Me.Hide()

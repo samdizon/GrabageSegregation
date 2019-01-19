@@ -1,5 +1,5 @@
 ﻿Imports System.Data.OleDb
-
+Imports System.IO.Ports
 
 Public Class fmMain
     Public IncorrectPaper, IncorrectMetal, IncorrectPlastic, CorrectPaper, CorrectMetal, CorrectPlastic, TotalPaper, TotalPlastic, TotalMetal As Integer
@@ -260,7 +260,6 @@ Public Class fmMain
     End Sub
 
     Private Sub lblRegisterFingerPrint_LinkClicked_1(sender As Object, e As LinkLabelLinkClickedEventArgs) Handles lblRegisterFingerPrint.LinkClicked
-        'send signal to finger print
 
         frmFingerprintRegistration.Show()
         'data is lost on main form, need to transfer data to form
@@ -273,6 +272,7 @@ Public Class fmMain
         frmFingerprintRegistration.Section = txtStudentSection.Text
 
         Me.Hide()
+
     End Sub
 
     Private Sub btnRegisterStudent_Click(sender As Object, e As EventArgs) Handles btnRegisterStudent.Click

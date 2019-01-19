@@ -67,7 +67,6 @@ Partial Class frmMainStudents
         Me.PictureBox3 = New System.Windows.Forms.PictureBox()
         Me.PictureBox4 = New System.Windows.Forms.PictureBox()
         Me.PictureBox5 = New System.Windows.Forms.PictureBox()
-        Me.btnThrow = New System.Windows.Forms.Button()
         Me.Label6 = New System.Windows.Forms.Label()
         Me.Button2 = New System.Windows.Forms.Button()
         Me.PictureBox6 = New System.Windows.Forms.PictureBox()
@@ -75,6 +74,7 @@ Partial Class frmMainStudents
         Me.lblStudentYearSection = New System.Windows.Forms.Label()
         Me.ArduinoSerialPort = New System.IO.Ports.SerialPort(Me.components)
         Me.TimerThrowGB = New System.Windows.Forms.Timer(Me.components)
+        Me.lblResultPrompt = New System.Windows.Forms.Label()
         CType(Me.PictureBox8, System.ComponentModel.ISupportInitialize).BeginInit()
         CType(Me.PictureBox9, System.ComponentModel.ISupportInitialize).BeginInit()
         CType(Me.PictureBox10, System.ComponentModel.ISupportInitialize).BeginInit()
@@ -556,21 +556,6 @@ Partial Class frmMainStudents
         Me.PictureBox5.TabIndex = 79
         Me.PictureBox5.TabStop = False
         '
-        'btnThrow
-        '
-        Me.btnThrow.BackColor = System.Drawing.Color.Transparent
-        Me.btnThrow.FlatAppearance.BorderColor = System.Drawing.Color.White
-        Me.btnThrow.FlatAppearance.CheckedBackColor = System.Drawing.Color.Chocolate
-        Me.btnThrow.FlatAppearance.MouseDownBackColor = System.Drawing.Color.Chocolate
-        Me.btnThrow.FlatAppearance.MouseOverBackColor = System.Drawing.Color.Chocolate
-        Me.btnThrow.FlatStyle = System.Windows.Forms.FlatStyle.Flat
-        Me.btnThrow.Location = New System.Drawing.Point(369, 600)
-        Me.btnThrow.Name = "btnThrow"
-        Me.btnThrow.Size = New System.Drawing.Size(284, 59)
-        Me.btnThrow.TabIndex = 80
-        Me.btnThrow.Text = "Throw garbage"
-        Me.btnThrow.UseVisualStyleBackColor = False
-        '
         'Label6
         '
         Me.Label6.BorderStyle = System.Windows.Forms.BorderStyle.Fixed3D
@@ -633,18 +618,30 @@ Partial Class frmMainStudents
         '
         Me.TimerThrowGB.Interval = 500
         '
+        'lblResultPrompt
+        '
+        Me.lblResultPrompt.BackColor = System.Drawing.Color.Transparent
+        Me.lblResultPrompt.Font = New System.Drawing.Font("Franklin Gothic Book", 16.0!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.lblResultPrompt.ForeColor = System.Drawing.Color.OrangeRed
+        Me.lblResultPrompt.Location = New System.Drawing.Point(103, 600)
+        Me.lblResultPrompt.Margin = New System.Windows.Forms.Padding(0)
+        Me.lblResultPrompt.Name = "lblResultPrompt"
+        Me.lblResultPrompt.Size = New System.Drawing.Size(510, 59)
+        Me.lblResultPrompt.TabIndex = 86
+        Me.lblResultPrompt.TextAlign = System.Drawing.ContentAlignment.MiddleCenter
+        '
         'frmMainStudents
         '
         Me.AutoScaleDimensions = New System.Drawing.SizeF(9.0!, 21.0!)
         Me.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font
         Me.BackColor = System.Drawing.Color.DarkOrange
         Me.ClientSize = New System.Drawing.Size(1030, 727)
+        Me.Controls.Add(Me.lblResultPrompt)
         Me.Controls.Add(Me.lblStudentYearSection)
         Me.Controls.Add(Me.lblStudentName)
         Me.Controls.Add(Me.PictureBox6)
         Me.Controls.Add(Me.Button2)
         Me.Controls.Add(Me.Label6)
-        Me.Controls.Add(Me.btnThrow)
         Me.Controls.Add(Me.PictureBox2)
         Me.Controls.Add(Me.btnClose)
         Me.Controls.Add(Me.btnMinimize)
@@ -751,7 +748,6 @@ Partial Class frmMainStudents
     Friend WithEvents PictureBox3 As PictureBox
     Friend WithEvents PictureBox4 As PictureBox
     Friend WithEvents PictureBox5 As PictureBox
-    Friend WithEvents btnThrow As Button
     Friend WithEvents Label6 As Label
     Friend WithEvents Button2 As Button
     Friend WithEvents PictureBox6 As PictureBox
@@ -759,4 +755,5 @@ Partial Class frmMainStudents
     Friend WithEvents lblStudentYearSection As Label
     Friend WithEvents ArduinoSerialPort As IO.Ports.SerialPort
     Friend WithEvents TimerThrowGB As Timer
+    Friend WithEvents lblResultPrompt As Label
 End Class

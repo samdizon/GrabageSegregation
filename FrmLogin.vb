@@ -131,7 +131,8 @@ Public Class frmLogin
     End Sub
 
     Private Sub Button1_Click(sender As Object, e As EventArgs) Handles btnCancel.Click
-        Me.Dispose()
+        frmStudentsPortal.Show()
+        Me.Hide()
     End Sub
 
     Private Sub FormSetup()

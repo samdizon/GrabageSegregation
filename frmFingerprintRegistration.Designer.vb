@@ -30,7 +30,8 @@ Partial Class frmFingerprintRegistration
         Me.Label2 = New System.Windows.Forms.Label()
         Me.RegisterFingerprintTimer = New System.Windows.Forms.Timer(Me.components)
         Me.Button1 = New System.Windows.Forms.Button()
-        Me.TextBox1 = New System.Windows.Forms.TextBox()
+        Me.ArduinoSerialPort = New System.IO.Ports.SerialPort(Me.components)
+        Me.Button2 = New System.Windows.Forms.Button()
         CType(Me.PictureBox1, System.ComponentModel.ISupportInitialize).BeginInit()
         Me.SuspendLayout()
         '
@@ -86,22 +87,22 @@ Partial Class frmFingerprintRegistration
         'Button1
         '
         Me.Button1.BackColor = System.Drawing.Color.DarkOrange
-        Me.Button1.Location = New System.Drawing.Point(357, 376)
+        Me.Button1.Location = New System.Drawing.Point(249, 322)
         Me.Button1.Name = "Button1"
         Me.Button1.Size = New System.Drawing.Size(100, 41)
         Me.Button1.TabIndex = 47
-        Me.Button1.Text = "Test"
+        Me.Button1.Text = "Enroll"
         Me.Button1.UseVisualStyleBackColor = False
         '
-        'TextBox1
+        'Button2
         '
-        Me.TextBox1.BackColor = System.Drawing.Color.Linen
-        Me.TextBox1.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle
-        Me.TextBox1.Font = New System.Drawing.Font("Franklin Gothic Medium", 21.0!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.TextBox1.Location = New System.Drawing.Point(251, 378)
-        Me.TextBox1.Name = "TextBox1"
-        Me.TextBox1.Size = New System.Drawing.Size(100, 39)
-        Me.TextBox1.TabIndex = 48
+        Me.Button2.BackColor = System.Drawing.Color.DarkOrange
+        Me.Button2.Location = New System.Drawing.Point(372, 322)
+        Me.Button2.Name = "Button2"
+        Me.Button2.Size = New System.Drawing.Size(100, 41)
+        Me.Button2.TabIndex = 48
+        Me.Button2.Text = "Exit"
+        Me.Button2.UseVisualStyleBackColor = False
         '
         'frmFingerprintRegistration
         '
@@ -109,7 +110,7 @@ Partial Class frmFingerprintRegistration
         Me.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font
         Me.BackColor = System.Drawing.Color.DarkOrange
         Me.ClientSize = New System.Drawing.Size(710, 467)
-        Me.Controls.Add(Me.TextBox1)
+        Me.Controls.Add(Me.Button2)
         Me.Controls.Add(Me.Button1)
         Me.Controls.Add(Me.Label2)
         Me.Controls.Add(Me.lblFingerprintMessage)
@@ -124,7 +125,6 @@ Partial Class frmFingerprintRegistration
         Me.Text = "frmFingerprintRegistration"
         CType(Me.PictureBox1, System.ComponentModel.ISupportInitialize).EndInit()
         Me.ResumeLayout(False)
-        Me.PerformLayout()
 
     End Sub
 
@@ -134,5 +134,6 @@ Partial Class frmFingerprintRegistration
     Friend WithEvents Label2 As Label
     Friend WithEvents RegisterFingerprintTimer As Timer
     Friend WithEvents Button1 As Button
-    Friend WithEvents TextBox1 As TextBox
+    Friend WithEvents ArduinoSerialPort As IO.Ports.SerialPort
+    Friend WithEvents Button2 As Button
 End Class
