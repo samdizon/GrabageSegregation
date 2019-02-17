@@ -131,11 +131,10 @@ Public Class frmStudentsPortal
                 frmMainStudents.lblTotalMetal.Text = ""
                 frmMainStudents.lblTotalPaper.Text = ""
                 frmMainStudents.lblTotalPlastic.Text = ""
+                frmMainStudents.lblIncorrectPoints.Text = ""
+                frmMainStudents.lblCorrectPoints.Text = ""
+                frmMainStudents.lblTotalEquivalentPoints.Text = ""
 
-                frmMainStudents.Show()
-                If frmMainStudents.ArduinoSerialPort.IsOpen = False Then
-                    frmMainStudents.ArduinoSerialPort.Open()
-                End If
                 frmMainStudents.TimerThrowGB.Enabled = True
                 frmMainStudents.TimerThrowGB.Start()
                 Me.Hide()

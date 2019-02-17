@@ -9,7 +9,7 @@ Public Class fmMain
     Private Sub fmMain_Load(sender As Object, e As EventArgs) Handles MyBase.Load
         'txtSearchStudents.Select()
         ConnectDB()
-
+        GetSettings()
         'gbRegisterStudents.Visible = False
 
         Try
@@ -597,6 +597,22 @@ Public Class fmMain
         lblTotalMetal.Text = TotalMetal
         lblTotalPaper.Text = TotalPaper
         lblTotalPlastic.Text = TotalPlastic
+
+        If CorrectEq <> Nothing Then
+            lblCorrectEq.Text = CorrectEq * CInt(lblTotalCorrect.Text)
+        Else
+            lblCorrectEq.Text = ""
+        End If
+
+        If IncorrectEq <> Nothing Then
+            lblIncorrectEq.Text = IncorrectEq * CInt(lblTotalIncorrect.Text)
+            lblTotalEquivalentPoints.Text = IncorrectEq * CInt(lblTotalIncorrect.Text)
+            lblTotalEquivalentPoints.Text = lblTotalEquivalentPoints.Text & " total pts."
+        Else
+            lblIncorrectEq.Text = ""
+            lblTotalEquivalentPoints.Text = ""
+        End If
+
     End Sub
 
 
@@ -1049,6 +1065,10 @@ Public Class fmMain
         txtEditUserPassword.Text = GeneratePassword()
     End Sub
 
+    Private Sub dgvStudents_CellContentClick(sender As Object, e As DataGridViewCellEventArgs) Handles dgvStudents.CellContentClick
+
+    End Sub
+
     Private Sub btnUpdateUser_Click(sender As Object, e As EventArgs) Handles btnUpdateUser.Click
         Dim FirstName, MiddleName, LastName, Username, Password As String
         Dim RoleID As Integer
@@ -1070,7 +1090,7 @@ Public Class fmMain
         ElseIf Username = "" Then
             MsgBox("Please provide username", MsgBoxStyle.Exclamation)
             txtEditUserUsername.Select()
-        ElseIf password = "" Then
+        ElseIf Password = "" Then
             MsgBox("Please provide password", MsgBoxStyle.Exclamation)
             txtEditUserPassword.Select()
         End If

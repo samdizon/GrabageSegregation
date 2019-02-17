@@ -220,6 +220,9 @@ Partial Class fmMain
         Me.PictureBox49 = New System.Windows.Forms.PictureBox()
         Me.lblUsername = New System.Windows.Forms.LinkLabel()
         Me.ArduinoSerialPort = New System.IO.Ports.SerialPort(Me.components)
+        Me.lblIncorrectEq = New System.Windows.Forms.Label()
+        Me.lblCorrectEq = New System.Windows.Forms.Label()
+        Me.lblTotalEquivalentPoints = New System.Windows.Forms.Label()
         CType(Me.PictureBox2, System.ComponentModel.ISupportInitialize).BeginInit()
         CType(Me.PictureBox1, System.ComponentModel.ISupportInitialize).BeginInit()
         CType(Me.PictureBox3, System.ComponentModel.ISupportInitialize).BeginInit()
@@ -471,6 +474,9 @@ Partial Class fmMain
         'gbBrowseStudents
         '
         Me.gbBrowseStudents.BackColor = System.Drawing.Color.Transparent
+        Me.gbBrowseStudents.Controls.Add(Me.lblTotalEquivalentPoints)
+        Me.gbBrowseStudents.Controls.Add(Me.lblCorrectEq)
+        Me.gbBrowseStudents.Controls.Add(Me.lblIncorrectEq)
         Me.gbBrowseStudents.Controls.Add(Me.btnDeleteStudent)
         Me.gbBrowseStudents.Controls.Add(Me.lblTotalPlastic)
         Me.gbBrowseStudents.Controls.Add(Me.Label15)
@@ -749,9 +755,9 @@ Partial Class fmMain
         'Label3
         '
         Me.Label3.BackColor = System.Drawing.Color.YellowGreen
-        Me.Label3.Location = New System.Drawing.Point(402, 478)
+        Me.Label3.Location = New System.Drawing.Point(353, 478)
         Me.Label3.Name = "Label3"
-        Me.Label3.Size = New System.Drawing.Size(78, 21)
+        Me.Label3.Size = New System.Drawing.Size(106, 21)
         Me.Label3.TabIndex = 14
         Me.Label3.Text = "Correct"
         Me.Label3.TextAlign = System.Drawing.ContentAlignment.MiddleCenter
@@ -759,9 +765,9 @@ Partial Class fmMain
         'Label2
         '
         Me.Label2.BackColor = System.Drawing.Color.Red
-        Me.Label2.Location = New System.Drawing.Point(136, 477)
+        Me.Label2.Location = New System.Drawing.Point(90, 479)
         Me.Label2.Name = "Label2"
-        Me.Label2.Size = New System.Drawing.Size(79, 21)
+        Me.Label2.Size = New System.Drawing.Size(102, 21)
         Me.Label2.TabIndex = 13
         Me.Label2.Text = "Incorrect"
         Me.Label2.TextAlign = System.Drawing.ContentAlignment.MiddleCenter
@@ -835,9 +841,9 @@ Partial Class fmMain
         '
         Me.lblTotalIncorrect.BackColor = System.Drawing.Color.Red
         Me.lblTotalIncorrect.Font = New System.Drawing.Font("Franklin Gothic Medium", 36.0!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.lblTotalIncorrect.Location = New System.Drawing.Point(135, 431)
+        Me.lblTotalIncorrect.Location = New System.Drawing.Point(89, 433)
         Me.lblTotalIncorrect.Name = "lblTotalIncorrect"
-        Me.lblTotalIncorrect.Size = New System.Drawing.Size(80, 60)
+        Me.lblTotalIncorrect.Size = New System.Drawing.Size(103, 60)
         Me.lblTotalIncorrect.TabIndex = 16
         Me.lblTotalIncorrect.Text = "0"
         Me.lblTotalIncorrect.TextAlign = System.Drawing.ContentAlignment.MiddleCenter
@@ -846,9 +852,9 @@ Partial Class fmMain
         '
         Me.lblTotalCorrect.BackColor = System.Drawing.Color.YellowGreen
         Me.lblTotalCorrect.Font = New System.Drawing.Font("Franklin Gothic Medium", 36.0!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.lblTotalCorrect.Location = New System.Drawing.Point(402, 431)
+        Me.lblTotalCorrect.Location = New System.Drawing.Point(353, 431)
         Me.lblTotalCorrect.Name = "lblTotalCorrect"
-        Me.lblTotalCorrect.Size = New System.Drawing.Size(78, 60)
+        Me.lblTotalCorrect.Size = New System.Drawing.Size(106, 60)
         Me.lblTotalCorrect.TabIndex = 17
         Me.lblTotalCorrect.Text = "0"
         Me.lblTotalCorrect.TextAlign = System.Drawing.ContentAlignment.MiddleCenter
@@ -867,7 +873,7 @@ Partial Class fmMain
         'PictureBox8
         '
         Me.PictureBox8.Image = CType(resources.GetObject("PictureBox8.Image"), System.Drawing.Image)
-        Me.PictureBox8.Location = New System.Drawing.Point(71, 431)
+        Me.PictureBox8.Location = New System.Drawing.Point(25, 431)
         Me.PictureBox8.Name = "PictureBox8"
         Me.PictureBox8.Size = New System.Drawing.Size(87, 70)
         Me.PictureBox8.TabIndex = 7
@@ -877,7 +883,7 @@ Partial Class fmMain
         'PictureBox9
         '
         Me.PictureBox9.Image = CType(resources.GetObject("PictureBox9.Image"), System.Drawing.Image)
-        Me.PictureBox9.Location = New System.Drawing.Point(339, 431)
+        Me.PictureBox9.Location = New System.Drawing.Point(290, 431)
         Me.PictureBox9.Name = "PictureBox9"
         Me.PictureBox9.Size = New System.Drawing.Size(85, 70)
         Me.PictureBox9.TabIndex = 8
@@ -2691,6 +2697,36 @@ Partial Class fmMain
         Me.lblUsername.Text = "Hi, xxxx"
         Me.lblUsername.TextAlign = System.Drawing.ContentAlignment.MiddleCenter
         '
+        'lblIncorrectEq
+        '
+        Me.lblIncorrectEq.BackColor = System.Drawing.Color.Red
+        Me.lblIncorrectEq.Font = New System.Drawing.Font("Franklin Gothic Medium", 16.0!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.lblIncorrectEq.Location = New System.Drawing.Point(198, 431)
+        Me.lblIncorrectEq.Name = "lblIncorrectEq"
+        Me.lblIncorrectEq.Size = New System.Drawing.Size(69, 60)
+        Me.lblIncorrectEq.TabIndex = 39
+        Me.lblIncorrectEq.TextAlign = System.Drawing.ContentAlignment.MiddleCenter
+        '
+        'lblCorrectEq
+        '
+        Me.lblCorrectEq.BackColor = System.Drawing.Color.YellowGreen
+        Me.lblCorrectEq.Font = New System.Drawing.Font("Franklin Gothic Medium", 16.0!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.lblCorrectEq.Location = New System.Drawing.Point(462, 431)
+        Me.lblCorrectEq.Name = "lblCorrectEq"
+        Me.lblCorrectEq.Size = New System.Drawing.Size(74, 60)
+        Me.lblCorrectEq.TabIndex = 40
+        Me.lblCorrectEq.TextAlign = System.Drawing.ContentAlignment.MiddleCenter
+        '
+        'lblTotalEquivalentPoints
+        '
+        Me.lblTotalEquivalentPoints.BackColor = System.Drawing.Color.Transparent
+        Me.lblTotalEquivalentPoints.Font = New System.Drawing.Font("Franklin Gothic Medium", 16.0!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.lblTotalEquivalentPoints.Location = New System.Drawing.Point(24, 359)
+        Me.lblTotalEquivalentPoints.Name = "lblTotalEquivalentPoints"
+        Me.lblTotalEquivalentPoints.Size = New System.Drawing.Size(246, 60)
+        Me.lblTotalEquivalentPoints.TabIndex = 41
+        Me.lblTotalEquivalentPoints.TextAlign = System.Drawing.ContentAlignment.MiddleLeft
+        '
         'fmMain
         '
         Me.AutoScaleDimensions = New System.Drawing.SizeF(9.0!, 21.0!)
@@ -2995,4 +3031,7 @@ Partial Class fmMain
     Friend WithEvents PictureBox49 As PictureBox
     Friend WithEvents lblUsername As LinkLabel
     Friend WithEvents ArduinoSerialPort As IO.Ports.SerialPort
+    Friend WithEvents lblTotalEquivalentPoints As Label
+    Friend WithEvents lblCorrectEq As Label
+    Friend WithEvents lblIncorrectEq As Label
 End Class

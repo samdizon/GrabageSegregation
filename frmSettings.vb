@@ -31,6 +31,8 @@ Public Class frmSettings
             txtDataBits.Text = dbDataTable.Rows(0)("DataBits")
             txtPortBaudRate.Text = dbDataTable.Rows(0)("PortBaudRate")
             txtReadTimeout.Text = dbDataTable.Rows(0)("ReadTimeout")
+            txtboxIncorrectEquivalent.Text = dbDataTable.Rows(0)("IncorrectEquivalent")
+            txtBoxCorrectEquivalent.Text = dbDataTable.Rows(0)("CorrectEquivalent")
             SettingsID = CInt(dbDataTable.Rows(0)("ID"))
         Catch ex As Exception
             MsgBox(ex, MsgBoxStyle.Critical)
@@ -44,6 +46,7 @@ Public Class frmSettings
     Private Sub btnSaveSettings_Click(sender As Object, e As EventArgs) Handles btnSaveSettings.Click
         Dim PortName As String = "dummy"
         Dim DataBits, PortBaudRate, ReadTimeout As Integer
+        Dim IncorrectEquivalent, CorrectEquivalent As Decimal
 
         If txtDataBits.Text = "" Then
             MsgBox("Please provide data bits, default value is 8", MsgBoxStyle.Exclamation)
@@ -58,10 +61,23 @@ Public Class frmSettings
             MsgBox("Please call your system administrator, the device is not recognized", MsgBoxStyle.Critical)
             End
         Else
+            If txtboxIncorrectEquivalent.Text = "" Then
+                IncorrectEquivalent = Nothing
+            Else
+                IncorrectEquivalent = Trim(txtboxIncorrectEquivalent.Text)
+            End If
+
+            If txtBoxCorrectEquivalent.Text = "" Then
+                CorrectEquivalent = Nothing
+            Else
+                CorrectEquivalent = Trim(txtBoxCorrectEquivalent.Text)
+            End If
+
             PortName = Trim(comboComPort.Text)
             DataBits = CInt(Trim(txtDataBits.Text))
             PortBaudRate = CInt(Trim(txtPortBaudRate.Text))
             ReadTimeout = CInt(Trim(txtReadTimeout.Text))
+
         End If
 
 
@@ -71,12 +87,13 @@ Public Class frmSettings
             Try
                 dbAdapter = New OleDbDataAdapter("UPDATE Settings 
                                                     SET PortName = '" & PortName & "', DataBits = " & DataBits & ", 
-                                                        PortBaudRate = " & PortBaudRate & ", ReadTimeout = " & ReadTimeout & "
+                                                        PortBaudRate = " & PortBaudRate & ", ReadTimeout = " & ReadTimeout & ",
+                                                        CorrectEquivalent = " & CorrectEquivalent & ", IncorrectEquivalent = " & IncorrectEquivalent & "
                                                         WHERE ID = " & SettingsID & "", dbConnection)
                 dbDataSet = New DataSet
                 dbAdapter.Fill(dbDataSet)
 
-                MsgBox("Settings updated.", MsgBoxStyle.Information, "Update GSS Settings")
+                MsgBox("Settings updated, please restart the application for settings to take effect.", MsgBoxStyle.Information, "Update GSS Settings")
                 Me.Hide()
             Catch ex As Exception
                 MsgBox(ex.ToString, MsgBoxStyle.Critical)

@@ -141,6 +141,7 @@ Public Class frmLogin
 
     Private Sub btnLogin_Click(sender As Object, e As EventArgs) Handles btnLogin.Click
         'check if username and password is provided
+
         If (Len(Trim(txtUsername.Text)) = 0) Then
             MessageBox.Show("Please enter user name", "Input Error", MessageBoxButtons.OK, MessageBoxIcon.Error)
             txtUsername.Focus()
