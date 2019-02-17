@@ -98,6 +98,7 @@ Public Class frmStudentsPortal
     End Function
 
     Private Sub ValidateStudentById(fingerPrintId As Integer)
+
         Try
 
             ArduinoSerialPort.Close()
@@ -111,8 +112,28 @@ Public Class frmStudentsPortal
             dbAdapter.Fill(dbDataTable)
 
             If dbDataTable.Rows.Count = 0 Then
-                MsgBox("Unrecognized fingerprint. Please check with your administrator if your biometric ID is registered.")
+                'student fingerprint is not recognized
+                Label1.Text = "Unrecognized fingerprint. Please check with your administrator if your biometric ID is registered."
+                DetectFingerprintTimer.Enabled = False
 
+                Try
+                    ArduinoSerialPort.Close()
+                    ArduinoSerialPort.PortName = PortName
+                    ArduinoSerialPort.BaudRate = BaudRate
+                    ArduinoSerialPort.DataBits = DataBits
+                    ArduinoSerialPort.Parity = Parity.None
+                    ArduinoSerialPort.Handshake = Handshake.None
+                    ArduinoSerialPort.Encoding = System.Text.Encoding.Default
+                    ArduinoSerialPort.ReadTimeout = ReadTimeout
+
+                    ArduinoSerialPort.Open()
+                    DetectFingerprintTimer.Enabled = True
+                    DetectFingerprintTimer.Start()
+                Catch ex As Exception
+                    MsgBox("Unable to connect with computer port " & PortName & ". Please call your system administrator and change port settings. " & ex.ToString, MsgBoxStyle.Critical)
+                    frmLogin.Show()
+                    Me.Hide()
+                End Try
             Else
 
                 frmMainStudents.StudentID = dbDataTable.Rows(0)("ID")
