@@ -101,6 +101,7 @@ Public Class frmMainStudents
 
     End Sub
 
+
     Private Sub AssignSortingResultsToLabels()
 
         lblCorrectPaper.Text = CorrectPaper.ToString
@@ -271,7 +272,7 @@ Public Class frmMainStudents
         Dim SortingID, result, resultIndex As Integer
 
 
-        receivedData = ReceiveSerialData().ToString.ToUpper
+        receivedData = Trim(ReceiveSerialData().ToString.ToUpper)
         'test data
         'receivedData = "PLASTIC-1"
 
@@ -281,52 +282,63 @@ Public Class frmMainStudents
 
         'get garbage thrown and result
         If receivedData <> "NOTHING" Then
-            resultIndex = receivedData.IndexOf("-")
-            resultIndex += 1
-            result = receivedData.Substring(resultIndex, 1)
-
-            receivedData = receivedData.Substring(0, resultIndex - 1)
-
             ArduinoSerialPort.Close()
             TimerThrowGB.Stop()
             TimerThrowGB.Enabled = False
+            If receivedData = "EXIT" Then
+                frmStudentsPortal.Show()
+                frmStudentsPortal.DetectFingerprintTimer.Enabled = True
+                frmStudentsPortal.ArduinoSerialPort.Open()
+                frmStudentsPortal.DetectFingerprintTimer.Start()
 
-            If receivedData = "PAPER" Then
-                SortingID = PaperID
-            End If
-            If receivedData = "PLASTIC" Then
-                SortingID = PlasticID
-            End If
-            If receivedData = "METAL" Then
-                SortingID = MetalID
-            End If
+                Me.Hide()
+            Else
+                resultIndex = receivedData.IndexOf("-")
+                resultIndex += 1
+                result = receivedData.Substring(resultIndex, 1)
 
-            Try
-                dbAdapter = New OleDbDataAdapter("INSERT INTO WasteSorting (StudentID, SortingCategoryID, Result)
+                receivedData = receivedData.Substring(0, resultIndex - 1)
+
+                'ArduinoSerialPort.Close()
+                'TimerThrowGB.Stop()
+                'TimerThrowGB.Enabled = False
+
+                If receivedData = "PAPER" Then
+                    SortingID = PaperID
+                End If
+                If receivedData = "PLASTIC" Then
+                    SortingID = PlasticID
+                End If
+                If receivedData = "METAL" Then
+                    SortingID = MetalID
+                End If
+
+                Try
+                    dbAdapter = New OleDbDataAdapter("INSERT INTO WasteSorting (StudentID, SortingCategoryID, Result)
                                                 VALUES (" & StudentID & "," & SortingID & "," & result & ")", dbConnection)
-                dbDataSet = New DataSet
-                dbAdapter.Fill(dbDataSet)
+                    dbDataSet = New DataSet
+                    dbAdapter.Fill(dbDataSet)
 
-                lblResultPrompt.Text = "Garbage thrown successfully."
-                GetAllSortedWaste()
+                    lblResultPrompt.Text = "Garbage thrown successfully."
+                    GetAllSortedWaste()
 
-                GetCorrectSortingCategoriesByID(StudentID)
-                GetInCorrectSortingCategoriesByID(StudentID)
-                GetTotalSorting()
+                    GetCorrectSortingCategoriesByID(StudentID)
+                    GetInCorrectSortingCategoriesByID(StudentID)
+                    GetTotalSorting()
 
-                AssignSortingResultsToLabels()
-
-
-                ArduinoSerialPort.Open()
-                TimerThrowGB.Enabled = True
-                'TimerThrowGB.Start()
+                    AssignSortingResultsToLabels()
 
 
-            Catch ex As Exception
-                MsgBox(ex.ToString, MsgBoxStyle.Critical)
+                    ArduinoSerialPort.Open()
+                    TimerThrowGB.Enabled = True
+                    'TimerThrowGB.Start()
 
-            End Try
 
+                Catch ex As Exception
+                    MsgBox(ex.ToString, MsgBoxStyle.Critical)
+
+                End Try
+            End If
         End If
 
     End Sub

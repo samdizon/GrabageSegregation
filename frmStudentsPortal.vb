@@ -23,6 +23,7 @@ Public Class frmStudentsPortal
 
             ArduinoSerialPort.Open()
             DetectFingerprintTimer.Enabled = True
+            DetectFingerprintTimer.Start()
         Catch ex As Exception
             MsgBox("Unable to connect with computer port " & PortName & ". Please call your system administrator and change port settings. " & ex.ToString, MsgBoxStyle.Critical)
             frmLogin.Show()
@@ -118,6 +119,11 @@ Public Class frmStudentsPortal
 
                 frmMainStudents.StudentID = dbDataTable.Rows(0)("ID")
                 frmMainStudents.Show()
+                If frmMainStudents.ArduinoSerialPort.IsOpen = False Then
+                    frmMainStudents.ArduinoSerialPort.Open()
+                End If
+                frmMainStudents.TimerThrowGB.Enabled = True
+                frmMainStudents.TimerThrowGB.Start()
                 Me.Hide()
             End If
 

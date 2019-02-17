@@ -105,10 +105,11 @@ Public Class frmFingerprintRegistration
             ArduinoSerialPort.Open()
             RegisterFingerprintTimer.Enabled = True
             ArduinoSerialPort.Write("ENROLL")
-
+            ArduinoSerialPort.Write(InputBox("Input Fingerprint ID"))
             RegisterFingerprintTimer.Start()
         Catch ex As Exception
-            MsgBox("Fingerprint enrollment is ready.", MsgBoxStyle.Information)
+            ArduinoSerialPort.Write("ENROLL")
+            ArduinoSerialPort.Write(InputBox("Input Fingerprint ID"))
         End Try
     End Sub
 
