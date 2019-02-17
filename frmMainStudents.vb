@@ -121,23 +121,6 @@ Public Class frmMainStudents
         lblTotalCorrect.Text = CorrectMetal + CorrectPaper + CorrectPlastic
         lblTotalIncorrect.Text = IncorrectMetal + IncorrectPaper + IncorrectPlastic
         lblTotal.Text = CInt(Trim(lblTotalCorrect.Text)) + CInt(Trim(lblTotalIncorrect.Text))
-
-
-        If CorrectEq <> Nothing Then
-            lblCorrectPoints.Text = CorrectEq * CInt(lblTotalCorrect.Text)
-        Else
-            lblIncorrectPoints.Text = ""
-        End If
-
-        If IncorrectEq <> Nothing Then
-            lblIncorrectPoints.Text = IncorrectEq * CInt(lblTotalIncorrect.Text)
-            lblTotalEquivalentPoints.Text = IncorrectEq * CInt(lblTotalIncorrect.Text)
-            lblTotalEquivalentPoints.Text = lblTotalEquivalentPoints.Text & " total points"
-        Else
-            lblIncorrectPoints.Text = ""
-            lblTotalEquivalentPoints.Text = ""
-        End If
-
     End Sub
 
     Private Sub GetCorrectSortingCategoriesByID(StudentID As String)

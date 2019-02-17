@@ -11,8 +11,6 @@ Module Declarations
     'connection declaration
     Public PortName As String
     Public BaudRate, DataBits, ReadTimeout As String
-    Public IncorrectEq, CorrectEq As Decimal
-
 
 
 
@@ -32,8 +30,7 @@ Module Declarations
         BaudRate = Trim(CInt(dbDataTable.Rows(0)("PortBaudRate")))
         ReadTimeout = Trim(CInt(dbDataTable.Rows(0)("ReadTimeout")))
         PortName = Trim(dbDataTable.Rows(0)("PortName"))
-        IncorrectEq = Trim(dbDataTable.Rows(0)("IncorrectEquivalent"))
-        CorrectEq = Trim(dbDataTable.Rows(0)("CorrectEquivalent"))
+
     End Sub
 
 End Module
