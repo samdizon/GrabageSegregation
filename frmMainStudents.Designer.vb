@@ -24,8 +24,8 @@ Partial Class frmMainStudents
     Private Sub InitializeComponent()
         Me.components = New System.ComponentModel.Container()
         Dim resources As System.ComponentModel.ComponentResourceManager = New System.ComponentModel.ComponentResourceManager(GetType(frmMainStudents))
-        Dim DataGridViewCellStyle1 As System.Windows.Forms.DataGridViewCellStyle = New System.Windows.Forms.DataGridViewCellStyle()
-        Dim DataGridViewCellStyle2 As System.Windows.Forms.DataGridViewCellStyle = New System.Windows.Forms.DataGridViewCellStyle()
+        Dim DataGridViewCellStyle3 As System.Windows.Forms.DataGridViewCellStyle = New System.Windows.Forms.DataGridViewCellStyle()
+        Dim DataGridViewCellStyle4 As System.Windows.Forms.DataGridViewCellStyle = New System.Windows.Forms.DataGridViewCellStyle()
         Me.lblTotalPlastic = New System.Windows.Forms.Label()
         Me.Label15 = New System.Windows.Forms.Label()
         Me.lblTotalMetal = New System.Windows.Forms.Label()
@@ -342,7 +342,7 @@ Partial Class frmMainStudents
         '
         Me.lblTotalCorrect.BackColor = System.Drawing.Color.DarkOrange
         Me.lblTotalCorrect.Font = New System.Drawing.Font("Franklin Gothic Medium", 36.0!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.lblTotalCorrect.Location = New System.Drawing.Point(535, 460)
+        Me.lblTotalCorrect.Location = New System.Drawing.Point(522, 460)
         Me.lblTotalCorrect.Name = "lblTotalCorrect"
         Me.lblTotalCorrect.Size = New System.Drawing.Size(78, 60)
         Me.lblTotalCorrect.TabIndex = 47
@@ -431,25 +431,25 @@ Partial Class frmMainStudents
         '
         Me.dgvBrowseSortedWaste.AllowUserToAddRows = False
         Me.dgvBrowseSortedWaste.AllowUserToDeleteRows = False
-        DataGridViewCellStyle1.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft
-        DataGridViewCellStyle1.BackColor = System.Drawing.SystemColors.Control
-        DataGridViewCellStyle1.Font = New System.Drawing.Font("Franklin Gothic Medium", 12.0!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        DataGridViewCellStyle1.ForeColor = System.Drawing.SystemColors.WindowText
-        DataGridViewCellStyle1.SelectionBackColor = System.Drawing.Color.DarkOrange
-        DataGridViewCellStyle1.SelectionForeColor = System.Drawing.SystemColors.HighlightText
-        DataGridViewCellStyle1.WrapMode = System.Windows.Forms.DataGridViewTriState.[True]
-        Me.dgvBrowseSortedWaste.ColumnHeadersDefaultCellStyle = DataGridViewCellStyle1
+        DataGridViewCellStyle3.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft
+        DataGridViewCellStyle3.BackColor = System.Drawing.SystemColors.Control
+        DataGridViewCellStyle3.Font = New System.Drawing.Font("Franklin Gothic Medium", 12.0!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        DataGridViewCellStyle3.ForeColor = System.Drawing.SystemColors.WindowText
+        DataGridViewCellStyle3.SelectionBackColor = System.Drawing.Color.DarkOrange
+        DataGridViewCellStyle3.SelectionForeColor = System.Drawing.SystemColors.HighlightText
+        DataGridViewCellStyle3.WrapMode = System.Windows.Forms.DataGridViewTriState.[True]
+        Me.dgvBrowseSortedWaste.ColumnHeadersDefaultCellStyle = DataGridViewCellStyle3
         Me.dgvBrowseSortedWaste.ColumnHeadersHeight = 30
         Me.dgvBrowseSortedWaste.Location = New System.Drawing.Point(66, 160)
         Me.dgvBrowseSortedWaste.Name = "dgvBrowseSortedWaste"
-        DataGridViewCellStyle2.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft
-        DataGridViewCellStyle2.BackColor = System.Drawing.SystemColors.Control
-        DataGridViewCellStyle2.Font = New System.Drawing.Font("Franklin Gothic Medium", 12.0!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        DataGridViewCellStyle2.ForeColor = System.Drawing.SystemColors.WindowText
-        DataGridViewCellStyle2.SelectionBackColor = System.Drawing.Color.DarkOrange
-        DataGridViewCellStyle2.SelectionForeColor = System.Drawing.SystemColors.HighlightText
-        DataGridViewCellStyle2.WrapMode = System.Windows.Forms.DataGridViewTriState.[True]
-        Me.dgvBrowseSortedWaste.RowHeadersDefaultCellStyle = DataGridViewCellStyle2
+        DataGridViewCellStyle4.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft
+        DataGridViewCellStyle4.BackColor = System.Drawing.SystemColors.Control
+        DataGridViewCellStyle4.Font = New System.Drawing.Font("Franklin Gothic Medium", 12.0!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        DataGridViewCellStyle4.ForeColor = System.Drawing.SystemColors.WindowText
+        DataGridViewCellStyle4.SelectionBackColor = System.Drawing.Color.DarkOrange
+        DataGridViewCellStyle4.SelectionForeColor = System.Drawing.SystemColors.HighlightText
+        DataGridViewCellStyle4.WrapMode = System.Windows.Forms.DataGridViewTriState.[True]
+        Me.dgvBrowseSortedWaste.RowHeadersDefaultCellStyle = DataGridViewCellStyle4
         Me.dgvBrowseSortedWaste.RowTemplate.DefaultCellStyle.ForeColor = System.Drawing.Color.Black
         Me.dgvBrowseSortedWaste.RowTemplate.DefaultCellStyle.SelectionBackColor = System.Drawing.Color.DarkOrange
         Me.dgvBrowseSortedWaste.Size = New System.Drawing.Size(891, 270)
@@ -599,7 +599,7 @@ Partial Class frmMainStudents
         Me.lblStudentName.Name = "lblStudentName"
         Me.lblStudentName.Size = New System.Drawing.Size(650, 37)
         Me.lblStudentName.TabIndex = 84
-        Me.lblStudentName.Text = "Albert Pangiidian Dizon Jr."
+        Me.lblStudentName.Text = "Albert Pangidian Dizon Jr."
         Me.lblStudentName.TextAlign = System.Drawing.ContentAlignment.MiddleLeft
         '
         'lblStudentYearSection

@@ -678,7 +678,7 @@ Public Class fmMain
 
     Private Sub btnUpdateStudent_Click(sender As Object, e As EventArgs) Handles btnUpdateStudent.Click
         Dim StudentNumber, FirstName, MiddleName, LastName, CourseCode, Year, Section As String
-        Dim StudentID As Integer
+        Dim StudentID, FingerprintID As Integer
 
         StudentNumber = Trim(txtEditStudentNumber.Text)
         FirstName = Trim(txtEditStudentFirstName.Text)
@@ -688,6 +688,7 @@ Public Class fmMain
         Year = Trim(txtEditStudentYear.Text)
         Section = Trim(txtEditStudentSection.Text)
         StudentID = CInt(lblEditStudentID.Text)
+        FingerprintID = Trim(CInt(txtEditStudentFingerPrint.Text))
 
         If StudentNumber = "" Then
             MsgBox("Please provide student number.", MsgBoxStyle.Exclamation)
@@ -706,7 +707,7 @@ Public Class fmMain
         If StudentNumber <> "" And FirstName <> "" And LastName <> "" And CourseCode <> "" Then
             Try
                 dbAdapter = New OleDbDataAdapter("UPDATE Students 
-                                                    SET StudentNumber = '" & StudentNumber & "', FirstName = '" & FirstName & "', MiddleName = '" & MiddleName & "', LastName = '" & LastName & "', Year ='" & Year & "', Section ='" & Section & "', CourseCode ='" & CourseCode & "'
+                                                    SET StudentNumber = '" & StudentNumber & "', FingerPrintID = " & FingerprintID & ",  FirstName = '" & FirstName & "', MiddleName = '" & MiddleName & "', LastName = '" & LastName & "', Year ='" & Year & "', Section ='" & Section & "', CourseCode ='" & CourseCode & "'
                                                     WHERE ID = " & StudentID & "", dbConnection)
                 dbDataSet = New DataSet
                 dbAdapter.Fill(dbDataSet)
@@ -1030,10 +1031,18 @@ Public Class fmMain
         comboRoles.Select()
     End Sub
 
+    Private Sub txtEditStudentFingerPrint_TextChanged(sender As Object, e As EventArgs) Handles txtEditStudentFingerPrint.TextChanged
+
+    End Sub
+
     Private Sub txtEditStudentCourse_KeyDown(sender As Object, e As KeyEventArgs) Handles txtEditStudentCourse.KeyDown
         If e.KeyCode = Keys.Space Then
             e.SuppressKeyPress = True
         End If
+    End Sub
+
+    Private Sub txtboxFingerprintID_TextChanged(sender As Object, e As EventArgs) Handles txtboxFingerprintID.TextChanged
+
     End Sub
 
     Private Sub Button1_Click_2(sender As Object, e As EventArgs) Handles Button1.Click
@@ -1289,5 +1298,13 @@ Public Class fmMain
 
         End If
 
+    End Sub
+
+    Private Sub txtEditStudentFingerPrint_KeyPress(sender As Object, e As KeyPressEventArgs) Handles txtEditStudentFingerPrint.KeyPress
+        If Not Char.IsNumber(e.KeyChar) AndAlso Not Char.IsControl(e.KeyChar) Then e.KeyChar = ""
+    End Sub
+
+    Private Sub txtboxFingerprintID_KeyPress(sender As Object, e As KeyPressEventArgs) Handles txtboxFingerprintID.KeyPress
+        If Not Char.IsNumber(e.KeyChar) AndAlso Not Char.IsControl(e.KeyChar) Then e.KeyChar = ""
     End Sub
 End Class

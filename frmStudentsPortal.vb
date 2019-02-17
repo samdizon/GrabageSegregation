@@ -65,7 +65,7 @@ Public Class frmStudentsPortal
     End Sub
 
     Private Sub DetectFingerprintTimer_Tick(sender As Object, e As EventArgs) Handles DetectFingerprintTimer.Tick
-        Dim fingerprintID As Integer = 0
+        Dim fingerprintId As Integer = 0
 
         receivedData = ReceiveSerialData().ToString.ToUpper
         'test data
@@ -82,42 +82,56 @@ Public Class frmStudentsPortal
     End Sub
 
     Function ReceiveSerialData() As String
-        Dim Incoming As String
+        Dim incoming As String
         Try
-            Incoming = ArduinoSerialPort.ReadExisting()
-            If Incoming Is Nothing Then
+            incoming = ArduinoSerialPort.ReadExisting()
+            If incoming Is Nothing Then
                 Return "nothing"
             ElseIf Incoming = "" Then
                 Return "nothing"
             Else
-                Return Incoming
+                Return incoming
             End If
         Catch ex As TimeoutException
             Return "Error: Serial Port read timed out."
         End Try
     End Function
 
-    Private Sub ValidateStudentByID(FingerPrintID As Integer)
+    Private Sub ValidateStudentById(fingerPrintId As Integer)
         Try
 
             ArduinoSerialPort.Close()
             DetectFingerprintTimer.Stop()
             DetectFingerprintTimer.Enabled = False
 
-            Dim Sql = "Select * From Students where FingerPrintID = " & FingerPrintID & " "
+            Dim sql = "Select * From Students where FingerPrintID = " & fingerPrintId & " "
 
-            dbAdapter = New OleDbDataAdapter(Sql, dbConnection)
+            dbAdapter = New OleDbDataAdapter(sql, dbConnection)
             dbDataTable = New DataTable
             dbAdapter.Fill(dbDataTable)
 
             If dbDataTable.Rows.Count = 0 Then
-
-
                 MsgBox("Unrecognized fingerprint. Please check with your administrator if your biometric ID is registered.")
 
             Else
 
                 frmMainStudents.StudentID = dbDataTable.Rows(0)("ID")
+                frmMainStudents.dgvBrowseSortedWaste.DataSource = Nothing
+                frmMainStudents.lblStudentName.Text = ""
+                frmMainStudents.lblStudentYearSection.Text = ""
+                frmMainStudents.lblCorrectMetal.Text = ""
+                frmMainStudents.lblCorrectPaper.Text = ""
+                frmMainStudents.lblTotalCorrect.Text = ""
+                frmMainStudents.lblCorrectPlastic.Text = ""
+                frmMainStudents.lblIncorrectMetal.Text = ""
+                frmMainStudents.lblIncorrectPaper.Text = ""
+                frmMainStudents.lblIncorrectPlastic.Text = ""
+                frmMainStudents.lblTotalIncorrect.Text = ""
+                frmMainStudents.lblTotal.Text = ""
+                frmMainStudents.lblTotalMetal.Text = ""
+                frmMainStudents.lblTotalPaper.Text = ""
+                frmMainStudents.lblTotalPlastic.Text = ""
+
                 frmMainStudents.Show()
                 If frmMainStudents.ArduinoSerialPort.IsOpen = False Then
                     frmMainStudents.ArduinoSerialPort.Open()
