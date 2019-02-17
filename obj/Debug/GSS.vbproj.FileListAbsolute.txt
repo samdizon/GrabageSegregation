@@ -115,3 +115,4 @@ C:\Users\SAM\Desktop\GrabageSegregation\obj\Debug\GSS.vbproj.CoreCompileInputs.c
 C:\Users\SAM\Desktop\GrabageSegregation\obj\Debug\GSS.exe
 C:\Users\SAM\Desktop\GrabageSegregation\obj\Debug\GSS.xml
 C:\Users\SAM\Desktop\GrabageSegregation\obj\Debug\GSS.pdb
+C:\Users\SAM\Desktop\GrabageSegregation\obj\Debug\GSS.vbprojAssemblyReference.cache
