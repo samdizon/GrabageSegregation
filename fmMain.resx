@@ -965,4 +965,7 @@
         iigAooooAKKKKACiiigAooooAKKKKAP/2Q==
 </value>
   </data>
+  <data name="frmStudentsPortal_ValidateStudentById_Unrecognized_fingerprint__Please_check_with_your_administrator_if_your_biometric_ID_is_registered_" xml:space="preserve">
+    <value>Unrecognized fingerprint. Please check with your administrator if your biometric ID is registered.</value>
+  </data>
 </root>
