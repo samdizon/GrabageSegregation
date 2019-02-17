@@ -2721,13 +2721,13 @@ Partial Class fmMain
         Me.Controls.Add(Me.lblRegisterUsers)
         Me.Controls.Add(Me.lblDummyRegisterUser)
         Me.Controls.Add(Me.PictureBox1)
+        Me.Controls.Add(Me.gbBrowseStudents)
+        Me.Controls.Add(Me.gbEditUser)
+        Me.Controls.Add(Me.gbRegisterUser)
         Me.Controls.Add(Me.gbRegisterStudents)
         Me.Controls.Add(Me.gbBrowseSortedWaste)
         Me.Controls.Add(Me.gbEditStudents)
         Me.Controls.Add(Me.gbBrowseUsers)
-        Me.Controls.Add(Me.gbBrowseStudents)
-        Me.Controls.Add(Me.gbEditUser)
-        Me.Controls.Add(Me.gbRegisterUser)
         Me.Font = New System.Drawing.Font("Franklin Gothic Medium", 12.0!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
         Me.ForeColor = System.Drawing.Color.White
         Me.FormBorderStyle = System.Windows.Forms.FormBorderStyle.None
