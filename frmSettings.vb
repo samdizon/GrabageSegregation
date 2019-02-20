@@ -7,6 +7,7 @@ Public Class frmSettings
     Private Sub frmSettings_Load(sender As Object, e As EventArgs) Handles MyBase.Load
         ConnectDB()
         GetSettings()
+        comboComPort.Items.Clear()
 
         For Each sp As String In My.Computer.Ports.SerialPortNames
             comboComPort.Items.Add(sp)
@@ -32,6 +33,8 @@ Public Class frmSettings
             txtPortBaudRate.Text = dbDataTable.Rows(0)("PortBaudRate")
             txtReadTimeout.Text = dbDataTable.Rows(0)("ReadTimeout")
             SettingsID = CInt(dbDataTable.Rows(0)("ID"))
+            txtIncorrectEquivalent.Text = Trim(dbDataTable.Rows(0)("IncorrectEquivalent"))
+            txtCorrectEquivalent.Text = Trim(dbDataTable.Rows(0)("CorrectEquivalent"))
         Catch ex As Exception
             MsgBox(ex, MsgBoxStyle.Critical)
         End Try
@@ -42,8 +45,9 @@ Public Class frmSettings
     End Sub
 
     Private Sub btnSaveSettings_Click(sender As Object, e As EventArgs) Handles btnSaveSettings.Click
-        Dim PortName As String = "dummy"
-        Dim DataBits, PortBaudRate, ReadTimeout As Integer
+        Dim portName As String = "dummy"
+        Dim dataBits, portBaudRate, readTimeout As Integer
+        Dim incorrectPoints, correctPoints As Decimal
 
         If txtDataBits.Text = "" Then
             MsgBox("Please provide data bits, default value is 8", MsgBoxStyle.Exclamation)
@@ -54,29 +58,42 @@ Public Class frmSettings
         ElseIf txtReadTimeout.Text = "" Then
             MsgBox("Please provide read timeout, default value is 10000", MsgBoxStyle.Exclamation)
             txtReadTimeout.Select()
-        ElseIf PortName = "" Then
+        ElseIf portName = "" Then
             MsgBox("Please call your system administrator, the device is not recognized", MsgBoxStyle.Critical)
             End
         Else
-            PortName = Trim(comboComPort.Text)
-            DataBits = CInt(Trim(txtDataBits.Text))
-            PortBaudRate = CInt(Trim(txtPortBaudRate.Text))
-            ReadTimeout = CInt(Trim(txtReadTimeout.Text))
+            portName = Trim(comboComPort.Text)
+            dataBits = CInt(Trim(txtDataBits.Text))
+            portBaudRate = CInt(Trim(txtPortBaudRate.Text))
+            readTimeout = CInt(Trim(txtReadTimeout.Text))
+
+            If txtIncorrectEquivalent.Text = Nothing Then
+                incorrectPoints = Nothing
+            Else
+                incorrectPoints = Trim(txtIncorrectEquivalent.Text)
+            End If
+
+            If txtCorrectEquivalent.Text = Nothing Then
+                correctPoints = Nothing
+            Else
+                correctPoints = Trim(txtCorrectEquivalent.Text)
+            End If
         End If
 
 
-        If DataBits <> 0 And PortBaudRate <> 0 And ReadTimeout <> 0 Then
+        If dataBits <> 0 And portBaudRate <> 0 And readTimeout <> 0 Then
 
 
             Try
                 dbAdapter = New OleDbDataAdapter("UPDATE Settings 
-                                                    SET PortName = '" & PortName & "', DataBits = " & DataBits & ", 
-                                                        PortBaudRate = " & PortBaudRate & ", ReadTimeout = " & ReadTimeout & "
+                                                    SET PortName = '" & portName & "', DataBits = " & dataBits & ", 
+                                                        PortBaudRate = " & portBaudRate & ", ReadTimeout = " & readTimeout & ",
+                                                        IncorrectEquivalent = " & incorrectPoints & ", CorrectEquivalent = " & correctPoints & "
                                                         WHERE ID = " & SettingsID & "", dbConnection)
                 dbDataSet = New DataSet
                 dbAdapter.Fill(dbDataSet)
 
-                MsgBox("Settings updated.", MsgBoxStyle.Information, "Update GSS Settings")
+                MsgBox("Settings updated, please restart the system for changes to take effect.", MsgBoxStyle.Information, "Update GSS Settings")
                 Me.Hide()
             Catch ex As Exception
                 MsgBox(ex.ToString, MsgBoxStyle.Critical)
@@ -85,5 +102,10 @@ Public Class frmSettings
         End If
     End Sub
 
-
+    Private Sub txtCorrectEquivalent_KeyPress(sender As Object, e As KeyPressEventArgs) Handles txtCorrectEquivalent.KeyPress
+        e.Handled = Not (Char.IsDigit(e.KeyChar) Or Asc(e.KeyChar) = 8 Or ((e.KeyChar = ".") And (sender.Text.IndexOf(".") = -1 And sender.Text.IndexOf(",") = -1)))
+    End Sub
+    Private Sub txtInCorrectEquivalent_KeyPress(sender As Object, e As KeyPressEventArgs) Handles txtIncorrectEquivalent.KeyPress
+        e.Handled = Not (Char.IsDigit(e.KeyChar) Or Asc(e.KeyChar) = 8 Or ((e.KeyChar = ".") And (sender.Text.IndexOf(".") = -1 And sender.Text.IndexOf(",") = -1)))
+    End Sub
 End Class

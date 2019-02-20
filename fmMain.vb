@@ -9,7 +9,7 @@ Public Class fmMain
     Private Sub fmMain_Load(sender As Object, e As EventArgs) Handles MyBase.Load
         'txtSearchStudents.Select()
         ConnectDB()
-
+        GetSettings()
         'gbRegisterStudents.Visible = False
 
         Try
@@ -597,6 +597,21 @@ Public Class fmMain
         lblTotalMetal.Text = TotalMetal
         lblTotalPaper.Text = TotalPaper
         lblTotalPlastic.Text = TotalPlastic
+
+        If IncorrectPoints = Nothing Or IncorrectPoints = 0 Then
+            DisplayIncorrectPoints.Text = ""
+            lblIncorrectPoints.Text = ""
+        Else
+            DisplayIncorrectPoints.Text = Format(IncorrectPoints * CInt(Trim(lblTotalIncorrect.Text)), "N2")
+        End If
+
+        If CorrectPoints = Nothing Or CorrectPoints = 0 Then
+            DisplayCorrectPoints.Text = ""
+            lblCorrectPoints.Text = ""
+        Else
+            DisplayCorrectPoints.Text = Format(CorrectPoints * CInt(Trim(lblTotalCorrect.Text)), "N2")
+        End If
+
     End Sub
 
 
