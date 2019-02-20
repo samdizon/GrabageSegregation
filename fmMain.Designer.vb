@@ -540,7 +540,7 @@ Partial Class fmMain
         'lblTotalPlastic
         '
         Me.lblTotalPlastic.BackColor = System.Drawing.Color.DarkOrange
-        Me.lblTotalPlastic.Font = New System.Drawing.Font("Franklin Gothic Medium", 14.25!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.lblTotalPlastic.Font = New System.Drawing.Font("Franklin Gothic Medium", 10.0!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
         Me.lblTotalPlastic.ForeColor = System.Drawing.Color.MistyRose
         Me.lblTotalPlastic.Location = New System.Drawing.Point(716, 504)
         Me.lblTotalPlastic.Name = "lblTotalPlastic"
@@ -563,7 +563,7 @@ Partial Class fmMain
         'lblTotalMetal
         '
         Me.lblTotalMetal.BackColor = System.Drawing.Color.DarkOrange
-        Me.lblTotalMetal.Font = New System.Drawing.Font("Franklin Gothic Medium", 14.25!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.lblTotalMetal.Font = New System.Drawing.Font("Franklin Gothic Medium", 10.0!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
         Me.lblTotalMetal.ForeColor = System.Drawing.Color.MistyRose
         Me.lblTotalMetal.Location = New System.Drawing.Point(647, 504)
         Me.lblTotalMetal.Name = "lblTotalMetal"
@@ -586,7 +586,7 @@ Partial Class fmMain
         'lblTotalPaper
         '
         Me.lblTotalPaper.BackColor = System.Drawing.Color.DarkOrange
-        Me.lblTotalPaper.Font = New System.Drawing.Font("Franklin Gothic Medium", 14.25!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.lblTotalPaper.Font = New System.Drawing.Font("Franklin Gothic Medium", 10.0!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
         Me.lblTotalPaper.ForeColor = System.Drawing.Color.MistyRose
         Me.lblTotalPaper.Location = New System.Drawing.Point(568, 504)
         Me.lblTotalPaper.Name = "lblTotalPaper"
@@ -609,7 +609,7 @@ Partial Class fmMain
         'lblCorrectPlastic
         '
         Me.lblCorrectPlastic.BackColor = System.Drawing.Color.YellowGreen
-        Me.lblCorrectPlastic.Font = New System.Drawing.Font("Franklin Gothic Medium", 14.25!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.lblCorrectPlastic.Font = New System.Drawing.Font("Franklin Gothic Medium", 10.0!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
         Me.lblCorrectPlastic.ForeColor = System.Drawing.Color.MistyRose
         Me.lblCorrectPlastic.Location = New System.Drawing.Point(449, 504)
         Me.lblCorrectPlastic.Name = "lblCorrectPlastic"
@@ -632,7 +632,7 @@ Partial Class fmMain
         'lblCorrectMetal
         '
         Me.lblCorrectMetal.BackColor = System.Drawing.Color.YellowGreen
-        Me.lblCorrectMetal.Font = New System.Drawing.Font("Franklin Gothic Medium", 14.25!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.lblCorrectMetal.Font = New System.Drawing.Font("Franklin Gothic Medium", 10.0!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
         Me.lblCorrectMetal.ForeColor = System.Drawing.Color.MistyRose
         Me.lblCorrectMetal.Location = New System.Drawing.Point(380, 504)
         Me.lblCorrectMetal.Name = "lblCorrectMetal"
@@ -655,7 +655,7 @@ Partial Class fmMain
         'lblCorrectPaper
         '
         Me.lblCorrectPaper.BackColor = System.Drawing.Color.YellowGreen
-        Me.lblCorrectPaper.Font = New System.Drawing.Font("Franklin Gothic Medium", 14.25!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.lblCorrectPaper.Font = New System.Drawing.Font("Franklin Gothic Medium", 10.0!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
         Me.lblCorrectPaper.ForeColor = System.Drawing.Color.MistyRose
         Me.lblCorrectPaper.Location = New System.Drawing.Point(301, 504)
         Me.lblCorrectPaper.Name = "lblCorrectPaper"
@@ -678,7 +678,7 @@ Partial Class fmMain
         'lblIncorrectPlastic
         '
         Me.lblIncorrectPlastic.BackColor = System.Drawing.Color.Red
-        Me.lblIncorrectPlastic.Font = New System.Drawing.Font("Franklin Gothic Medium", 14.25!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.lblIncorrectPlastic.Font = New System.Drawing.Font("Franklin Gothic Medium", 10.0!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
         Me.lblIncorrectPlastic.ForeColor = System.Drawing.Color.MistyRose
         Me.lblIncorrectPlastic.Location = New System.Drawing.Point(182, 501)
         Me.lblIncorrectPlastic.Name = "lblIncorrectPlastic"
@@ -701,7 +701,7 @@ Partial Class fmMain
         'lblIncorrectMetal
         '
         Me.lblIncorrectMetal.BackColor = System.Drawing.Color.Red
-        Me.lblIncorrectMetal.Font = New System.Drawing.Font("Franklin Gothic Medium", 14.25!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.lblIncorrectMetal.Font = New System.Drawing.Font("Franklin Gothic Medium", 10.0!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
         Me.lblIncorrectMetal.ForeColor = System.Drawing.Color.MistyRose
         Me.lblIncorrectMetal.Location = New System.Drawing.Point(113, 501)
         Me.lblIncorrectMetal.Name = "lblIncorrectMetal"
@@ -724,7 +724,7 @@ Partial Class fmMain
         'lblIncorrectPaper
         '
         Me.lblIncorrectPaper.BackColor = System.Drawing.Color.Red
-        Me.lblIncorrectPaper.Font = New System.Drawing.Font("Franklin Gothic Medium", 14.25!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.lblIncorrectPaper.Font = New System.Drawing.Font("Franklin Gothic Medium", 10.0!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
         Me.lblIncorrectPaper.ForeColor = System.Drawing.Color.MistyRose
         Me.lblIncorrectPaper.Location = New System.Drawing.Point(34, 501)
         Me.lblIncorrectPaper.Name = "lblIncorrectPaper"
@@ -749,7 +749,7 @@ Partial Class fmMain
         Me.Label4.BackColor = System.Drawing.Color.DarkOrange
         Me.Label4.Location = New System.Drawing.Point(663, 479)
         Me.Label4.Name = "Label4"
-        Me.Label4.Size = New System.Drawing.Size(85, 21)
+        Me.Label4.Size = New System.Drawing.Size(142, 21)
         Me.Label4.TabIndex = 15
         Me.Label4.Text = "Total"
         Me.Label4.TextAlign = System.Drawing.ContentAlignment.MiddleCenter
@@ -842,7 +842,7 @@ Partial Class fmMain
         'lblTotalIncorrect
         '
         Me.lblTotalIncorrect.BackColor = System.Drawing.Color.Red
-        Me.lblTotalIncorrect.Font = New System.Drawing.Font("Franklin Gothic Medium", 36.0!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.lblTotalIncorrect.Font = New System.Drawing.Font("Franklin Gothic Medium", 24.0!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
         Me.lblTotalIncorrect.Location = New System.Drawing.Point(94, 431)
         Me.lblTotalIncorrect.Name = "lblTotalIncorrect"
         Me.lblTotalIncorrect.Size = New System.Drawing.Size(100, 60)
@@ -853,7 +853,7 @@ Partial Class fmMain
         'lblTotalCorrect
         '
         Me.lblTotalCorrect.BackColor = System.Drawing.Color.YellowGreen
-        Me.lblTotalCorrect.Font = New System.Drawing.Font("Franklin Gothic Medium", 36.0!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.lblTotalCorrect.Font = New System.Drawing.Font("Franklin Gothic Medium", 24.0!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
         Me.lblTotalCorrect.Location = New System.Drawing.Point(362, 431)
         Me.lblTotalCorrect.Name = "lblTotalCorrect"
         Me.lblTotalCorrect.Size = New System.Drawing.Size(97, 60)
@@ -864,10 +864,10 @@ Partial Class fmMain
         'lblTotal
         '
         Me.lblTotal.BackColor = System.Drawing.Color.DarkOrange
-        Me.lblTotal.Font = New System.Drawing.Font("Franklin Gothic Medium", 36.0!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.lblTotal.Font = New System.Drawing.Font("Franklin Gothic Medium", 14.0!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
         Me.lblTotal.Location = New System.Drawing.Point(667, 431)
         Me.lblTotal.Name = "lblTotal"
-        Me.lblTotal.Size = New System.Drawing.Size(81, 59)
+        Me.lblTotal.Size = New System.Drawing.Size(138, 59)
         Me.lblTotal.TabIndex = 18
         Me.lblTotal.Text = "0"
         Me.lblTotal.TextAlign = System.Drawing.ContentAlignment.MiddleCenter
@@ -2702,7 +2702,7 @@ Partial Class fmMain
         'DisplayIncorrectPoints
         '
         Me.DisplayIncorrectPoints.BackColor = System.Drawing.Color.Red
-        Me.DisplayIncorrectPoints.Font = New System.Drawing.Font("Franklin Gothic Medium", 24.0!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.DisplayIncorrectPoints.Font = New System.Drawing.Font("Franklin Gothic Medium", 14.0!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
         Me.DisplayIncorrectPoints.Location = New System.Drawing.Point(184, 431)
         Me.DisplayIncorrectPoints.Name = "DisplayIncorrectPoints"
         Me.DisplayIncorrectPoints.Size = New System.Drawing.Size(84, 47)
@@ -2735,7 +2735,7 @@ Partial Class fmMain
         'DisplayCorrectPoints
         '
         Me.DisplayCorrectPoints.BackColor = System.Drawing.Color.YellowGreen
-        Me.DisplayCorrectPoints.Font = New System.Drawing.Font("Franklin Gothic Medium", 24.0!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.DisplayCorrectPoints.Font = New System.Drawing.Font("Franklin Gothic Medium", 14.0!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
         Me.DisplayCorrectPoints.Location = New System.Drawing.Point(452, 431)
         Me.DisplayCorrectPoints.Name = "DisplayCorrectPoints"
         Me.DisplayCorrectPoints.Size = New System.Drawing.Size(85, 47)

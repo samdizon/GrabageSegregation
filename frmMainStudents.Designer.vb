@@ -24,8 +24,8 @@ Partial Class frmMainStudents
     Private Sub InitializeComponent()
         Me.components = New System.ComponentModel.Container()
         Dim resources As System.ComponentModel.ComponentResourceManager = New System.ComponentModel.ComponentResourceManager(GetType(frmMainStudents))
-        Dim DataGridViewCellStyle3 As System.Windows.Forms.DataGridViewCellStyle = New System.Windows.Forms.DataGridViewCellStyle()
-        Dim DataGridViewCellStyle4 As System.Windows.Forms.DataGridViewCellStyle = New System.Windows.Forms.DataGridViewCellStyle()
+        Dim DataGridViewCellStyle1 As System.Windows.Forms.DataGridViewCellStyle = New System.Windows.Forms.DataGridViewCellStyle()
+        Dim DataGridViewCellStyle2 As System.Windows.Forms.DataGridViewCellStyle = New System.Windows.Forms.DataGridViewCellStyle()
         Me.lblTotalPlastic = New System.Windows.Forms.Label()
         Me.Label15 = New System.Windows.Forms.Label()
         Me.lblTotalMetal = New System.Windows.Forms.Label()
@@ -93,7 +93,7 @@ Partial Class frmMainStudents
         'lblTotalPlastic
         '
         Me.lblTotalPlastic.BackColor = System.Drawing.Color.DarkOrange
-        Me.lblTotalPlastic.Font = New System.Drawing.Font("Franklin Gothic Medium", 14.25!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.lblTotalPlastic.Font = New System.Drawing.Font("Franklin Gothic Medium", 10.0!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
         Me.lblTotalPlastic.ForeColor = System.Drawing.Color.MistyRose
         Me.lblTotalPlastic.Location = New System.Drawing.Point(863, 529)
         Me.lblTotalPlastic.Name = "lblTotalPlastic"
@@ -116,7 +116,7 @@ Partial Class frmMainStudents
         'lblTotalMetal
         '
         Me.lblTotalMetal.BackColor = System.Drawing.Color.DarkOrange
-        Me.lblTotalMetal.Font = New System.Drawing.Font("Franklin Gothic Medium", 14.25!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.lblTotalMetal.Font = New System.Drawing.Font("Franklin Gothic Medium", 10.0!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
         Me.lblTotalMetal.ForeColor = System.Drawing.Color.MistyRose
         Me.lblTotalMetal.Location = New System.Drawing.Point(775, 529)
         Me.lblTotalMetal.Name = "lblTotalMetal"
@@ -139,7 +139,7 @@ Partial Class frmMainStudents
         'lblTotalPaper
         '
         Me.lblTotalPaper.BackColor = System.Drawing.Color.DarkOrange
-        Me.lblTotalPaper.Font = New System.Drawing.Font("Franklin Gothic Medium", 14.25!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.lblTotalPaper.Font = New System.Drawing.Font("Franklin Gothic Medium", 10.0!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
         Me.lblTotalPaper.ForeColor = System.Drawing.Color.MistyRose
         Me.lblTotalPaper.Location = New System.Drawing.Point(687, 529)
         Me.lblTotalPaper.Name = "lblTotalPaper"
@@ -162,7 +162,7 @@ Partial Class frmMainStudents
         'lblCorrectPlastic
         '
         Me.lblCorrectPlastic.BackColor = System.Drawing.Color.DarkOrange
-        Me.lblCorrectPlastic.Font = New System.Drawing.Font("Franklin Gothic Medium", 14.25!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.lblCorrectPlastic.Font = New System.Drawing.Font("Franklin Gothic Medium", 10.0!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
         Me.lblCorrectPlastic.ForeColor = System.Drawing.Color.MistyRose
         Me.lblCorrectPlastic.Location = New System.Drawing.Point(561, 533)
         Me.lblCorrectPlastic.Name = "lblCorrectPlastic"
@@ -185,7 +185,7 @@ Partial Class frmMainStudents
         'lblCorrectMetal
         '
         Me.lblCorrectMetal.BackColor = System.Drawing.Color.DarkOrange
-        Me.lblCorrectMetal.Font = New System.Drawing.Font("Franklin Gothic Medium", 14.25!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.lblCorrectMetal.Font = New System.Drawing.Font("Franklin Gothic Medium", 10.0!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
         Me.lblCorrectMetal.ForeColor = System.Drawing.Color.MistyRose
         Me.lblCorrectMetal.Location = New System.Drawing.Point(475, 533)
         Me.lblCorrectMetal.Name = "lblCorrectMetal"
@@ -208,7 +208,7 @@ Partial Class frmMainStudents
         'lblCorrectPaper
         '
         Me.lblCorrectPaper.BackColor = System.Drawing.Color.DarkOrange
-        Me.lblCorrectPaper.Font = New System.Drawing.Font("Franklin Gothic Medium", 14.25!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.lblCorrectPaper.Font = New System.Drawing.Font("Franklin Gothic Medium", 10.0!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
         Me.lblCorrectPaper.ForeColor = System.Drawing.Color.MistyRose
         Me.lblCorrectPaper.Location = New System.Drawing.Point(383, 533)
         Me.lblCorrectPaper.Name = "lblCorrectPaper"
@@ -231,7 +231,7 @@ Partial Class frmMainStudents
         'lblIncorrectPlastic
         '
         Me.lblIncorrectPlastic.BackColor = System.Drawing.Color.DarkOrange
-        Me.lblIncorrectPlastic.Font = New System.Drawing.Font("Franklin Gothic Medium", 14.25!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.lblIncorrectPlastic.Font = New System.Drawing.Font("Franklin Gothic Medium", 10.0!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
         Me.lblIncorrectPlastic.ForeColor = System.Drawing.Color.MistyRose
         Me.lblIncorrectPlastic.Location = New System.Drawing.Point(257, 531)
         Me.lblIncorrectPlastic.Name = "lblIncorrectPlastic"
@@ -254,7 +254,7 @@ Partial Class frmMainStudents
         'lblIncorrectMetal
         '
         Me.lblIncorrectMetal.BackColor = System.Drawing.Color.DarkOrange
-        Me.lblIncorrectMetal.Font = New System.Drawing.Font("Franklin Gothic Medium", 14.25!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.lblIncorrectMetal.Font = New System.Drawing.Font("Franklin Gothic Medium", 10.0!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
         Me.lblIncorrectMetal.ForeColor = System.Drawing.Color.MistyRose
         Me.lblIncorrectMetal.Location = New System.Drawing.Point(176, 531)
         Me.lblIncorrectMetal.Name = "lblIncorrectMetal"
@@ -277,7 +277,7 @@ Partial Class frmMainStudents
         'lblIncorrectPaper
         '
         Me.lblIncorrectPaper.BackColor = System.Drawing.Color.DarkOrange
-        Me.lblIncorrectPaper.Font = New System.Drawing.Font("Franklin Gothic Medium", 14.25!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.lblIncorrectPaper.Font = New System.Drawing.Font("Franklin Gothic Medium", 10.0!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
         Me.lblIncorrectPaper.ForeColor = System.Drawing.Color.MistyRose
         Me.lblIncorrectPaper.Location = New System.Drawing.Point(81, 531)
         Me.lblIncorrectPaper.Name = "lblIncorrectPaper"
@@ -330,7 +330,7 @@ Partial Class frmMainStudents
         'lblTotalIncorrect
         '
         Me.lblTotalIncorrect.BackColor = System.Drawing.Color.DarkOrange
-        Me.lblTotalIncorrect.Font = New System.Drawing.Font("Franklin Gothic Medium", 36.0!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.lblTotalIncorrect.Font = New System.Drawing.Font("Franklin Gothic Medium", 24.0!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
         Me.lblTotalIncorrect.Location = New System.Drawing.Point(220, 460)
         Me.lblTotalIncorrect.Name = "lblTotalIncorrect"
         Me.lblTotalIncorrect.Size = New System.Drawing.Size(80, 60)
@@ -341,7 +341,7 @@ Partial Class frmMainStudents
         'lblTotalCorrect
         '
         Me.lblTotalCorrect.BackColor = System.Drawing.Color.DarkOrange
-        Me.lblTotalCorrect.Font = New System.Drawing.Font("Franklin Gothic Medium", 36.0!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.lblTotalCorrect.Font = New System.Drawing.Font("Franklin Gothic Medium", 24.0!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
         Me.lblTotalCorrect.Location = New System.Drawing.Point(522, 460)
         Me.lblTotalCorrect.Name = "lblTotalCorrect"
         Me.lblTotalCorrect.Size = New System.Drawing.Size(78, 60)
@@ -352,7 +352,7 @@ Partial Class frmMainStudents
         'lblTotal
         '
         Me.lblTotal.BackColor = System.Drawing.Color.DarkOrange
-        Me.lblTotal.Font = New System.Drawing.Font("Franklin Gothic Medium", 36.0!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.lblTotal.Font = New System.Drawing.Font("Franklin Gothic Medium", 24.0!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
         Me.lblTotal.Location = New System.Drawing.Point(818, 457)
         Me.lblTotal.Name = "lblTotal"
         Me.lblTotal.Size = New System.Drawing.Size(81, 59)
@@ -431,25 +431,25 @@ Partial Class frmMainStudents
         '
         Me.dgvBrowseSortedWaste.AllowUserToAddRows = False
         Me.dgvBrowseSortedWaste.AllowUserToDeleteRows = False
-        DataGridViewCellStyle3.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft
-        DataGridViewCellStyle3.BackColor = System.Drawing.SystemColors.Control
-        DataGridViewCellStyle3.Font = New System.Drawing.Font("Franklin Gothic Medium", 12.0!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        DataGridViewCellStyle3.ForeColor = System.Drawing.SystemColors.WindowText
-        DataGridViewCellStyle3.SelectionBackColor = System.Drawing.Color.DarkOrange
-        DataGridViewCellStyle3.SelectionForeColor = System.Drawing.SystemColors.HighlightText
-        DataGridViewCellStyle3.WrapMode = System.Windows.Forms.DataGridViewTriState.[True]
-        Me.dgvBrowseSortedWaste.ColumnHeadersDefaultCellStyle = DataGridViewCellStyle3
+        DataGridViewCellStyle1.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft
+        DataGridViewCellStyle1.BackColor = System.Drawing.SystemColors.Control
+        DataGridViewCellStyle1.Font = New System.Drawing.Font("Franklin Gothic Medium", 12.0!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        DataGridViewCellStyle1.ForeColor = System.Drawing.SystemColors.WindowText
+        DataGridViewCellStyle1.SelectionBackColor = System.Drawing.Color.DarkOrange
+        DataGridViewCellStyle1.SelectionForeColor = System.Drawing.SystemColors.HighlightText
+        DataGridViewCellStyle1.WrapMode = System.Windows.Forms.DataGridViewTriState.[True]
+        Me.dgvBrowseSortedWaste.ColumnHeadersDefaultCellStyle = DataGridViewCellStyle1
         Me.dgvBrowseSortedWaste.ColumnHeadersHeight = 30
         Me.dgvBrowseSortedWaste.Location = New System.Drawing.Point(66, 160)
         Me.dgvBrowseSortedWaste.Name = "dgvBrowseSortedWaste"
-        DataGridViewCellStyle4.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft
-        DataGridViewCellStyle4.BackColor = System.Drawing.SystemColors.Control
-        DataGridViewCellStyle4.Font = New System.Drawing.Font("Franklin Gothic Medium", 12.0!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        DataGridViewCellStyle4.ForeColor = System.Drawing.SystemColors.WindowText
-        DataGridViewCellStyle4.SelectionBackColor = System.Drawing.Color.DarkOrange
-        DataGridViewCellStyle4.SelectionForeColor = System.Drawing.SystemColors.HighlightText
-        DataGridViewCellStyle4.WrapMode = System.Windows.Forms.DataGridViewTriState.[True]
-        Me.dgvBrowseSortedWaste.RowHeadersDefaultCellStyle = DataGridViewCellStyle4
+        DataGridViewCellStyle2.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft
+        DataGridViewCellStyle2.BackColor = System.Drawing.SystemColors.Control
+        DataGridViewCellStyle2.Font = New System.Drawing.Font("Franklin Gothic Medium", 12.0!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        DataGridViewCellStyle2.ForeColor = System.Drawing.SystemColors.WindowText
+        DataGridViewCellStyle2.SelectionBackColor = System.Drawing.Color.DarkOrange
+        DataGridViewCellStyle2.SelectionForeColor = System.Drawing.SystemColors.HighlightText
+        DataGridViewCellStyle2.WrapMode = System.Windows.Forms.DataGridViewTriState.[True]
+        Me.dgvBrowseSortedWaste.RowHeadersDefaultCellStyle = DataGridViewCellStyle2
         Me.dgvBrowseSortedWaste.RowTemplate.DefaultCellStyle.ForeColor = System.Drawing.Color.Black
         Me.dgvBrowseSortedWaste.RowTemplate.DefaultCellStyle.SelectionBackColor = System.Drawing.Color.DarkOrange
         Me.dgvBrowseSortedWaste.Size = New System.Drawing.Size(891, 270)

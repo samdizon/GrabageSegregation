@@ -1,7 +1,7 @@
-USE [GSS]
+USE [Sample]
 GO
 
-/****** Object:  Table [dbo].[Settings]    Script Date: 1/15/2019 11:58:51 AM ******/
+/****** Object:  Table [dbo].[Settings]    Script Date: 20 Feb 2019 10:49:06 AM ******/
 SET ANSI_NULLS ON
 GO
 
@@ -14,11 +14,12 @@ CREATE TABLE [dbo].[Settings](
 	[DataBits] [int] NULL,
 	[PortBaudRate] [int] NULL,
 	[ReadTimeout] [int] NULL,
+	[CorrectEquivalent] [decimal](6, 2) NULL,
+	[IncorrectEquivalent] [decimal](6, 2) NULL,
  CONSTRAINT [PK_Settings] PRIMARY KEY CLUSTERED 
 (
 	[ID] ASC
 )WITH (PAD_INDEX = OFF, STATISTICS_NORECOMPUTE = OFF, IGNORE_DUP_KEY = OFF, ALLOW_ROW_LOCKS = ON, ALLOW_PAGE_LOCKS = ON) ON [PRIMARY]
 ) ON [PRIMARY]
-
 GO
 
